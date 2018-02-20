@@ -1,3 +1,4 @@
+
 .body {
 	background-color: gold;
 }
@@ -36,6 +37,29 @@
 	margin-left: 20%;
 	position: absolute;
 	background-color: silver;
+}
+
+.Days {
+	width: 3em;
+	height: auto;
+	display: inline-flex;
+	flex-direction: row;
+	margin: 0.4em;
+	padding: 5px;
+	border: 1px solid gold;
+	border-radius: 10%;
+}
+
+.Descriptions {
+	position: relative;
+	margin-top: 20%;		/* Styling could be better */
+	display: inline-block;
+	text-align: center;
+}
+
+.DescriptionImages {
+	width: 68%;
+	height: 68%;
 }
 
 /* I'm having trouble with getting it to fit properly.
