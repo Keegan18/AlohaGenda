@@ -6,7 +6,7 @@
 	margin-top: 0px;
 	text-align: center;
 	color: rgb(36, 104, 214);
-	background-color: seagreen;
+	background-color: goldenrod;
 	height: 100px;
 }
 
@@ -23,9 +23,9 @@
 #School-Pics {
 	max-height: 100%;
 	max-width: 20%;
-	width: 20%;
+	width: 19%;
 	border:1px solid grey;
-	margin-left: 80.5%;
+	margin-left: 80%;
 	position: absolute;
 	background-color: lightblue;
 }
@@ -35,7 +35,7 @@
 	max-height: 100%;
 	max-width: 100%;
 	height: 70%;
-	width: 60%;
+	width: 59.5%;
 	margin-left: 20%;
 	position: absolute;
 	background-color: silver;
@@ -43,7 +43,7 @@
 
 .Days {
 	width: 82px;
-	height: 125px;
+	height: 120px;
 	display: inline-flex;
 	flex-direction: row;
 	margin: 0.4em;
@@ -54,14 +54,15 @@
 
 .Descriptions {
 	position: relative;
-	margin-top: 20%;		/* Styling could be better */
+	margin-top: 10%;		/* Styling could be better */
 	display: inline-block;
 	text-align: center;
 }
 
 .DescriptionImages {
 	width: 68%;
-	height: 68%;
+	height: 50%;
+	padding-right: 20%;
 }
 
 #Weekly {
