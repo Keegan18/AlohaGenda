@@ -41,7 +41,7 @@
 
 .Days {
 	width: 3em;
-	height: auto;
+	min-height: 5em;
 	display: inline-flex;
 	flex-direction: row;
 	margin: 0.4em;
@@ -55,6 +55,10 @@
 	margin-top: 20%;		/* Styling could be better */
 	display: inline-block;
 	text-align: center;
+}
+
+.Descriptions > * {
+	display: inline-block;
 }
 
 .DescriptionImages {
