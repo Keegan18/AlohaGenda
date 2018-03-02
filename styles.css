@@ -32,7 +32,7 @@
 	border: 1px solid grey;
 	max-height: 100%;
 	max-width: 100%;
-	height: 70%;
+	height: auto;
 	width: 60%;
 	margin-left: 20%;
 	position: absolute;
@@ -57,13 +57,13 @@
 	text-align: center;
 }
 
-.Descriptions > * {
-	display: inline-block;
-}
-
 .DescriptionImages {
 	width: 68%;
 	height: 68%;
+}
+
+#overlay-test {
+	margin-top: 10%;
 }
 
 /* I'm having trouble with getting it to fit properly.
