@@ -1,11 +1,12 @@
 
 .body {
-	background-color: gold;
+	background-color: rgb(15, 22, 101);
 }
 
 #h1 {
 	text-align: center;
 	color: rgb(36, 104, 214);
+	background-color: goldenrod;
 }
 
 #School-Pic {
@@ -29,25 +30,25 @@
 }
 
 #Calendar {
-	border: 1px solid grey;
-	max-height: 100%;
-	max-width: 100%;
+	border: 2px solid goldenrod;
 	height: auto;
-	width: 60%;
+	width: auto;
+	max-width: 60%;
 	margin-left: 20%;
 	position: absolute;
-	background-color: silver;
+	background-color: rgb(15, 22, 101);
 }
 
 .Days {
 	width: 3em;
-	min-height: 5em;
+	height: 5em;
 	display: inline-flex;
 	flex-direction: row;
 	margin: 0.4em;
-	padding: 5px;
-	border: 1px solid gold;
+	padding: 2%;
+	border: 1px solid goldenrod;
 	border-radius: 10%;
+	background-color: goldenrod;
 }
 
 .Descriptions {
