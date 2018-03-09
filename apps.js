@@ -1,5 +1,4 @@
 //class the months
-
 console.log("Big Gay");
 var calender = document.getElementById("Calendar");
 
