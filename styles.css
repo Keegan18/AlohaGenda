@@ -10,8 +10,8 @@
 }
 
 #School-Pic {
-	max-height: 100%;
-	max-width: 20%;
+	height: 56%;
+	max-width: 18%;
 	width: 20%;
 	border:1px solid grey;
 	position: absolute;
@@ -20,8 +20,8 @@
 }
 
 #School-Pics {
-	max-height: 100%;
-	max-width: 20%;
+	height: 56%;
+	max-width: 18%;
 	width: 20%;
 	border:1px solid grey;
 	margin-left: 80.5%;
@@ -34,7 +34,7 @@
 	height: auto;
 	width: auto;
 	max-width: 60%;
-	margin-left: 20.5%;
+	margin-left: 19.5%;
 	position: relative;
 	background-color: rgb(15, 22, 101);
 }
@@ -69,8 +69,9 @@
 
 #Weekly {
 	border: 2px solid goldenrod;
-	height: 15%;
+	height: 152px;
 	width: 90%;
+	text-align: center;
 	margin-left: 5%;
 	margin-top: 10%;
 	position: relative;
