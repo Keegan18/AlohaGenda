@@ -33,62 +33,41 @@ function Overlay(title,par1,img1,day) {
 	
 	var button = document.createElement("button"); //this is temporarily
 	
-	moreDescript.appendChild(infoContainer);
-	infoContainer.appendChild(descriptTitle);
-	infoContainer.appendChild(line);
-	infoContainer.appendChild(flexShow);
-	flexShow.appendChild(descriptPar1);
-	flexShow.appendChild(descriptImage1);
-	flexShow.appendChild(button);
+	moreDescript.appendChild(infoContainer);  //appends cotainer to overlay
+	infoContainer.appendChild(descriptTitle); // appends title to info container
+	infoContainer.appendChild(line); //appends line to info Container
+	infoContainer.appendChild(flexShow); // appends flex box which contains text to container
+	flexShow.appendChild(descriptPar1); //appends paragraph 1 to text container
+	flexShow.appendChild(descriptImage1); //appends image to container
+	flexShow.appendChild(button); //button
+	
+	moreDescript.className = "overlay";
+	infoContainer.className = "infoContainer";
+	descriptTitle.className = "containerTitle";
+	line.className = "containerLine";
+	flexShow.className = "containerFlex";
+	descriptPar1.className = "containerPar";
+	descriptImage1.className = "imageContainer";
 	
 	/* styles of overlay */
-	moreDescript.style.width = "100%";
-	moreDescript.style.height = "100%";
-	moreDescript.style.display = "none";
-	moreDescript.style.position = "fixed";
-	moreDescript.style.backgroundColor = "RGBA(0,0,0,0.5)";
-	moreDescript.style.zIndex = "2";
 	/* ends here */
 	
 	/* style of header */
 	descriptTitle.innerHTML = title;
-	descriptTitle.style.textAlign = "left";
-	descriptTitle.style.padding = "2px";
 	/* ends here */
 	
 	/* styles of info container */
-	infoContainer.style.width = "43em";
-	infoContainer.style.height = "23em";
-	infoContainer.style.margin = "auto";
-	infoContainer.style.backgroundColor = "grey";
 	/* ends here */
 	
 	/* styles of flex */
-	flexShow.style.display = "flex";
-	flexShow.style.flexDirection = "column";
-	flexShow.style.flexWrap = "wrap";
-	flexShow.style.width = "100%";
-	flexShow.style.height = "100%";
-	flexShow.style.overflow = "hidden";
 	/* ends here */
 	
 	/* styles of descriptPar1 */
 	descriptPar1.innerHTML = par1;
-	descriptPar1.style.width = "23em";
-	descriptPar1.style.height = "13em";
-	descriptPar1.style.margin = "0 2% 0 1%";
-	descriptPar1.style.display = "inline-block";
-	descriptPar1.style.border = "1px solid black";
-	descriptPar1.style.textAlign = "left";
-	descriptPar1.style.padding = "7px";
 	/* ends here */
 	
 	/* start of img1 */
 	descriptImage1.src = img1;
-	descriptImage1.style.display = "inline-block";
-	descriptImage1.style.marginRight = "10%";
-	descriptImage1.style.width = "13em";
-	descriptImage1.style.height = "14em";
 	/* ends here */
 	
 	/* start of temp button */
@@ -151,4 +130,4 @@ function MonthDays(days,events){
 	}
 }
 
-MonthDays(31,Januaryevents);
+MonthDays(32,Januaryevents);
