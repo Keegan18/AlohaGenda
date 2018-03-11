@@ -49,42 +49,12 @@ function Overlay(title,par1,img1,day) {
 	descriptPar1.className = "containerPar";
 	descriptImage1.className = "imageContainer";
 	
-	/* styles of overlay */
-	/* ends here */
-	
-	/* style of header */
 	descriptTitle.innerHTML = title;
-	/* ends here */
-	
-	/* styles of info container */
-	/* ends here */
-	
-	/* styles of flex */
-	/* ends here */
-	
-	/* styles of descriptPar1 */
 	descriptPar1.innerHTML = par1;
-	/* ends here */
-	
-	/* start of img1 */
 	descriptImage1.src = img1;
-	/* ends here */
 	
-	/* start of temp button */
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
 	button.onclick = function(){toggle(day)};
-	
-	/*
-	var descriptPar2 = document.createElement("p");
-	var descriptImage2 = document.createElement("img");
-	if(descriptImage2 !== 0) {
-		descriptImage2.src = "images/dab.jpg";
-		descriptImage2.style.display = "inline-block";  fix all this later 
-		descriptImage2.style.width = "13em";
-		descriptImage2.style.height = "14em";
-		
-		flexShow.appendChild(descriptImage2);
-	} */
 	
 	moreDescript.id = "overlay-" + day; //class Name for overlays
 	
@@ -93,10 +63,12 @@ function Overlay(title,par1,img1,day) {
 }
 
 function toggle(number) {
-	if(document.getElementById("overlay-"+number).style.display === "none") {
-		document.getElementById("overlay-"+number).style.display = "block"; //will shorten to var later
+	var overlay = document.getElementsByClassName("overlay");
+	console.log(overlay[0].innerHTML);
+	if(overlay[number].style.display === "none") {
+		overlay[number].style.display = "block"; //will shorten to var later
 	} else {
-		document.getElementById("overlay-"+number).style.display = "none";
+		overlay[number].style.display = "none";
 	}
 }
 

@@ -24,23 +24,7 @@
 	background-color: lightblue;
 }
 
-#School-Pics {
-	max-height: 100%;
-	max-width: 20%;
-	width: 19%;
-	border:1px solid grey;
-	margin-left: 80%;
-	height: 56%;
-	max-width: 18%;
-	width: 20%;
-	border:1px solid grey;
-	margin-left: 80.5%;
-	position: absolute;
-	background-color: lightblue;
-}
-
 #Calendar {
-	color: goldenrod;
 	border-radius: 3%;
 	border: 2px solid goldenrod;
 	height: auto;
