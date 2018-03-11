@@ -43,7 +43,8 @@
 	width: 3em;
 	height: 5em;
 	display: inline-flex;
-	flex-direction: row;
+	
+	flex: center;
 	margin: 0.4em;
 	padding: 2%;
 	border: 1px solid goldenrod;
