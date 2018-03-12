@@ -152,3 +152,21 @@ function MonthDays(days,events){
 
 MonthDays(32,Januaryevents);
 
+
+//Search bar stuff//
+function active(){
+	var search = document.getElementById("search");
+	if(search.value == "Search..."){
+		search.value = ""
+		search.placeholder = "Search..."
+	}
+}
+
+function inactive(){
+	var search = document.getElementById("search");
+	if(search.value == ""){
+		search.value = "Search..."
+		search.placeholder = ""
+	}
+}
+
