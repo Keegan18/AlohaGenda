@@ -24,6 +24,12 @@
 	background-color: lightblue;
 }
 
+.buttons {
+	margin: 0 auto;
+	display: table;
+	border: 2px solid goldenrod;
+}
+
 #Calendar {
 	border-radius: 3%;
 	border: 2px solid goldenrod;

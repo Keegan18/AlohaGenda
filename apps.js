@@ -1,23 +1,65 @@
 //class the months
 var calender = document.getElementById("Calendar");
-
 var time = new Date();
 
-var Januaryevents = {
-	first: [1,"Sample Text",{
-		title: "Good Update!",
-		par1: "addedd the overlay",
-		img1: "images/school.jpg"
-	}],												 //three array variable: date, Event Description,Detailed Description
-	second: [2,"Sample Text"],
-	third: 	[3,"Sample Text"],
-	fourth: [4,"Sample Text"],
-	fifth: [5,"ur MoM gay LOL",{
-		title: "reason why ur MOM big Gay",
-		par1: "No U",
-		img1: "images/dab.jpg"
-	}],
-	sixth: [23,"Holla if you here me"]
+var date = time.getDate();
+var month = time.getMonth();
+var year = time.getYear();
+
+var currentMonth = month; //what month is currently getting viewed
+
+var events = {
+	January: {
+		month: 0, //says what month it is
+		first: [1,"Sample Text",{
+			title: "Good Update!",
+			par1: "addedd the overlay",
+			img1: "images/school.jpg"
+		},1],												 //three array variable: date,month,Event Description,Detailed Description
+		second: [2,"Sample Text"],
+		third: 	[3,"Sample Text"],
+		fourth: [4,"Sample Text"],
+		fifth: [5,"ur MoM gay LOL",{
+			title: "reason why ur MOM big Gay",
+			par1: "No U",
+			img1: "images/dab.jpg"
+		}],
+		sixth: [23,"Holla if you here me"]
+	},
+	Febuary: {
+		month: 1
+	},
+	March: {
+		month: 2,
+		NationalPigDay: [1,"Animals rise once more"]
+	},
+	April: {
+		month: 3
+	},
+	June: {
+		month: 4
+	},
+	May: {
+		month: 5
+	},
+	July: {
+		month: 6
+	},
+	August: {
+		month: 7
+	},
+	September: {
+		month: 8
+	},
+	October: {
+		month: 9
+	},
+	November: {
+		month: 10
+	},
+	December: {
+		month: 11
+	}
 }
 
 function Overlay(title,par1,img1,day) {
@@ -64,51 +106,76 @@ function Overlay(title,par1,img1,day) {
 }
 
 function toggle(number) {
-	/*var overlay = document.getElementById("overlay-number-"+number);
-	console.log("overlay-number-"+number); //debug
-	if(overlay.style.display === "none") {
-		overlay.style.display = "block"; //will shorten to var later
-	} else {
-		overlay.style.display = "none"; 
-	} */
+	
 }
 
-function MonthDays(days,events){
-	var date = time.getDate();
-	var month = time.getMonth();
-	for(var i=1; i < days; i++) {  //implement to function later...
+function ClickNext() {
+	var current = document.getElementById("Month-"+currentMonth);
+	current.style.display = "none";
+	
+	currentMonth += 1;
+	document.getElementById("Month-"+currentMonth).style.display = "block";
+}
+
+function ClickPrevious() {
+	var current = document.getElementById("Month-"+currentMonth);
+	current.style.display = "none";
+	
+	currentMonth -= 1;
+	console.log(document.getElementById("Month-"+currentMonth));
+	document.getElementById("Month-"+currentMonth).style.display = "block";
+}
+
+function daysInMonth (month, year) { //gets the days in a month
+    return new Date(year, month, 0).getDate();
+}
+
+function Calendar(events){
+	for(var k=0; k <11; k++) {
+		var addInMonths = document.createElement("DIV");
+		addInMonths.className = "Months";
+		addInMonths.id = "Month-" + k;
 		
-		var addInDays = document.createElement("DIV"); //for days
-		var addInDescript = document.createElement("DIV"); //for the description in the divs
+		if(k !== month) {
+			addInMonths.style.display = "none";
+		}
 		
-		//adds the date
-		addInDays.className = "Days"; //class name is Days
-		addInDays.innerHTML = i;
-		
-		calender.appendChild(addInDays); //adds in the days
-		
-		//adds the Description & DIV for the image
-		addInDescript.className = "Descriptions"; //class name is Descriptions
-		addInDays.appendChild(addInDescript);
-		
-		for(var j in events){ // logic to add in stuff
-			if(events[j][0] === i){
-				addInDescript.innerHTML = events[j][1];
+		for(var i=1; i < daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+			
+			var addInDays = document.createElement("DIV"); //for days
+			var addInDescript = document.createElement("DIV"); //for the description in the divs
+			
+			//adds the date
+			addInDays.className = "Days"; //class name is Days
+			addInDays.innerHTML = i;
+			
+			addInMonths.appendChild(addInDays); //adds in the days
+			
+			//adds the Description & DIV for the image
+			addInDescript.className = "Descriptions"; //class name is Descriptions
+			addInDays.appendChild(addInDescript);
+			
+			/*for(var j in events){ // logic to add in stuff
+					if((events[j][0] === i) && (events.month[j] === k)){
+						addInDescript.innerHTML = events[j][h][1];
+						
+						if(events[h][j][2] !== undefined) {
+							Overlay(events[j][2].title,events[j][2].par1,events[j][2].img1,events[j][0]);
+							
+						}
+					} 
+				} 
+			
+			} */
+			
+			if(i > date && addInDescript.innerHTML !== "") { //makes a list for the upcoming events
+				var listInfo = document.createElement("li");
+				listInfo.innerHTML = addInDescript.innerHTML;
+				document.getElementById("list").appendChild(listInfo);
 				
-				if(events[j][2] !== undefined) {
-					Overlay(events[j][2].title,events[j][2].par1,events[j][2].img1,events[j][0]);
-					console.log("overlay-number-"+events[j][0]);
-					
-				}
 			}
 		}
-		
-		if(i > date && addInDescript.innerHTML !== "") { //makes a list for the upcoming events
-			var listInfo = document.createElement("li");
-			listInfo.innerHTML = addInDescript.innerHTML;
-			document.getElementById("list").appendChild(listInfo);
-			
-		}
+		calender.appendChild(addInMonths);
 	}
 }
 
@@ -117,4 +184,4 @@ function MonthDays(days,events){
 } */
 
 
-MonthDays(32,Januaryevents);
+Calendar(events);
