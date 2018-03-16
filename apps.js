@@ -62,7 +62,7 @@ var events = { //every event is now in the array
 	}
 }
 
-function Overlay(title,par1,img1) {
+function Overlay(title,par1,img1,day) {
 	
 	var moreDescript = document.createElement("DIV"); //overlay divs
 	var infoContainer = document.createElement("DIV"); //where info is held
@@ -98,6 +98,7 @@ function Overlay(title,par1,img1) {
 	
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
 	
+	moreDescript.id = "overlay-" + day;
 	
 	/*.addEventListener("click",function(){
 		if(this.style.display === "none")
@@ -105,6 +106,8 @@ function Overlay(title,par1,img1) {
 		else
 			this.style.display = "none"
 	},true); */
+	
+	document.body.insertBefore(moreDescript, document.body.firstChild);
 }
 
 function ClickNext() { //this makes calender display the next date
@@ -128,11 +131,20 @@ function ClickPrevious() { //vice versa
 	}
 }
 
+function toggle(number){
+	var temp = document.getElementById("overlay-"+number);
+	
+	if(temp.style.display === "none")
+		temp.style.display = "block";
+	else
+		temp.style.display = "none";
+}
+
 function daysInMonth (month, year) { //gets the days in a month
     return new Date(year, month, 0).getDate();
 }
 
-function Calendar(events){ //whole calender logic
+function Calendar(events) { //whole calender logic
 	for(var k=0; k <= 11; k++) {
 		var addInMonths = document.createElement("DIV");
 		addInMonths.className = "Months";
@@ -161,9 +173,10 @@ function Calendar(events){ //whole calender logic
 				for(var h in events[j]){
 					if((events[j].month === k) && (events[j][h][0] === i)) {
 						addInDescript.innerHTML = events[j][h][1];
+						addInDays.addEventListener("click",function(){window.onload = toggle()}) //currently in progress
 						
 						if(events[j][h][2] !== undefined) {
-							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1); //j = keys in the first class, h = keys in the second classes
+							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
 						}
 					}
 				}
@@ -179,6 +192,5 @@ function Calendar(events){ //whole calender logic
 		calender.appendChild(addInMonths);
 	}
 }
-
 
 Calendar(events);
