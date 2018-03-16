@@ -8,7 +8,7 @@ var year = time.getYear();
 
 var currentMonth = month; //what month is currently getting viewed
 
-var events = {
+var events = { //every event is now in the array
 	January: {
 		month: 0, //says what month it is
 		first: [1,"Sample Text",{
@@ -62,7 +62,7 @@ var events = {
 	}
 }
 
-function Overlay(title,par1,img1,day) {
+function Overlay(title,par1,img1) {
 	
 	var moreDescript = document.createElement("DIV"); //overlay divs
 	var infoContainer = document.createElement("DIV"); //where info is held
@@ -97,41 +97,43 @@ function Overlay(title,par1,img1,day) {
 	descriptImage1.src = img1;
 	
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
-	button.onclick = function(){toggle(day)};
-	
-	moreDescript.id = "overlay-" + day; //class Name for overlays
 	
 	
-	document.body.insertBefore(moreDescript,document.body.firstChild);
+	/*.addEventListener("click",function(){
+		if(this.style.display === "none")
+			this.style.display = "display";
+		else
+			this.style.display = "none"
+	},true); */
 }
 
-function toggle(number) {
-	
+function ClickNext() { //this makes calender display the next date
+	if(currentMonth !== 11) {
+		var current = document.getElementById("Month-"+currentMonth);
+		current.style.display = "none";
+		console.log(document.getElementById("Month-"+currentMonth));
+		currentMonth += 1;
+		document.getElementById("Month-"+currentMonth).style.display = "block";
+	}
 }
 
-function ClickNext() {
-	var current = document.getElementById("Month-"+currentMonth);
-	current.style.display = "none";
-	
-	currentMonth += 1;
-	document.getElementById("Month-"+currentMonth).style.display = "block";
-}
-
-function ClickPrevious() {
-	var current = document.getElementById("Month-"+currentMonth);
-	current.style.display = "none";
-	
-	currentMonth -= 1;
-	console.log(document.getElementById("Month-"+currentMonth));
-	document.getElementById("Month-"+currentMonth).style.display = "block";
+function ClickPrevious() { //vice versa 
+	if(currentMonth !== 0) {
+		var current = document.getElementById("Month-"+currentMonth);
+		current.style.display = "none";
+		
+		currentMonth -= 1;
+		console.log(document.getElementById("Month-"+currentMonth));
+		document.getElementById("Month-"+currentMonth).style.display = "block";	
+	}
 }
 
 function daysInMonth (month, year) { //gets the days in a month
     return new Date(year, month, 0).getDate();
 }
 
-function Calendar(events){
-	for(var k=0; k <11; k++) {
+function Calendar(events){ //whole calender logic
+	for(var k=0; k <= 11; k++) {
 		var addInMonths = document.createElement("DIV");
 		addInMonths.className = "Months";
 		addInMonths.id = "Month-" + k;
@@ -155,21 +157,20 @@ function Calendar(events){
 			addInDescript.className = "Descriptions"; //class name is Descriptions
 			addInDays.appendChild(addInDescript);
 			
-			/*for(var j in events){ // logic to add in stuff
-					if((events[j][0] === i) && (events.month[j] === k)){
+			for(var j in events) { //logic to add description to the calender
+				for(var h in events[j]){
+					if((events[j].month === k) && (events[j][h][0] === i)) {
 						addInDescript.innerHTML = events[j][h][1];
 						
-						if(events[h][j][2] !== undefined) {
-							Overlay(events[j][2].title,events[j][2].par1,events[j][2].img1,events[j][0]);
-							
+						if(events[j][h][2] !== undefined) {
+							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1); //j = keys in the first class, h = keys in the second classes
 						}
-					} 
-				} 
+					}
+				}
+			}
 			
-			} */
-			
-			if(i > date && addInDescript.innerHTML !== "") { //makes a list for the upcoming events
-				var listInfo = document.createElement("li");
+			if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
+				var listInfo = document.createElement("li"); 
 				listInfo.innerHTML = addInDescript.innerHTML;
 				document.getElementById("list").appendChild(listInfo);
 				
@@ -178,10 +179,6 @@ function Calendar(events){
 		calender.appendChild(addInMonths);
 	}
 }
-
-/*function Today(number) { //function that helps get today
-	var Date = time.getDate(); likely scrapped
-} */
 
 
 Calendar(events);
