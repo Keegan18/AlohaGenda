@@ -1,22 +1,70 @@
 //class the months
-console.log("Big Gay");
 var calender = document.getElementById("Calendar");
+var time = new Date();
+var date = time.getDate();
+var month = time.getMonth();
+var monthNames = ['January','Febuary','March','April','June','May','June','July','August','October','November','December']
+var year = time.getYear();
 
-var Januaryevents = {
-	first: [1,"Sample Text","images/school.jpg",{
-		title: "Good Update!",
-		par1: "addedd the overlay",
-		img1: "images/school.jpg"
-	}],												 //three array variable: date, Event Description, Image SRC, Detailed Description
-	second: [2,"Sample Text","images/school.jpg"],
-	third: 	[3,"Sample Text","images/school.jpg"],
-	fourth: [4,"Sample Text","images/school.jpg"],
-	fifth: [5,"ur MoM gay LOL","images/dab.jpg",{
-		title: "reason why ur MOM big Gay",
-		par1: "No U",
-		img1: "images/dab.jpg"
-	}]
+
+var currentMonth = month; //what month is currently getting viewed
+
+var events = { //every event is now in the array
+	January: {
+		month: 0, //says what month it is
+		first: [1,"Sample Text",{
+			title: "Good Update!",
+			par1: "addedd the overlay",
+			img1: "images/school.jpg"
+		},1],												 //three array variable: date,month,Event Description,Detailed Description
+		second: [2,"Sample Text"],
+		third: 	[3,"Sample Text"],
+		fourth: [4,"Sample Text"],
+		fifth: [5,"ur MoM gay LOL",{
+			title: "reason why ur MOM big Gay",
+			par1: "No U",
+			img1: "images/dab.jpg"
+		}],
+		sixth: [23,"Holla if you here me"]
+	},
+	Febuary: {
+		month: 1
+	},
+	March: {
+		month: 2,
+		NationalPigDay: [1,"Animals rise once more"],
+		UrMomGayDay: [26,"Jesus will 69"]
+	},
+	April: {
+		month: 3
+	},
+	June: {
+		month: 4
+	},
+	May: {
+		month: 5
+	},
+	July: {
+		month: 6
+	},
+	August: {
+		month: 7
+	},
+	September: {
+		month: 8
+	},
+	October: {
+		month: 9
+	},
+	November: {
+		month: 10
+	},
+	December: {
+		month: 11
+	}
 }
+
+document.getElementById("Month-name").innerHTML = monthNames[currentMonth]; //gets the  current month
 
 function Overlay(title,par1,img1,day) {
 	
@@ -32,126 +80,122 @@ function Overlay(title,par1,img1,day) {
 	
 	var button = document.createElement("button"); //this is temporarily
 	
-	moreDescript.appendChild(infoContainer);
-	infoContainer.appendChild(descriptTitle);
-	infoContainer.appendChild(line);
-	infoContainer.appendChild(flexShow);
-	flexShow.appendChild(descriptPar1);
-	flexShow.appendChild(descriptImage1);
-	flexShow.appendChild(button);
+	moreDescript.appendChild(infoContainer);  //appends cotainer to overlay
+	infoContainer.appendChild(descriptTitle); // appends title to info container
+	infoContainer.appendChild(line); //appends line to info Container
+	infoContainer.appendChild(flexShow); // appends flex box which contains text to container
+	flexShow.appendChild(descriptPar1); //appends paragraph 1 to text container
+	flexShow.appendChild(descriptImage1); //appends image to container
+	flexShow.appendChild(button); //button
 	
-	/* styles of overlay */
-	moreDescript.style.width = "100%";
-	moreDescript.style.height = "100%";
-	moreDescript.style.display = "none";
-	moreDescript.style.position = "fixed";
-	moreDescript.style.backgroundColor = "RGBA(0,0,0,0.5)";
-	moreDescript.style.zIndex = "2";
-	/* ends here */
+	moreDescript.className = "overlay";
+	infoContainer.className = "infoContainer";
+	descriptTitle.className = "containerTitle";
+	line.className = "containerLine";
+	flexShow.className = "containerFlex";
+	descriptPar1.className = "containerPar";
+	descriptImage1.className = "imageContainer";
 	
-	/* style of header */
 	descriptTitle.innerHTML = title;
-	descriptTitle.style.textAlign = "left";
-	descriptTitle.style.padding = "2px";
-	/* ends here */
-	
-	/* styles of info container */
-	infoContainer.style.width = "43em";
-	infoContainer.style.height = "23em";
-	infoContainer.style.margin = "auto";
-	infoContainer.style.backgroundColor = "grey";
-	/* ends here */
-	
-	/* styles of flex */
-	flexShow.style.display = "flex";
-	flexShow.style.flexDirection = "column";
-	flexShow.style.flexWrap = "wrap";
-	flexShow.style.width = "100%";
-	flexShow.style.height = "100%";
-	flexShow.style.overflow = "hidden";
-	/* ends here */
-	
-	/* styles of descriptPar1 */
 	descriptPar1.innerHTML = par1;
-	descriptPar1.style.width = "23em";
-	descriptPar1.style.height = "13em";
-	descriptPar1.style.margin = "0 2% 0 1%";
-	descriptPar1.style.display = "inline-block";
-	descriptPar1.style.border = "1px solid black";
-	descriptPar1.style.textAlign = "left";
-	descriptPar1.style.padding = "7px";
-	/* ends here */
-	
-	/* start of img1 */
 	descriptImage1.src = img1;
-	descriptImage1.style.display = "inline-block";
-	descriptImage1.style.marginRight = "10%";
-	descriptImage1.style.width = "13em";
-	descriptImage1.style.height = "14em";
-	/* ends here */
 	
-	/* start of temp button */
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
-	button.onclick = function(){toggle(day)};
+	button.onclick = function(){
+		moreDescript.style.display = "none";
+	};
 	
-	/*
-	var descriptPar2 = document.createElement("p");
-	var descriptImage2 = document.createElement("img");
-	if(descriptImage2 !== 0) {
-		descriptImage2.src = "images/dab.jpg";
-		descriptImage2.style.display = "inline-block";  fix all this later 
-		descriptImage2.style.width = "13em";
-		descriptImage2.style.height = "14em";
+	moreDescript.id = "overlay-" + day;
+	
+	document.body.insertBefore(moreDescript, document.body.firstChild);
+}
+
+function ClickNext() { //this makes calender display the next date
+	if(currentMonth !== 11) {
+		var current = document.getElementById("Month-"+currentMonth);
+		current.style.display = "none";
+		console.log(document.getElementById("Month-"+currentMonth));
+		currentMonth += 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
+		document.getElementById("Month-"+currentMonth).style.display = "block";
+	}
+}
+
+function ClickPrevious() { //vice versa 
+	if(currentMonth !== 0) {
+		var current = document.getElementById("Month-"+currentMonth);
+		current.style.display = "none";
 		
-		flexShow.appendChild(descriptImage2);
-	} */
-	
-	moreDescript.id = "overlay-" + day; //class Name for overlays
-	
-	
-	document.body.insertBefore(moreDescript,document.body.firstChild);
+		console.log(document.getElementById("Month-"+currentMonth));
+		currentMonth -= 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
+		document.getElementById("Month-"+currentMonth).style.display = "block";	
+	}
 }
 
 function toggle(number) {
-	if(document.getElementById("overlay-"+number).style.display === "none") {
-		document.getElementById("overlay-"+number).style.display = "block"; //will shorten to var later
-	} else {
-		document.getElementById("overlay-"+number).style.display = "none";
-	}
+	var temp = document.getElementById("overlay-"+number);
+	//console.log(temp)
+	if(temp.style.display === "none")
+		temp.style.display = "block";
+	else
+		temp.style.display = "none";
 }
 
-function MonthDays(days,events){
-	for(var i=1; i < days; i++) {  //implement to function later...
+function daysInMonth (month, year) { //gets the days in a month
+    return new Date(year, month, 0).getDate();
+}
+
+
+
+function Calendar(events) { //whole calender logic
+	for(var k=0; k <= 11; k++) {
+		var addInMonths = document.createElement("DIV");
+		addInMonths.className = "Months";
+		addInMonths.id = "Month-" + k;
 		
-		var addInDays = document.createElement("DIV"); //for days
-		var addInDescript = document.createElement("DIV"); //for the description in the divs
+		if(k !== month) {
+			addInMonths.style.display = "none";
+		}
 		
-		//adds the date
-		addInDays.className = "Days"; //class name is Days
-		addInDays.innerHTML = i;
-		calender.appendChild(addInDays); //adds in the days
-		
-		//adds the Description & DIV for the image
-		addInDescript.className = "Descriptions"; //class name is Descriptions
-		addInDays.appendChild(addInDescript);
-		
-		for(var j in events){ // logic to add in stuff
-			if(events[j][0] === i){
-				addInDescript.innerHTML = events[j][1];
-				
-				if(events[j][3] !== undefined) {
-					console.log(events[j])
-					Overlay(events[j][3].title,events[j][3].par1,events[j][3].img1,events[j][0]);
-					addInDescript.addEventListener("click",function(){toggle(events[j][0])},true); //gives update to display overlay
+		for(var i=1; i < daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+			
+			var addInDays = document.createElement("DIV"); //for days
+			var addInDescript = document.createElement("DIV"); //for the description in the divs
+			
+			//adds the date
+			addInDays.className = "Days"; //class name is Days
+			addInDays.innerHTML = i;
+			
+			addInMonths.appendChild(addInDays); //adds in the days
+			
+			//adds the Description & DIV for the image
+			addInDescript.className = "Descriptions"; //class name is Descriptions
+			addInDays.appendChild(addInDescript);
+			
+			for(var j in events) { //logic to add description to the calender
+				for(var h in events[j]){
+					if((events[j].month === k) && (events[j][h][0] === i)) {
+						addInDescript.innerHTML = events[j][h][1];
+						
+						if(events[j][h][2] !== undefined) {
+							console.log(events[j][h][0]);
+							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
+							addInDays.addEventListener("click",() => toggle(1),false); // <---- change the number in the toggle function to test out a other overlay
+						}
+					}
 				}
 			}
 			
-		} 
+			if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
+				var listInfo = document.createElement("li"); 
+				listInfo.innerHTML = addInDescript.innerHTML;
+				document.getElementById("list").appendChild(listInfo);
+			}
+		}
+		calender.appendChild(addInMonths);
 	}
 }
-
-MonthDays(32,Januaryevents);
-
 
 //Search bar stuff//
 function active(){
@@ -170,3 +214,4 @@ function inactive(){
 	}
 }
 
+window.onload = Calendar(events);
