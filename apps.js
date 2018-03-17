@@ -101,7 +101,9 @@ function Overlay(title,par1,img1,day) {
 	descriptImage1.src = img1;
 	
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
-	//button.onclick = toggle(1);
+	button.onclick = function(){
+		moreDescript.style.display = "none";
+	};
 	
 	moreDescript.id = "overlay-" + day;
 	
@@ -192,6 +194,23 @@ function Calendar(events) { //whole calender logic
 			}
 		}
 		calender.appendChild(addInMonths);
+	}
+}
+
+//Search bar stuff//
+function active(){
+	var search = document.getElementById("search");
+	if(search.value == "Search..."){
+		search.value = ""
+		search.placeholder = "Search..."
+	}
+}
+
+function inactive(){
+	var search = document.getElementById("search");
+	if(search.value == ""){
+		search.value = "Search..."
+		search.placeholder = ""
 	}
 }
 
