@@ -1,20 +1,14 @@
-
 .body {
 	background-color: rgb(15, 22, 101);
 }
 
 #h1 {
-	margin-top: -0.75%;
+	background-color: goldenrod;
 	text-align: center;
 	color: rgb(36, 104, 214);
-	width: 100%;
-	border:10px solid goldenrod;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	background-color: goldenrod;
 }
 
-#Upcoming-events {
+#School-Pic {
 	height: 56%;
 	max-width: 18%;
 	width: 20%;
@@ -24,14 +18,17 @@
 	background-color: lightblue;
 }
 
-.buttons {
-	margin: 0 auto;
-	display: table;
-	border: 2px solid goldenrod;
+#School-Pics {
+	height: 56%;
+	max-width: 18%;
+	width: 20%;
+	border:1px solid grey;
+	margin-left: 80.5%;
+	position: absolute;
+	background-color: lightblue;
 }
 
 #Calendar {
-	border-radius: 3%;
 	border: 2px solid goldenrod;
 	height: auto;
 	width: auto;
@@ -56,15 +53,18 @@
 
 .Descriptions {
 	position: relative;
-	margin-top: 10%;		/* Styling could be better */
+	margin-top: 20%;		/* Styling could be better */
 	display: inline-block;
 	text-align: center;
 }
 
 .DescriptionImages {
 	width: 68%;
-	height: 50%;
-	padding-right: 20%;
+	height: 68%;
+}
+
+#overlay-test {
+	margin-top: 10%;
 }
 
 #Weekly {
@@ -145,6 +145,19 @@
 	display: inline-block;
 	margin: 0 0 0 10%;
 }
+
+/*end */
+
+#Upcoming-events {
+	height: 56%;
+	max-width: 18%;
+	width: 20%;
+	border:1px solid grey;
+	position: absolute;
+	margin-left: -0.5%;
+	background-color: lightblue;
+}
+
 /* I need help putting these in a good place! */
 #search {
 	background-color: white;
