@@ -1,10 +1,11 @@
 //class the months
 var calender = document.getElementById("Calendar");
 var time = new Date();
-
 var date = time.getDate();
 var month = time.getMonth();
+var monthNames = ['January','Febuary','March','April','June','May','June','July','August','October','November','December']
 var year = time.getYear();
+
 
 var currentMonth = month; //what month is currently getting viewed
 
@@ -63,6 +64,8 @@ var events = { //every event is now in the array
 	}
 }
 
+document.getElementById("Month-name").innerHTML = monthNames[currentMonth]; //gets the  current month
+
 function Overlay(title,par1,img1,day) {
 	
 	var moreDescript = document.createElement("DIV"); //overlay divs
@@ -98,15 +101,9 @@ function Overlay(title,par1,img1,day) {
 	descriptImage1.src = img1;
 	
 	button.innerHTML = "THIS IS TEMP FOR STABILITY";
+	//button.onclick = toggle(1);
 	
 	moreDescript.id = "overlay-" + day;
-	
-	/*.addEventListener("click",function(){
-		if(this.style.display === "none")
-			this.style.display = "display";
-		else
-			this.style.display = "none"
-	},true); */
 	
 	document.body.insertBefore(moreDescript, document.body.firstChild);
 }
@@ -117,6 +114,7 @@ function ClickNext() { //this makes calender display the next date
 		current.style.display = "none";
 		console.log(document.getElementById("Month-"+currentMonth));
 		currentMonth += 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
 		document.getElementById("Month-"+currentMonth).style.display = "block";
 	}
 }
@@ -126,24 +124,27 @@ function ClickPrevious() { //vice versa
 		var current = document.getElementById("Month-"+currentMonth);
 		current.style.display = "none";
 		
-		currentMonth -= 1;
 		console.log(document.getElementById("Month-"+currentMonth));
+		currentMonth -= 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
 		document.getElementById("Month-"+currentMonth).style.display = "block";	
 	}
 }
 
 function toggle(number) {
-		var temp = document.getElementById("overlay-"+number);
-		//console.log(temp)
-		if(temp.style.display === "none")
-			temp.style.display = "block";
-		else
-			temp.style.display = "none";
+	var temp = document.getElementById("overlay-"+number);
+	//console.log(temp)
+	if(temp.style.display === "none")
+		temp.style.display = "block";
+	else
+		temp.style.display = "none";
 }
 
 function daysInMonth (month, year) { //gets the days in a month
     return new Date(year, month, 0).getDate();
 }
+
+
 
 function Calendar(events) { //whole calender logic
 	for(var k=0; k <= 11; k++) {
@@ -177,10 +178,8 @@ function Calendar(events) { //whole calender logic
 						
 						if(events[j][h][2] !== undefined) {
 							console.log(events[j][h][0]);
-							addInDays.addEventListener("click",function(){
-								
-							}); //currently in progress
 							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
+							addInDays.addEventListener("click",() => toggle(1),false);
 						}
 					}
 				}
@@ -190,11 +189,10 @@ function Calendar(events) { //whole calender logic
 				var listInfo = document.createElement("li"); 
 				listInfo.innerHTML = addInDescript.innerHTML;
 				document.getElementById("list").appendChild(listInfo);
-				
 			}
 		}
 		calender.appendChild(addInMonths);
 	}
 }
 
-Calendar(events);
+window.onload = Calendar(events);

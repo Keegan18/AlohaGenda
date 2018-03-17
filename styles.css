@@ -91,6 +91,10 @@
 	flex-direction: row;
 }
 
+#Month-name {
+	text-align:center;
+}
+
 /*everything for the overlay starts here*/
 
 .overlay {
