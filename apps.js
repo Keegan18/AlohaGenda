@@ -181,7 +181,7 @@ function Calendar(events) { //whole calender logic
 						if(events[j][h][2] !== undefined) {
 							console.log(events[j][h][0]);
 							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
-							addInDays.addEventListener("click",() => toggle(1),false);
+							addInDays.addEventListener("click",() => toggle(1),false); // <---- change the number in the toggle function to test out a other overlay
 						}
 					}
 				}
