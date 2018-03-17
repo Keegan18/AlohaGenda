@@ -31,7 +31,8 @@ var events = { //every event is now in the array
 	},
 	March: {
 		month: 2,
-		NationalPigDay: [1,"Animals rise once more"]
+		NationalPigDay: [1,"Animals rise once more"],
+		UrMomGayDay: [26,"Jesus will 69"]
 	},
 	April: {
 		month: 3
@@ -131,13 +132,13 @@ function ClickPrevious() { //vice versa
 	}
 }
 
-function toggle(number){
-	var temp = document.getElementById("overlay-"+number);
-	
-	if(temp.style.display === "none")
-		temp.style.display = "block";
-	else
-		temp.style.display = "none";
+function toggle(number) {
+		var temp = document.getElementById("overlay-"+number);
+		//console.log(temp)
+		if(temp.style.display === "none")
+			temp.style.display = "block";
+		else
+			temp.style.display = "none";
 }
 
 function daysInMonth (month, year) { //gets the days in a month
@@ -173,9 +174,12 @@ function Calendar(events) { //whole calender logic
 				for(var h in events[j]){
 					if((events[j].month === k) && (events[j][h][0] === i)) {
 						addInDescript.innerHTML = events[j][h][1];
-						addInDays.addEventListener("click",function(){window.onload = toggle()}) //currently in progress
 						
 						if(events[j][h][2] !== undefined) {
+							console.log(events[j][h][0]);
+							addInDays.addEventListener("click",function(){
+								
+							}); //currently in progress
 							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
 						}
 					}
