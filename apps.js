@@ -66,6 +66,31 @@ var events = { //every event is now in the array
 
 document.getElementById("Month-name").innerHTML = monthNames[currentMonth]; //gets the  current month
 
+function DateOption(option) {
+	Days = daysInMonth(option.value,year);
+	
+	addInDays = document.getElementById("Day-selection");
+	
+	while(addInDays.firstChild) {
+		addInDays.removeChild(addInDays.firstChild);
+	}
+	
+	for(var i=1; i < Days; i++) {
+		var date = document.createElement("option");
+		date.value = i;
+		date.innerHTML = i;
+		addInDays.appendChild(date);
+	}
+}
+
+function EventAdd() {
+	
+}
+
+function MoreIndex() {			//empty functions for the add function, will change sooner
+	
+}
+
 function Overlay(title,par1,img1,day) {
 	
 	var moreDescript = document.createElement("DIV"); //overlay divs

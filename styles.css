@@ -73,8 +73,8 @@
 }
 
 .infoContainer {
-	width: 43em;
-	height: 23em;
+	width: 55em;
+	height: 36em;
 	margin: auto;
 	background-color: grey;
 }
@@ -115,6 +115,26 @@
 }
 
 /*end */
+
+/* everything for Add feature starts here */
+#Add-in-Overlay { /* change to class overlay function later */
+	width: 110%;
+	height: 100%;
+	background-color: RGBA(0,0,0,0.5);
+	z-index: 2;
+	display: none;
+	position: fixed;
+}
+
+#Add-in-container {
+	width: 55em;
+	height: 36em;
+	margin: auto;
+	background-color: grey;
+}
+
+
+/* end */
 
 #Upcoming-events {
 	height: 70%;
