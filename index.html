@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
-	<div id= "Add-in-Overlay">
+	<div id= "Add-in-Overlay"> <!-- Overlay for add function -->
 		<div class="infoContainer">
 			<h3> Add in a event </h3>
 			<hr />
@@ -33,16 +33,24 @@
 				<input class="Header"> </input>
 				<input class="Paragraph"> </input>
 				<button id="more" onclick="MoreIndex()"> Add More </button>
-				<button id="Add-button" onclick="AddEvent()"> Add </button>
+				<button id="Add-button" onclick="EventAdd()"> Add </button>
+				<button onclick="ToggleAdd()"> close </button>
 			</div>
 		</div>
 	</div>
 	
-	<form action="">
+
+	<div id="tb">
+		<button id="add" onclick="ToggleAdd()"> Add </button> 
+
+		<div id="Month-name">	</div>
+
+		<form action="">
 			
-	   	<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active();" ="" onblur="inactive();"/><input type="submit" id="submit" value="Submit"/>
+	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active();" ="" onblur="inactive();"/><input type="submit" id="submit" value="Submit"/>
 		
-	</form>
+		</form>
+	</div>
 	
 	<div id="h1">
 		<h1 id="aloha"> 
@@ -51,7 +59,6 @@
 	</div>
 
 
-	<div id="Month-name">	</div>
 
 	<div id="Upcoming-events"> 
 		<p>Upcoming </p>

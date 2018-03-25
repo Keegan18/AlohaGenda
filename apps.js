@@ -83,6 +83,18 @@ function DateOption(option) {
 	}
 }
 
+/* everything for the ADD function */
+var overlay = document.getElementById("Add-in-Overlay").style.display;
+
+function ToggleAdd() {
+	console.log(overlay);
+	if(overlay === "none") {
+		overlay = "block";
+	} else {
+		overlay = "none";
+	}
+}
+
 function EventAdd() {
 	
 }
@@ -90,6 +102,8 @@ function EventAdd() {
 function MoreIndex() {			//empty functions for the add function, will change sooner
 	
 }
+
+/* end */
 
 function Overlay(title,par1,img1,day) {
 	
@@ -158,7 +172,7 @@ function ClickPrevious() { //vice versa
 	}
 }
 
-function toggle(number) {
+function toggleEvents(number) {
 	var temp = document.getElementById("overlay-"+number);
 	//console.log(temp)
 	if(temp.style.display === "none")
@@ -206,7 +220,7 @@ function Calendar(events) { //whole calender logic
 						if(events[j][h][2] !== undefined) {
 							console.log(events[j][h][0]);
 							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
-							addInDays.addEventListener("click",() => toggle(1),false); // <---- change the number in the toggle function to test out a other overlay
+							addInDays.addEventListener("click",() => toggleEvents(1),false); // <---- change the number in the toggle function to test out a other overlay
 						}
 					}
 				}
