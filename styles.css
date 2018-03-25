@@ -3,7 +3,7 @@
 }
 
 #h1 {
-	margin-top: -5%;
+	margin-top: -2%;
 	margin-bottom: -3%;
 	margin-left: 2%;
 	width: 18%;
@@ -16,14 +16,21 @@
 
 /* everything for the top bar starts here */
 #tb {
-	width: 70%;
-	margin-left: 25%;
-	border: 1px solid black;
-	display: flex;
+	width: 61.3%;
+	margin-left: 28.3%;
+	border: 3px solid black;
+	display: inline-flex;
+	flex-direction: row;
+	border-left: none;
+	border-right: none;
+	border-top: none;
 }
 
 #tb > * {
 	border: 1px solid black;
+	border-left: none;
+	border-right: none;
+	border-top: none;
 }
 
 #add {
@@ -32,6 +39,8 @@
 	display:inline-block;
 	color: goldenrod;
 	background-color:rgb(15, 22, 101);
+	padding-left: 5%;
+	padding-right: 10%;
 }
 
 #Month-name {
@@ -39,13 +48,18 @@
 	display: inline-block;
 	text-align:center;
 	color: goldenrod;
+	padding-left: 10%;
+	padding-right: 9%;
+	border:3px solid black;
+	border-top: none;
+	border-bottom: none;
 }
 
 /* I need help putting these in a good place! */
 #search {
 	position: relative;
-	display: inline-block;
-	width: 45%;
+	display: inline-flex;
+	width: 15%;
 	background-color: white;
 	color: black;
 	border: 1px solid black;
@@ -58,8 +72,8 @@
 }
 
 #submit {
-	width: 22%;
-	display: inline-block;
+	width: 7%;
+	display: inline-flex;
 	background-color: #42f4d7;
 	color: black;
 	border: 1px solid black;
