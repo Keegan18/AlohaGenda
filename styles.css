@@ -278,3 +278,30 @@
 	flex-direction: row;
 }
 
+#foot {
+	background-color: goldenrod;
+	height: 10%;
+	width:70%;
+	border:2px solid black;
+	position: relative;
+	margin-top: 10%;
+	margin-left: 25%;
+}
+
+#phone{
+	padding-left: 10%;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+#address {
+	padding-left: 10%;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+#waipahu {
+	display: inline-flex;
+	flex-direction: row;
+	padding-left: 13.5%;
+}
