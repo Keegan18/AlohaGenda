@@ -2,16 +2,18 @@
 var calender = document.getElementById("Calendar");
 var time = new Date();
 var date = time.getDate();
-var month = time.getMonth();
-var monthNames = ['January','Febuary','March','April','June','May','June','July','August','October','November','December']
-var year = time.getYear();
-
+var month = time.getMonth()+1; //+1 since the daysInMonth function does not count 0 as a month
+var monthNames = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
+var year = time.getFullYear();
+console.log(date + "/" + month + "/" + date); //helps to know the date in the console
 
 var currentMonth = month; //what month is currently getting viewed
+console.log(currentMonth);
+
 
 var events = { //every event is now in the array
 	January: {
-		month: 0, //says what month it is
+		month: 1, //says what month it is
 		first: [1,"Sample Text",{
 			title: "Good Update!",
 			par1: "addedd the overlay",
@@ -28,43 +30,44 @@ var events = { //every event is now in the array
 		sixth: [23,"Holla if you here me"]
 	},
 	Febuary: {
-		month: 1
+		month: 2
 	},
 	March: {
-		month: 2,
+		month: 3,
 		NationalPigDay: [1,"Animals rise once more"],
-		UrMomGayDay: [26,"Jesus will 69"]
+		UrMomGayDay: [26,"Jesus will 88"],
+		OOF: [27,"THis Should Work"]
 	},
 	April: {
-		month: 3
-	},
-	June: {
 		month: 4
 	},
-	May: {
+	June: {
 		month: 5
 	},
-	July: {
+	May: {
 		month: 6
 	},
-	August: {
+	July: {
 		month: 7
 	},
-	September: {
+	August: {
 		month: 8
 	},
-	October: {
+	September: {
 		month: 9
 	},
-	November: {
+	October: {
 		month: 10
 	},
-	December: {
+	November: {
 		month: 11
+	},
+	December: {
+		month: 12
 	}
 }
 
-document.getElementById("Month-name").innerHTML = monthNames[currentMonth]; //gets the  current month
+document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1]; //gets the  current month
 
 function DateOption(option) {
 	Days = daysInMonth(option.value,year);
@@ -84,15 +87,14 @@ function DateOption(option) {
 }
 
 /* everything for the ADD function */
-var overlay = document.getElementById("Add-in-Overlay").style.display;
+var overlay = document.getElementById("Add-in-Overlay");
 
 function ToggleAdd() {
-	console.log(overlay);
-	if(overlay === "none") {
-		overlay = "block";
-	} else {
-		overlay = "none";
-	}
+	if(overlay.style.display === "block")
+		overlay.style.display = "none";
+	else
+		overlay.style.display = "block";
+	
 }
 
 function EventAdd() {
@@ -150,24 +152,24 @@ function Overlay(title,par1,img1,day) {
 }
 
 function ClickNext() { //this makes calender display the next date
-	if(currentMonth !== 11) {
+	if(currentMonth !== 12) {
 		var current = document.getElementById("Month-"+currentMonth);
 		current.style.display = "none";
 		console.log(document.getElementById("Month-"+currentMonth));
 		currentMonth += 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
 		document.getElementById("Month-"+currentMonth).style.display = "block";
 	}
 }
 
 function ClickPrevious() { //vice versa 
-	if(currentMonth !== 0) {
+	if(currentMonth !== 1) {
 		var current = document.getElementById("Month-"+currentMonth);
 		current.style.display = "none";
 		
 		console.log(document.getElementById("Month-"+currentMonth));
 		currentMonth -= 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth];
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
 		document.getElementById("Month-"+currentMonth).style.display = "block";	
 	}
 }
@@ -188,16 +190,17 @@ function daysInMonth (month, year) { //gets the days in a month
 
 
 function Calendar(events) { //whole calender logic
-	for(var k=0; k <= 11; k++) {
+	for(var k=1; k <= 12; k++) {
 		var addInMonths = document.createElement("DIV");
 		addInMonths.className = "Months";
 		addInMonths.id = "Month-" + k;
-		
+		//console.log(k);
+		//console.log(daysInMonth(k,2018));
 		if(k !== month) {
 			addInMonths.style.display = "none";
 		}
 		
-		for(var i=1; i < daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+		for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
 			
 			var addInDays = document.createElement("DIV"); //for days
 			var addInDescript = document.createElement("DIV"); //for the description in the divs
@@ -220,7 +223,7 @@ function Calendar(events) { //whole calender logic
 						if(events[j][h][2] !== undefined) {
 							console.log(events[j][h][0]);
 							Overlay(events[j][h][2].title,events[j][h][2].par1,events[j][h][2].img1,events[j][h][0]); //j = keys in the first class, h = keys in the second classes
-							addInDays.addEventListener("click",() => toggleEvents(1),false); // <---- change the number in the toggle function to test out a other overlay
+							addInDays.addEventListener("click",() => toggleEvents(events[j][h][0]),false); // <---- change the number in the toggle function to test out a other overlay
 						}
 					}
 				}
