@@ -4,6 +4,7 @@
 
 #h1 {
 	margin-top: -2%;
+	margin-bottom: -3%;
 	margin-left: 2%;
 	width: 18%;
 	background-color: goldenrod;
@@ -12,6 +13,93 @@
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
+
+/* everything for the top bar starts here */
+#tb {
+	width: 54%;
+	margin-left: 32%;
+	border: 3px solid black;
+	display: inline-flex;
+	flex-direction: row;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+
+#tb > * {
+	border: 1px solid black;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	padding-left: 2%;
+}
+
+#add {
+	border: none;
+	font-size: 60px;
+	display:inline-block;
+	color: goldenrod;
+	background-color:rgb(15, 22, 101);
+	padding-left: 5%;
+	padding-right: 10%;
+}
+
+#Month-name {
+	font-size: 60px;
+	display: inline-block;
+	text-align:center;
+	color: goldenrod;
+	padding-left: 10%;
+	padding-right: 9%;
+	border:3px solid black;
+	border-top: none;
+	border-bottom: none;
+}
+
+/* I need help putting these in a good place! */
+#search {
+	
+	position: relative;
+	display: inline-flex;
+	width: 70%;
+	height: 50%;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-right: none;
+	font-size: 1em;
+	outline: none;
+	padding: 0.4%;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius:10px;
+	margin-top: 7%;
+}
+
+#submit {
+	width: 24%;
+	height: 55%;
+	display: inline-flex;
+	background-color: #42f4d7;
+	color: black;
+	border: 1px solid black;
+	font-size: 1em;
+	outline: none;
+	cursor: pointer;
+	padding: 0.4%;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius:10px;
+}
+
+/* Changes the color of the button when hovered over it, feel free to change the color. */
+#submit:hover {
+	background-color: tomato;
+}
+
+/* Dem "go to next month." buttons */
+
+/*end*/
+
 
 #Calendar {
 	border: 2px solid goldenrod;
@@ -52,15 +140,6 @@
 	margin-top: 10%;
 }
 
-
-#Month-name {
-	font-size: 60px;
-	text-align:center;
-	color: goldenrod;
-	margin-left: 15%;
-	margin-top: -7%;
-}
-
 /*everything for the overlay starts here*/
 
 .overlay {
@@ -73,8 +152,8 @@
 }
 
 .infoContainer {
-	width: 43em;
-	height: 23em;
+	width: 55em;
+	height: 36em;
 	margin: auto;
 	background-color: grey;
 }
@@ -116,6 +195,26 @@
 
 /*end */
 
+/* everything for Add feature starts here */
+#Add-in-Overlay { /* change to class overlay function later */
+	width: 110%;
+	height: 100%;
+	background-color: RGBA(0,0,0,0.5);
+	z-index: 2;
+	display: none;
+	position: fixed;
+}
+
+#Add-in-container {
+	width: 55em;
+	height: 36em;
+	margin: auto;
+	background-color: grey;
+}
+
+
+/* end */
+
 #Upcoming-events {
 	height: 70%;
 	max-width: 40%;
@@ -127,44 +226,6 @@
 	background-color: lightblue;
 	position: absolute;
 }
-
-/* I need help putting these in a good place! */
-#search {
-	height: 2%;
-	width: 12%;
-	background-color: white;
-	color: black;
-	border: 1px solid black;
-	border-right: none;
-	font-size: 1em;
-	outline: none;
-	padding: 0.4%;
-	border-bottom-left-radius: 10px;
-	border-top-left-radius:10px;
-	margin-left: 75%;
-	margin-top: 3%;
-}
-
-#submit {
-	height: 2%;
-	width: 4%;
-	background-color: #42f4d7;
-	color: black;
-	border: 1px solid black;
-	font-size: 1em;
-	outline: none;
-	cursor: pointer;
-	padding: 0.4%;
-	border-bottom-right-radius: 10px;
-	border-top-right-radius:10px;
-}
-
-/* Changes the color of the button when hovered over it, feel free to change the color. */
-#submit:hover {
-	background-color: tomato;
-}
-
-/* Dem "go to next month." buttons */
 
 
 #LB {
@@ -196,8 +257,8 @@
 	height: 15%;
 	width: 69%;
 	margin-left: 29%;
-	margin-top: 2%;
 	margin-bottom: 1%;
+	margin-top: 0%;
 	position: relative;
 }
 
@@ -217,3 +278,30 @@
 	flex-direction: row;
 }
 
+#foot {
+	background-color: goldenrod;
+	height: 10%;
+	width:70%;
+	border:2px solid black;
+	position: relative;
+	margin-top: 10%;
+	margin-left: 25%;
+}
+
+#phone{
+	padding-left: 10%;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+#address {
+	padding-left: 10%;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+#waipahu {
+	display: inline-flex;
+	flex-direction: row;
+	padding-left: 13.5%;
+}
