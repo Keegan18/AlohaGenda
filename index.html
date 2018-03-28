@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>AlohaGenda</title>
 	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body class="body">
 	<div id= "Add-in-Overlay"> <!-- Overlay for add function -->
@@ -11,27 +12,29 @@
 			<h3> Add in a event </h3>
 			<hr />
 			
-			<div class="Add-in-holder">
+			<div id="Add-in-holder">
 			
 				<select id="Month-selection" onclick="DateOption(this)"> <!-- Selection of Dates -->
-					<option value=0> January </option>
-					<option value=1> February </option>
-					<option value=2> March </option>
-					<option value=3> April </option>
-					<option value=4> June </option>
-					<option value=5> May </option>
-					<option value=6> July </option>
-					<option value=7> August </option>
-					<option value=8> September </option>
-					<option value=9> October </option>
-					<option value=10> November </option>
-					<option value=11> December </option>
+					<option value=1> January </option>
+					<option value=2> February </option>
+					<option value=3> March </option>
+					<option value=4> April </option>
+					<option value=5> June </option>
+					<option value=6> May </option>
+					<option value=7> July </option>
+					<option value=8> August </option>
+					<option value=9> September </option>
+					<option value=10> October </option>
+					<option value=11> November </option>
+					<option value=12> December </option>
 				</select>
 				
 				<select id="Day-selection"> </select>
-				<input class="Title"> </input>
-				<input class="Header"> </input>
-				<input class="Paragraph"> </input>
+				
+				<input id="Quick-descript" placeholder="Quick Description"> </input>
+				<input id="Title" placeholder="Title"> </input>
+				<input class="Header" placeholder="Header"> </input>
+				<input class="Paragraph" placeholder="Paragraph"> </input>
 				<button id="more" onclick="MoreIndex()"> Add More </button>
 				<button id="Add-button" onclick="EventAdd()"> Add </button>
 				<button onclick="ToggleAdd()"> close </button>
@@ -47,7 +50,7 @@
 
 		<form action="">
 			
-	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active();" ="" onblur="inactive();"/><input type="submit" id="submit" value="Submit"/>
+	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input type="submit" id="submit" value="Submit"/>
 		
 		</form>
 	</div>
