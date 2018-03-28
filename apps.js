@@ -290,12 +290,12 @@ function Calendar(events) { //whole calender logic
 						if(events[j][h][2] !== undefined) {
 							var placeholder = events[j][h][0];
 							overlayStuff.push(placeholder)
-							Overlay(events[j][h][2],events[j][h][0],i); //j = keys in the first class, h = keys in the second classes
+							Overlay(events[j][h][2],events[j][h][0],events[j].month); //j = keys in the first class, h = keys in the second classes
 
 							console.log(addInDays.innerHTML.slice(0,1));
 							var placeholder = determineEvent(addInDays);
 
-							addEvent(addInDays, overlayStuff, i);
+							addEvent(addInDays, overlayStuff, events[j].month);
 					}
 				}
 			}
