@@ -1,8 +1,4 @@
 //class the months
-<<<<<<< HEAD
-console.log("Big Gay");
-=======
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 var calender = document.getElementById("Calendar");
 var time = new Date();
 var date = time.getDate();
@@ -260,8 +256,4 @@ function inactive(){
 	}
 }
 
-<<<<<<< HEAD
-MonthDays(31,Januaryevents);
-=======
 window.onload = Calendar(events);
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80

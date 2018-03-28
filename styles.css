@@ -7,33 +7,6 @@
 }
 
 #h1 {
-<<<<<<< HEAD
-	text-align: center;
-	color: rgb(36, 104, 214);
-	background-color: goldenrod;
-}
-
-#School-Pic {
-	height: 56%;
-	max-width: 18%;
-	width: 20%;
-	border:1px solid grey;
-	position: absolute;
-	margin-left: -0.5%;
-	background-color: lightblue;
-}
-
-#School-Pics {
-	height: 56%;
-	max-width: 18%;
-	width: 20%;
-	border:1px solid grey;
-	margin-left: 80.5%;
-	position: absolute;
-	background-color: lightblue;
-}
-
-=======
 	margin-top: -2%;
 	margin-bottom: -3%;
 	margin-left: 2%;
@@ -131,19 +104,13 @@
 /*end*/
 
 
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 #Calendar {
 	border: 2px solid goldenrod;
 	height: auto;
 	width: auto;
-<<<<<<< HEAD
-	max-width: 60%;
-	margin-left: 19.5%;
-=======
 	max-width: 72%;
 	max-height: 90%;
 	margin-left: 24%;
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 	position: relative;
 	background-color: rgb(15, 22, 101);
 }
@@ -170,8 +137,6 @@
 .DescriptionImages {
 	width: 68%;
 	height: 68%;
-<<<<<<< HEAD
-=======
 }
 
 #overlay-test {
@@ -276,7 +241,6 @@
 	border-radius: 100%;
 	background-color: goldenrod;
 	position: absolute;
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 }
 
 #RB {
@@ -293,20 +257,11 @@
 
 /* WEEKLY CLANEDER STUFF! */
 #Weekly {
-<<<<<<< HEAD
-	border: 2px solid goldenrod;
-	height: 152px;
-	width: 90%;
-	text-align: center;
-	margin-left: 5%;
-	margin-top: 10%;
-=======
 	height: 12%;
 	width: 82%;
 	margin-left: 24.7%;
 	margin-bottom: 1%;
 	margin-top: 0%;
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 	position: relative;
 	z-index: 1;
 }
@@ -362,9 +317,5 @@
 #waipahu {
 	display: inline-flex;
 	flex-direction: row;
-<<<<<<< HEAD
-}
-=======
 	padding-left: 13.5%;
 }
->>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
