@@ -4,21 +4,43 @@
 	<meta charset="UTF-8">
 	<title>AlohaGenda</title>
 	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body class="body">
-	
-	<h1 id="h1">AlohaGenda</h1>
-	
-	<div id="School-Pic"> 
-		Side Images, MIGHT BE CHANGED LATER ON
-		<img src=" "> 
+	<div id= "Add-in-Overlay"> <!-- Overlay for add function -->
+		<div class="infoContainer">
+			<h3> Add in a event </h3>
+			<hr />
+			
+			<div class="Add-in-holder">
+			
+				<select id="Month-selection" onclick="DateOption(this)"> <!-- Selection of Dates -->
+					<option value=0> January </option>
+					<option value=1> February </option>
+					<option value=2> March </option>
+					<option value=3> April </option>
+					<option value=4> June </option>
+					<option value=5> May </option>
+					<option value=6> July </option>
+					<option value=7> August </option>
+					<option value=8> September </option>
+					<option value=9> October </option>
+					<option value=10> November </option>
+					<option value=11> December </option>
+				</select>
+				
+				<select id="Day-selection"> </select>
+				<input class="Title"> </input>
+				<input class="Header"> </input>
+				<input class="Paragraph"> </input>
+				<button id="more" onclick="MoreIndex()"> Add More </button>
+				<button id="Add-button" onclick="EventAdd()"> Add </button>
+				<button onclick="ToggleAdd()"> close </button>
+			</div>
+		</div>
 	</div>
 	
-	<div id="School-Pics"> 
-		Side Images. MIGHT BE CHANGED LATER ON!
-		<img src=" "> 
-	</div>
-	
+<<<<<<< HEAD
 	<div id="Calendar"> 
 	
 	</div>
@@ -33,6 +55,70 @@
 		<div class="weeks"> Friday </div>
 		<div class="weeks"> Saturday </div>
 
+=======
+
+	<div id="tb">
+		<button id="add" onclick="ToggleAdd()"> Add </button> 
+
+		<div id="Month-name">	</div>
+
+		<form action="">
+			
+	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active();" ="" onblur="inactive();"/><input type="submit" id="submit" value="Submit"/>
+		
+		</form>
+	</div>
+	
+	<div id="h1">
+		<h1 id="aloha"> 
+			Aloha Genda	
+		</h1>
+	</div>
+
+
+
+	<div id="Upcoming-events"> 
+		<p>Upcoming </p>
+		<hr />
+		<div id="Upcoming-list">
+			<ul id="list">
+			</ul>
+		</div>
+	</div>
+
+	<div id="Weekly">
+		
+		<div class="weeks" id="Sunday"> Sunday </div>
+		<div class="weeks" id="Monday"> Monday </div>
+		<div class="weeks" id="Tuesday"> Tuesday </div>
+		<div class="weeks" id="Wednesday"> Wednesday </div>
+		<div class="weeks" id="Thursday"> Thursday </div>
+		<div class="weeks" id="Friday"> Friday </div>
+		<div class="weeks" id="Saturday"> Saturday </div>
+
+	</div>
+		
+	
+	
+	<div id="Calendar">
+	
+	</div>
+	
+	<div id="buttons">
+
+		<button id="RB" onclick="ClickNext()"> > </button>
+			 
+		 <button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
+		
+	</div>
+
+	<div id="foot">
+		<a  id="waipahu" href="http://www.edline.net/pages/waipahu_high_school"> <strong> Waipahu High School </strong> </a>
+
+		<p id="phone"> <strong>Phone:</strong>(808)307-9555 </p>
+
+		<p id="address"> <strong>Address:</strong>94-1211 Farrington Highway, Waipahu, HI 96797 </p>
+>>>>>>> 2c0554e1eeda9dfe8e3fd15ceb0d9c2de6fe3e80
 	</div>
 
 	<script src="apps.js"></script>
