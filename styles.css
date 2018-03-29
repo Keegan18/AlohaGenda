@@ -3,10 +3,7 @@
 }
 
 .body {
-	background-color: rgb(15, 22, 101);
-}
-* {
-	font-family: 'Ubuntu', sans-serif;
+	background-color: rgb(244, 245, 247);
 }
 
 #h1 {
@@ -230,7 +227,7 @@ width: 100%;
 	position: absolute;
 	margin-left: 0.5%;
 	margin-top: 4%;
-	background-color: lightblue;
+	background-color: rgb(201, 205, 211);
 	position: absolute;
 }
 
