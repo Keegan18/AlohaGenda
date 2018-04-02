@@ -115,7 +115,7 @@ function EventAdd() {
 	var holder = document.getElementById("Add-in-holder").getElementsByTagName("input"); //try to be more efficient, but, geets the values of input and puts them 
 	for(var i=0; i < holder.length; i++) {
 		var par = "par" + i;
-		userClass.par = holder[i].value;
+		userClass[par] = holder[i].value;
 	}
 	userArray.push(userClass);
 	console.log(userArray);
@@ -258,59 +258,64 @@ function addEvent(day, arr,month) {
 
 var counter = 0;
 function Calendar(events) { //whole calender logic
-	for(var k=1; k <= 12; k++) {
-		var addInMonths = document.createElement("DIV");
-		addInMonths.className = "Months";
-		addInMonths.id = "Month-" + k;
-		//console.log(k);
-		//console.log(daysInMonth(k,2018));
-		if(k !== month) {
-			addInMonths.style.display = "none";
-		}
-		
-		for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+	/*for(var y=0; y < 6; y++) {
+		var addInYears = document.createElement("DIV");
+		addInYears.className = "Years";
+		addInYears.id = "Year-" + y;
+		add */
+		for(var k=1; k <= 12; k++) {
+			var addInMonths = document.createElement("DIV");
+			addInMonths.className = "Months";
+			addInMonths.id = "Month-" + k;
+			//console.log(k);
+			//console.log(daysInMonth(k,2018));
+			if(k !== month) {
+				addInMonths.style.display = "none";
+			}
 			
-			var addInDays = document.createElement("DIV"); //for days
-			var addInDescript = document.createElement("DIV"); //for the description in the divs
-			
-			//adds the date
-			addInDays.className = "Days"; //class name is Days
-			addInDays.innerHTML = i;
-			
-			addInMonths.appendChild(addInDays); //adds in the days
-			
-			//adds the Description & DIV for the image
-			addInDescript.className = "Descriptions"; //class name is Descriptions
-			addInDays.appendChild(addInDescript);
-			
-			for(var j in events) { //logic to add description to the calender
-				for(var h in events[j]){
-					if((events[j].month === k) && (events[j][h][0] === i)) {
-						addInDescript.innerHTML = events[j][h][1];
-						if(events[j][h][2] !== undefined) {
-							var placeholder = events[j][h][0];
-							overlayStuff.push(placeholder)
-							Overlay(events[j][h][2],events[j][h][0],events[j].month); //j = keys in the first class, h = keys in the second classes
+			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				
+				var addInDays = document.createElement("DIV"); //for days
+				var addInDescript = document.createElement("DIV"); //for the description in the divs
+				
+				//adds the date
+				addInDays.className = "Days"; //class name is Days
+				addInDays.innerHTML = i;
+				
+				addInMonths.appendChild(addInDays); //adds in the days
+				
+				//adds the Description & DIV for the image
+				addInDescript.className = "Descriptions"; //class name is Descriptions
+				addInDays.appendChild(addInDescript);
+				
+				for(var j in events) { //logic to add description to the calender
+					for(var h in events[j]){
+						if((events[j].month === k) && (events[j][h][0] === i)) {
+							addInDescript.innerHTML = events[j][h][1];
+							if(events[j][h][2] !== undefined) {
+								var placeholder = events[j][h][0];
+								overlayStuff.push(placeholder)
+								Overlay(events[j][h][2],events[j][h][0],events[j].month); //j = keys in the first class, h = keys in the second classes
 
-							console.log(addInDays.innerHTML.slice(0,1));
-							var placeholder = determineEvent(addInDays);
+								console.log(addInDays.innerHTML.slice(0,1));
+								var placeholder = determineEvent(addInDays);
 
-							addEvent(addInDays, overlayStuff, events[j].month);
+								addEvent(addInDays, overlayStuff, events[j].month);
+						}
 					}
 				}
 			}
-		}
-			
-			if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
-				var listInfo = document.createElement("li"); 
-				listInfo.innerHTML = addInDescript.innerHTML;
-				document.getElementById("list").appendChild(listInfo);
+				
+				if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
+					var listInfo = document.createElement("li"); 
+					listInfo.innerHTML = addInDescript.innerHTML;
+					document.getElementById("list").appendChild(listInfo);
+				}
 			}
+			calender.appendChild(addInMonths);
 		}
-		calender.appendChild(addInMonths);
 	}
 }
-
 //Search bar stuff//
 function active(){
 	var search = document.getElementById("search");
