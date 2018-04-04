@@ -3,7 +3,7 @@
 }
 
 .body {
-	background-color: rgb(15, 22, 101);
+	background-color: rgb(244, 245, 247);
 }
 
 #h1 {
@@ -172,14 +172,14 @@
 
 .containerFlex {
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	display: flex;
-	flex-direction: column;
+	/*flex-direction: column;*/
 	flex-wrap: wrap;
-	overflow: hidden;
+	overflow: scroll;
 }
 
-.containerPar {
+.Overlay-paragraphs {
 	width: 23em;
 	height: 13em;
 	margin: 0 2% 0 1%;
@@ -189,7 +189,7 @@
 	padding: 7px;
 }
 
-.imageContainer {
+.Overlay-images {
 	width: 13em;
 	height: 14em;
 	display: inline-block;
@@ -208,13 +208,14 @@
 	position: fixed;
 }
 
-#Add-in-container {
-	width: 55em;
-	height: 36em;
-	margin: auto;
-	background-color: grey;
+#Add-in-holder {
+width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow: scroll;
 }
-
 
 /* end */
 
@@ -226,7 +227,7 @@
 	position: absolute;
 	margin-left: 0.5%;
 	margin-top: 4%;
-	background-color: lightblue;
+	background-color: rgb(201, 205, 211);
 	position: absolute;
 }
 
