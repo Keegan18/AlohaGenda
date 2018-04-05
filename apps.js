@@ -47,8 +47,16 @@ var events = { //every event is now in the array
 				title: "Extra: Napoleon kicks Snowball fom Animal Farm, is new leader",
 				par1: "All Animals our equal, but some are more equal than others"
 			}],
-			UrMomGayDay: [26,"Jesus will 88"],
-			OOF: [27,"THis Should Work"]
+			UrMomGayDay: [26,"Jesus will 88", {
+				title: "Typo: 69 was the #",
+				header1: "88",
+				par1: "OOF"
+			}],
+			OOF: [27,"THis Should Work", {
+				title:"It DID!",
+				header1: "WORKING",
+				par1: "Works, now just for the styles"
+			}]
 		},
 		April: {
 			month: 4
