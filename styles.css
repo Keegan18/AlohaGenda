@@ -7,13 +7,14 @@
 }
 
 #h1 {
+	overflow: hidden;
 	margin-top: -2%;
 	margin-bottom: -3%;
 	margin-left: 2%;
 	width: 18%;
-	background-color: goldenrod;
 	text-align: center;
-	color: rgb(36, 104, 214);
+	color: goldenrod;
+	background-color: rgb(15, 22, 101);
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
@@ -22,7 +23,7 @@
 #tb {
 	width: 30%;
 	margin-left: 43%;
-	border: 2px solid black;
+	border: 0.5px solid #d3d3d3;
 	display: inline-flex;
 	flex-direction: row;
 	border-left: none;
@@ -31,7 +32,7 @@
 }
 
 #tb > * {
-	border: 1px solid black;
+	border: 0.5px solid #d3d3d3;
 	border-left: none;
 	border-right: none;
 	border-top: none;
@@ -44,7 +45,7 @@
 	font-size: 200%;
 	display:inline-block;
 	color: goldenrod;
-	background-color:rgb(15, 22, 101);
+	background-color: rgb(244, 245, 247);
 	padding-left: 5%;
 	padding-right: 5%;
 }
@@ -56,7 +57,7 @@
 	color: goldenrod;
 	padding-left: 5%;
 	padding-right: 5%;
-	border:3px solid black;
+	border:0.5px solid #d3d3d3;
 	border-top: none;
 	border-bottom: none;
 }
@@ -105,7 +106,8 @@
 
 
 #Calendar {
-	border: 2px solid goldenrod;
+	border: 0.9px solid goldenrod;
+	border-radius: 0.5%;
 	height: auto;
 	width: auto;
 	max-width: 72%;
@@ -123,7 +125,7 @@
 	margin: 0.4em;
 	padding: 2%;
 	border: 1px solid goldenrod;
-	border-radius: 10%;
+	border-radius: 7.12%;
 	background-color: goldenrod;
 }
 
@@ -158,7 +160,7 @@
 	width: 55em;
 	height: 36em;
 	margin: auto;
-	background-color: grey;
+	background-color:grey;
 }
 
 .containerTitle {
@@ -209,7 +211,7 @@
 }
 
 #Add-in-holder {
-width: 100%;
+	width: 100%;
 	height: 90%;
 	display: flex;
 	flex-direction: column;
@@ -220,14 +222,16 @@ width: 100%;
 /* end */
 
 #Upcoming-events {
+	overflow: hidden;	
 	height: 70%;
 	max-width: 40%;
 	width: 20%;
 	border:1px solid grey;
+	border-radius: 1.2%;
 	position: absolute;
 	margin-left: 0.5%;
 	margin-top: 4%;
-	background-color: rgb(201, 205, 211);
+	background-color: goldenrod;
 	position: absolute;
 }
 
@@ -252,37 +256,42 @@ width: 100%;
 	margin-left: 96%;
 	margin-top: -12%;
 	border-radius: 100%;
-	background-color: goldenrod;
+	background-color:  goldenrod;
 	position: absolute;
 }
 
 /* WEEKLY CLANEDER STUFF! */
 #Weekly {
+	white-space: nowrap;
 	height: 12%;
-	width: 82%;
-	margin-left: 24.7%;
+	width: 60%;
+	margin-left: 26%;
 	margin-bottom: 1%;
 	margin-top: 0%;
 	position: relative;
 	z-index: 1;
+	text-align: center;
 }
 
 .weeks {
-	border: 2px solid black;
-	text-align: center;
-	font-size: 1.5em;
+	overflow: hidden;
+	align-content: center;
+	border:2px solid black;
+	position: relative;
+	font-size: 150%;
 	height: 70%;
-	width: 8%;
-	background-color: goldenrod;
+	width: 7%;
 	margin-left: -1%;
 	padding-top: .3%;
 	padding-bottom: .3%;
 	padding-left: 3%;
-	padding-right: 2%;
+	padding-right: 3%;
 	display: inline-flex;
 	flex-direction: row;
-	border-bottom: none;
+	border-right: none;
 	border-top: none;
+	border-bottom: none;
+	background-color: rgb(244, 245, 247);
 }
 
 #Sunday {
@@ -293,30 +302,35 @@ width: 100%;
 	border-right:none;
 }
 
+#Wednesday{
+	padding-right: 7%;
+}
+
 #foot {
-	background-color: goldenrod;
-	height: 10%;
-	width:70%;
-	border:2px solid black;
-	position: relative;
-	margin-top: 10%;
-	margin-left: 25%;
+    background-image: url(https://i.vimeocdn.com/portrait/6686684_300x300);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: goldenrod;
+    height: 10%;
+    width:70%;
+    border:2px solid black;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 25%;
 }
 
 #phone{
-	padding-left: 10%;
-	display: inline-flex;
-	flex-direction: row;
+    padding-left: 30%;
+    display: inline-flex;
+    flex-direction: row;
 }
-
 #address {
-	padding-left: 10%;
-	display: inline-flex;
-	flex-direction: row;
+    padding-left: 25%;
+    display: inline-flex;
+    flex-direction: row;
 }
-
 #waipahu {
-	display: inline-flex;
-	flex-direction: row;
-	padding-left: 13.5%;
+    display: inline-flex;
+    flex-direction: row;
+    padding-left: 18.5%;
 }
