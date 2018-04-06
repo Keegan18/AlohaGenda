@@ -21,22 +21,27 @@ var events = { //every event is now in the array
 			month: 1, //says what month it is
 			first: [1,"Sample Text",{
 				title: "Good Update!",
+				header1: "oof",
 				par1: "addedd the overlay",
 				img1: "images/school.jpg",
+				header2: "wowzers",
 				par2: "plus this cool flexible feature, fits mulitple items instead of one",
 				img2: "images/To women.jpg",
+				header3: "insane!",
 				par3: "just make sure you give keys there respective names",
 				img3: "images/layermask.png"
 			},1],												 //three array variable: date,month,Event Description,Detailed Description
-			second: [2,"Sample Text"],
-			third: 	[3,"Sample Text"],
-			fourth: [4,"Sample Text"],
-			fifth: [5,"ur MoM gay LOL",{
+			job5: [5,"ur MoM gay LOL", {
 				title: "reason why ur MOM big Gay",
 				par1: "No U",
 				img1: "images/dab.jpg"
 			}],
-			sixth: [23,"Holla if you here me"]
+			sixth: [6,"Holla if you here me", {
+				title: "Kicked him in the head when 25",
+				header1: "got spots",
+				par1: "funky little boat race",
+				header2: "boogaloo dudes"
+			}]
 		},
 		Febuary: {
 			month: 2
@@ -45,13 +50,21 @@ var events = { //every event is now in the array
 			month: 3,
 			NationalPigDay: [1,"Animals rise once more", {
 				title: "Extra: Napoleon kicks Snowball fom Animal Farm, is new leader",
+				header1: "The message painted on the barn wall",
 				par1: "All Animals our equal, but some are more equal than others"
 			}],
-			UrMomGayDay: [26,"Jesus will 88"],
-			OOF: [27,"THis Should Work"]
+			UrMomGayDay: [26,"Jesus will 88", {
+				title: "Buddha",
+				header: "Buddha isn't fat",
+				par1: "if he was, then the Earth would be round"
+			}]
 		},
 		April: {
-			month: 4
+			month: 4,
+			OOF: [27,"THis Should Work", {
+				title: "good images",
+				img1: "https://www.hdwallback.net/wp-content/uploads/2017/03/4K-High-Definition-Wallpaper-3840x2160-680x425.jpg"
+			}]
 		},
 		June: {
 			month: 5
@@ -164,116 +177,6 @@ function MoreIndex() {			//empty functions for the add function, will change soo
 	document.getElementById("Add-in-holder").insertBefore(par,document.getElementById("more"));
 }
 
-/* end */
-
-function Overlay(className,number,month,year) {
-	
-	/* declaration of everything to be in the overlay intially */
-	var moreDescript = document.createElement("DIV"); //overlay divs
-	var infoContainer = document.createElement("DIV"); //where title,line are
-	var descriptTitle = document.createElement("h3"); //title
-	var line = document.createElement("hr"); //segregation
-	var flexShow = document.createElement("DIV"); //where paragraph and images are held
-	var exitButton = document.createElement("button"); //button to exit overlay
-	exitButton.innerHTML = "X";
-	/* end */
-	
-	/* appending everything with its elements respectfully */
-	document.body.insertBefore(moreDescript, document.body.firstChild); //appends overlay to document
-	moreDescript.appendChild(exitButton); //appends button to overlay
-	moreDescript.appendChild(infoContainer);  //appends cotainer to overlay
-	infoContainer.appendChild(descriptTitle); // appends title to info container
-	infoContainer.appendChild(line); //appends line to info Container
-	infoContainer.appendChild(flexShow); // appends flex box which contains text to container
-	/*lexShow.appendChild(button); */ //button
-	
-	/*end */
-	
-	/* all the contents that are and customally added */
-	for(var temp in className) {
-		if(temp === "title") 
-			descriptTitle.innerHTML = className[temp];
-		
-		if(temp.search("par") !== -1) { 				//finds if its a paragraph key respectfully
-			var descriptPar = document.createElement("p");
-			descriptPar.innerHTML = className[temp];
-			descriptPar.className = "Overlay-paragraphs";
-			flexShow.appendChild(descriptPar);
-		}
-		if(temp.search("img") !== -1) {
-			var descriptImg = document.createElement("img");
-			descriptImg.src = className[temp];
-			descriptImg.className = "Overlay-images";
-			flexShow.appendChild(descriptImg);
-		}
-		if(temp.search("header") !== -1) {
-			var descriptHeader = document.createElement("h3");
-			descriptHeader.innerHTML = className[temp];
-			descriptHeader.className = "Overlay-headers";
-			flexShow.appendChild(descriptHeader);
-		}
-	} 
-	/* end */
-	
-	/* giving the all the elements class name for stylization */
-	moreDescript.id = "overlay-"+ number + "-month-" + month + "-year-" + year; //id for overlay, to access specific overlay
-	moreDescript.className = "overlay"; //class name for overlay
-	infoContainer.className = "infoContainer"; //class name for the container that holds every content
-	descriptTitle.className = "containerTitle"; //class name container for the titles
-	line.className = "containerLine"; // class name for container line 
-	flexShow.className = "containerFlex"; //class name for par and img holder div
-	/* end */
-	
-	/* this is for the exit button */
-	exitButton.onclick = function() {
-		moreDescript.style.display = "none";
-	}
-	
-	console.log(moreDescript.id);
-}
-
-function ClickNext() { //this makes calender display the next date
-	if(currentMonth !== 12) {
-		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
-		current.style.display = "none";
-		console.log(document.getElementById("Month-"+currentMonth+ "-year-" + currentYear));
-		currentMonth += 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Month-"+currentMonth+ "-year-" + currentYear).style.display = "block";
-	} else if(currentYear !== year + (yearOn)) {
-		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "none";
-		document.getElementById("Year-"+currentYear).style.display = "none";
-		currentMonth = 1;
-		currentYear += 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Year-number").innerHTML = currentYear;
-		document.getElementById("Year-"+currentYear).style.display = "block";
-		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
-		document.getElementById("Month-"+ month + "-year-" + currentYear).style.display = "none";
-	}
-}
-
-function ClickPrevious() { //vice versa 
-	if(currentMonth !== 1) {
-		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
-		current.style.display = "none";
-		
-		console.log(document.getElementById("Month-"+currentMonth));
-		currentMonth -= 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "block";	
-	} else if(currentYear !== year) {
-		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "none";
-		document.getElementById("Year-"+currentYear).style.display = "none";
-		currentMonth = 12;
-		currentYear -= 1;
-		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Year-number").innerHTML = currentYear;
-		document.getElementById("Year-"+currentYear).style.display = "block";
-		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
-	}
-}
-
 function toggleEvents(number,month,year) {
 	var temp = document.getElementById("overlay-"+ number + "-month-" + month + "-year-" + year);
 	//console.log(temp)
@@ -373,23 +276,6 @@ function Calendar(events) { //whole calender logic
 			addInYears.appendChild(addInMonths);
 		}
 		calender.appendChild(addInYears);
-	}
-}
-
-//Search bar stuff//
-function active(){
-	var search = document.getElementById("search");
-	if(search.value == "Search..."){
-		search.value = ""
-		search.placeholder = "Search..."
-	}
-}
-
-function inactive(){
-	var search = document.getElementById("search");
-	if(search.value == ""){
-		search.value = "Search...";
-		search.placeholder = "";
 	}
 }
 

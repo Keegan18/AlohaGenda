@@ -199,26 +199,65 @@
 	width: 100%;
 	height: 90%;
 	display: flex;
-	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	overflow: scroll;
+}
+
+.containerFlexNoImage {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	overflow: scroll;
 }
 
 .Overlay-paragraphs {
-	width: 23em;
-	height: 13em;
-	margin: 0 2% 0 1%;
+	width: 44.6em;
+	min-height: 13em;
+	margin: 0 2% 0 2%;
+	font-size: 1.09em;
 	display: inline-block;
 	border: 1px solid black; /* for prototyping */
 	text-align: left;
 	padding: 7px;
 }
 
-.Overlay-images {
-	width: 13em;
-	height: 14em;
+.Overlay-headers {
+	font-size: 2.2em;
+	display: table;
+	margin: 2% 50% 2% 2%;
+	text-decoration: underline;
+}
+
+.imageContainer {
+	border: 1px solid black;
+	width: 100%;
+	height: 75%;
+	
+}
+
+.imageContainer > img {
+	display: block;
+	width: auto;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+
+.exitButton {
 	display: inline-block;
-	margin: 0 0 0 10%;
+	position: relative;
+	left: 97.5%;
+}
+
+.imgLeft {
+	width: 4em;
+	height: 3.2em;
+}
+
+.imgRight {
+	width: 4em;
+	height: 3.2em;
 }
 
 /*end */
