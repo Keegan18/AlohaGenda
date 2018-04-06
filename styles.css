@@ -294,6 +294,9 @@ width: 100%;
 }
 
 #foot {
+	background-image: url(https://i.vimeocdn.com/portrait/6686684_300x300);
+	background-repeat: no-repeat;
+	background-position: center top;
 	background-color: goldenrod;
 	height: 10%;
 	width:70%;
@@ -304,13 +307,13 @@ width: 100%;
 }
 
 #phone{
-	padding-left: 10%;
+	padding-left: 30%;
 	display: inline-flex;
 	flex-direction: row;
 }
 
 #address {
-	padding-left: 10%;
+	padding-left: 25%;
 	display: inline-flex;
 	flex-direction: row;
 }
@@ -318,5 +321,5 @@ width: 100%;
 #waipahu {
 	display: inline-flex;
 	flex-direction: row;
-	padding-left: 13.5%;
+	padding-left: 18.5%;
 }
