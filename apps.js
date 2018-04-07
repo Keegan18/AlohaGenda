@@ -7,75 +7,93 @@ var monthNames = ['January','Febuary','March','April','May','June','July','Augus
 var year = time.getFullYear();
 console.log(date + "/" + month + "/" + date); //helps to know the date in the console
 var overlayStuff = [ ]; //helps with overlay,
+var yearOn = 10;
 
 var currentMonth = month; //what month is currently getting viewed
+var currentYear = year;
 console.log(currentMonth);
 
 
 var events = { //every event is now in the array
-	January: {
-		month: 1, //says what month it is
-		first: [1,"Sample Text",{
-			title: "Good Update!",
-			par1: "addedd the overlay",
-			img1: "images/school.jpg",
-			par2: "plus this cool flexible feature, fits mulitple items instead of one",
-			img2: "images/To women.jpg",
-			par3: "just make sure you give keys there respective names",
-			img3: "images/layermask.png"
-		},1],												 //three array variable: date,month,Event Description,Detailed Description
-		second: [2,"Sample Text"],
-		third: 	[3,"Sample Text"],
-		fourth: [4,"Sample Text"],
-		fifth: [5,"ur MoM gay LOL",{
-			title: "reason why ur MOM big Gay",
-			par1: "No U",
-			img1: "images/dab.jpg"
-		}],
-		sixth: [23,"Holla if you here me"]
+	2018: {
+		year: 2018,
+		January: {
+			month: 1, //says what month it is
+			first: [1,"Sample Text",{
+				title: "Good Update!",
+				par1: "addedd the overlay",
+				img1: "images/school.jpg",
+				par2: "plus this cool flexible feature, fits mulitple items instead of one",
+				img2: "images/To women.jpg",
+				par3: "just make sure you give keys there respective names",
+				img3: "images/layermask.png"
+			},1],												 //three array variable: date,month,Event Description,Detailed Description
+			second: [2,"Sample Text"],
+			third: 	[3,"Sample Text"],
+			fourth: [4,"Sample Text"],
+			fifth: [5,"ur MoM gay LOL",{
+				title: "reason why ur MOM big Gay",
+				par1: "No U",
+				img1: "images/dab.jpg"
+			}],
+			sixth: [23,"Holla if you here me"]
+		},
+		Febuary: {
+			month: 2
+		},
+		March: {
+			month: 3,
+			NationalPigDay: [1,"Animals rise once more", {
+				title: "Extra: Napoleon kicks Snowball fom Animal Farm, is new leader",
+				par1: "All Animals our equal, but some are more equal than others"
+			}],
+			UrMomGayDay: [26,"Jesus will 88"],
+			OOF: [27,"THis Should Work"]
+		},
+		April: {
+			month: 4
+		},
+		June: {
+			month: 5
+		},
+		May: {
+			month: 6
+		},
+		July: {
+			month: 7
+		},
+		August: {
+			month: 8
+		},
+		September: {
+			month: 9
+		},
+		October: {
+			month: 10
+		},
+		November: {
+			month: 11
+		},
+		December: {
+			month: 12
+		}
 	},
-	Febuary: {
-		month: 2
-	},
-	March: {
-		month: 3,
-		NationalPigDay: [1,"Animals rise once more", {
-			title: "Extra: Napoleon kicks Snowball fom Animal Farm, is new leader",
-			par1: "All Animals our equal, but some are more equal than others"
-		}],
-		UrMomGayDay: [26,"Jesus will 88"],
-		OOF: [27,"THis Should Work"]
-	},
-	April: {
-		month: 4
-	},
-	June: {
-		month: 5
-	},
-	May: {
-		month: 6
-	},
-	July: {
-		month: 7
-	},
-	August: {
-		month: 8
-	},
-	September: {
-		month: 9
-	},
-	October: {
-		month: 10
-	},
-	November: {
-		month: 11
-	},
-	December: {
-		month: 12
+	2019: {
+		year: 2019,
+		January: {
+			month: 1,
+			Rutles: [1,"The Rutles Live Concert", {
+				title: "THe Rutles & Beatles Live in concert",
+				header1: "Whats being Natural?",
+				par1: "Ultimate combo to which your monf would explode",
+				img1: "images/To women.jpg"
+			}]
+		}
 	}
 }
 
 document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1]; //gets the  current month
+document.getElementById("Year-number").innerHTML = currentYear;
 
 function DateOption(option) {
 	Days = daysInMonth(option.value,year);
@@ -112,10 +130,20 @@ function EventAdd() {
 	var userArray = [daySelection,quicky];
 	var userClass = { };
 	
+	var parName = 1;
+	headerName += 1;
+	
 	var holder = document.getElementById("Add-in-holder").getElementsByTagName("input"); //try to be more efficient, but, geets the values of input and puts them 
 	for(var i=0; i < holder.length; i++) {
-		var par = "par" + i;
-		userClass.par = holder[i].value;
+		if(holder[i].name === "Title") {
+			userClass["Title"] = holder[i].value
+		} else if(holder[i].name === "Header") {
+			var headerName = 1
+			userClass["header"+1] = holder[i].value
+		} else if(holder[i].name === "Paragraph") {
+			userClass["par" + parName] = holder[i].value;
+			parName += 1;
+		}
 	}
 	userArray.push(userClass);
 	console.log(userArray);
@@ -138,7 +166,7 @@ function MoreIndex() {			//empty functions for the add function, will change soo
 
 /* end */
 
-function Overlay(className,number,month) {
+function Overlay(className,number,month,year) {
 	
 	/* declaration of everything to be in the overlay intially */
 	var moreDescript = document.createElement("DIV"); //overlay divs
@@ -178,11 +206,17 @@ function Overlay(className,number,month) {
 			descriptImg.className = "Overlay-images";
 			flexShow.appendChild(descriptImg);
 		}
+		if(temp.search("header") !== -1) {
+			var descriptHeader = document.createElement("h3");
+			descriptHeader.innerHTML = className[temp];
+			descriptHeader.className = "Overlay-headers";
+			flexShow.appendChild(descriptHeader);
+		}
 	} 
 	/* end */
 	
 	/* giving the all the elements class name for stylization */
-	moreDescript.id = "overlay-"+ number + "-month-" + month; //id for overlay, to access specific overlay
+	moreDescript.id = "overlay-"+ number + "-month-" + month + "-year-" + year; //id for overlay, to access specific overlay
 	moreDescript.className = "overlay"; //class name for overlay
 	infoContainer.className = "infoContainer"; //class name for the container that holds every content
 	descriptTitle.className = "containerTitle"; //class name container for the titles
@@ -200,29 +234,48 @@ function Overlay(className,number,month) {
 
 function ClickNext() { //this makes calender display the next date
 	if(currentMonth !== 12) {
-		var current = document.getElementById("Month-"+currentMonth);
+		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
 		current.style.display = "none";
-		console.log(document.getElementById("Month-"+currentMonth));
+		console.log(document.getElementById("Month-"+currentMonth+ "-year-" + currentYear));
 		currentMonth += 1;
 		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Month-"+currentMonth).style.display = "block";
+		document.getElementById("Month-"+currentMonth+ "-year-" + currentYear).style.display = "block";
+	} else if(currentYear !== year + (yearOn)) {
+		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "none";
+		document.getElementById("Year-"+currentYear).style.display = "none";
+		currentMonth = 1;
+		currentYear += 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
+		document.getElementById("Year-number").innerHTML = currentYear;
+		document.getElementById("Year-"+currentYear).style.display = "block";
+		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
+		document.getElementById("Month-"+ month + "-year-" + currentYear).style.display = "none";
 	}
 }
 
 function ClickPrevious() { //vice versa 
 	if(currentMonth !== 1) {
-		var current = document.getElementById("Month-"+currentMonth);
+		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
 		current.style.display = "none";
 		
 		console.log(document.getElementById("Month-"+currentMonth));
 		currentMonth -= 1;
 		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
-		document.getElementById("Month-"+currentMonth).style.display = "block";	
+		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "block";	
+	} else if(currentYear !== year) {
+		document.getElementById("Month-"+ currentMonth + "-year-" + currentYear).style.display = "none";
+		document.getElementById("Year-"+currentYear).style.display = "none";
+		currentMonth = 12;
+		currentYear -= 1;
+		document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1];
+		document.getElementById("Year-number").innerHTML = currentYear;
+		document.getElementById("Year-"+currentYear).style.display = "block";
+		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
 	}
 }
 
-function toggleEvents(number,month) {
-	var temp = document.getElementById("overlay-"+number+"-month-"+month);
+function toggleEvents(number,month,year) {
+	var temp = document.getElementById("overlay-"+ number + "-month-" + month + "-year-" + year);
 	//console.log(temp)
 	if(temp.style.display === "none")
 		temp.style.display = "block";
@@ -248,66 +301,78 @@ function determineEvent(days) {
 }
 
 
-function addEvent(day, arr,month) {
+function addEvent(day, arr,month,year) {
 	var currentCounter = counter; //0
 	var num = arr[currentCounter];
-	var placeholder = day.addEventListener("click",() => toggleEvents(num,month),false);
+	var placeholder = day.addEventListener("click",() => toggleEvents(num,month,year),false);
 	counter++;
 	return placeholder
 }
 
 var counter = 0;
 function Calendar(events) { //whole calender logic
-	for(var k=1; k <= 12; k++) {
-		var addInMonths = document.createElement("DIV");
-		addInMonths.className = "Months";
-		addInMonths.id = "Month-" + k;
-		//console.log(k);
-		//console.log(daysInMonth(k,2018));
-		if(k !== month) {
-			addInMonths.style.display = "none";
+	for(var y=year; y <= year + yearOn; y++) { //adds in the years
+		var addInYears = document.createElement("DIV");
+		addInYears.className = "Years";
+		addInYears.id = "Year-" + y;
+		
+		if(y !== year) {
+			addInYears.style.display = "none";
 		}
 		
-		for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+		for(var k=1; k <= 12; k++) {
+			var addInMonths = document.createElement("DIV");
+			addInMonths.className = "Months";
+			addInMonths.id = "Month-" + k + "-year-" + y;
 			
-			var addInDays = document.createElement("DIV"); //for days
-			var addInDescript = document.createElement("DIV"); //for the description in the divs
+			if(k !== month) {
+				addInMonths.style.display = "none";
+			}
 			
-			//adds the date
-			addInDays.className = "Days"; //class name is Days
-			addInDays.innerHTML = i;
-			
-			addInMonths.appendChild(addInDays); //adds in the days
-			
-			//adds the Description & DIV for the image
-			addInDescript.className = "Descriptions"; //class name is Descriptions
-			addInDays.appendChild(addInDescript);
-			
-			for(var j in events) { //logic to add description to the calender
-				for(var h in events[j]){
-					if((events[j].month === k) && (events[j][h][0] === i)) {
-						addInDescript.innerHTML = events[j][h][1];
-						if(events[j][h][2] !== undefined) {
-							var placeholder = events[j][h][0];
-							overlayStuff.push(placeholder)
-							Overlay(events[j][h][2],events[j][h][0],events[j].month); //j = keys in the first class, h = keys in the second classes
+			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				
+				var addInDays = document.createElement("DIV"); //for days
+				var addInDescript = document.createElement("DIV"); //for the description in the divs
+				
+				//adds the date
+				addInDays.className = "Days"; //class name is Days
+				addInDays.innerHTML = i;
+				
+				addInMonths.appendChild(addInDays); //adds in the days
+				
+				//adds the Description & DIV for the image
+				addInDescript.className = "Descriptions"; //class name is Descriptions
+				addInDays.appendChild(addInDescript);
+				
+				for(var p in events) {
+					for(var j in events[p]) { //logic to add description to the calender
+						for(var h in events[p][j]){
+							if((events[p][j].month === k) && (events[p][j][h][0] === i) && (events[p].year === y)) {
+								addInDescript.innerHTML = events[p][j][h][1];
+								if(events[p][j][h][2] !== undefined) {
+									var placeholder = events[p][j][h][0];
+									overlayStuff.push(placeholder)
+									Overlay(events[p][j][h][2],events[p][j][h][0],events[p][j].month,events[p].year); //j = keys in the first class, h = keys in the second classes
 
-							console.log(addInDays.innerHTML.slice(0,1));
-							var placeholder = determineEvent(addInDays);
+									console.log(addInDays.innerHTML.slice(0,1));
+									var placeholder = determineEvent(addInDays);
 
-							addEvent(addInDays, overlayStuff, events[j].month);
+									addEvent(addInDays, overlayStuff, events[p][j].month,events[p].year);
+								}
+							}
+						}
 					}
 				}
+				
+				if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
+					var listInfo = document.createElement("li"); 
+					listInfo.innerHTML = addInDescript.innerHTML;
+					document.getElementById("list").appendChild(listInfo);
+				}
 			}
+			addInYears.appendChild(addInMonths);
 		}
-			
-			if((i > date) && (addInDescript.innerHTML) !== "" && (k === month)) { //makes a list for the upcoming events if it i > current date and k === to current month
-				var listInfo = document.createElement("li"); 
-				listInfo.innerHTML = addInDescript.innerHTML;
-				document.getElementById("list").appendChild(listInfo);
-			}
-		}
-		calender.appendChild(addInMonths);
+		calender.appendChild(addInYears);
 	}
 }
 

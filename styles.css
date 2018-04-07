@@ -7,13 +7,14 @@
 }
 
 #h1 {
+	overflow: hidden;
 	margin-top: -2%;
 	margin-bottom: -3%;
 	margin-left: 2%;
 	width: 18%;
-	background-color: ;
 	text-align: center;
 	color: goldenrod;
+	background-color: rgb(15, 22, 101);
 	padding-top: 1%;
 	padding-bottom: 1%;
 	border: 2px solid;
@@ -22,18 +23,18 @@
 
 /* everything for the top bar starts here */
 #tb {
-	width: 30%;
-	margin-left: 43%;
-	border: 2px solid black;
+	width: 35%;
+	margin-left: 37%;
+	border: 0.5px solid #d3d3d3;
 	display: inline-flex;
 	flex-direction: row;
+	border-top: none;
 	border-left: none;
 	border-right: none;
-	border-top: none;
 }
 
 #tb > * {
-	border: 1px solid black;
+	border: 0.5px solid #d3d3d3;
 	border-left: none;
 	border-right: none;
 	border-top: none;
@@ -42,13 +43,15 @@
 }
 
 #add {
-	border: none;
 	font-size: 200%;
 	display:inline-block;
 	color: goldenrod;
-	background-color:rgb(15, 22, 101);
+	background-color: rgb(244, 245, 247);
 	padding-left: 5%;
 	padding-right: 5%;
+/** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 
 #Month-name {
@@ -58,16 +61,38 @@
 	color: goldenrod;
 	padding-left: 5%;
 	padding-right: 5%;
-	border:3px solid black;
+	border:0.5px solid #d3d3d3;
 	border-top: none;
 	border-bottom: none;
+	margin-top: 1%;
+}
+
+#Year-number {
+	font-size: 200%;
+	display: inline-block;
+	text-align:center;
+	color: goldenrod;
+	padding-left: 5%;
+	padding-right: 5%;
+	border:0.5px solid #d3d3d3;
+	border-top: none;
+	border-bottom: none;
+	margin-top: 1%;
 }
 
 /* I need help putting these in a good place! */
+#Searching {
+	padding-bottom: 2%;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-top: 1%;
+}
+
 #search {
 	position: relative;
 	display: inline-flex;
-	width: 70%;
+	overflow: hidden;
+	width: 65%;
 	height: 50%;
 	background-color: white;
 	color: black;
@@ -75,15 +100,15 @@
 	border-right: none;
 	font-size: 1em;
 	outline: none;
-	padding: 0.4%;
 	border-bottom-left-radius: 10px;
 	border-top-left-radius:10px;
 	margin-top: 4%;
+	padding-left: 3%;
 }
 
 #submit {
-	width: 24%;
-	height: 60%;
+	width: 28%;
+	height: 50%;
 	display: inline-flex;
 	background-color: #42f4d7;
 	color: black;
@@ -91,7 +116,6 @@
 	font-size: 1em;
 	outline: none;
 	cursor: pointer;
-	padding: 0.4%;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius:10px;
 }
@@ -107,7 +131,8 @@
 
 
 #Calendar {
-	border: 2px solid goldenrod;
+	border: 0.9px solid goldenrod;
+	border-radius: 0.5%;
 	height: auto;
 	width: auto;
 	border-radius: 3.14%;
@@ -126,8 +151,13 @@
 	margin: 0.4em;
 	padding: 2%;
 	border: 1px solid goldenrod;
+<<<<<<< HEAD
 	border-radius: 10%;
 	background-color: rgb(244, 245, 247);
+=======
+	border-radius: 7.12%;
+	background-color: goldenrod;
+>>>>>>> da1ed6a42167a5dca13fdf87fe389d0fda4c0245
 }
 
 .Descriptions {
@@ -161,7 +191,7 @@
 	width: 55em;
 	height: 36em;
 	margin: auto;
-	background-color: grey;
+	background-color:grey;
 }
 
 .containerTitle {
@@ -177,26 +207,65 @@
 	width: 100%;
 	height: 90%;
 	display: flex;
-	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	overflow: scroll;
+}
+
+.containerFlexNoImage {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	overflow: scroll;
 }
 
 .Overlay-paragraphs {
-	width: 23em;
-	height: 13em;
-	margin: 0 2% 0 1%;
+	width: 44.6em;
+	min-height: 13em;
+	margin: 0 2% 0 2%;
+	font-size: 1.09em;
 	display: inline-block;
 	border: 1px solid black; /* for prototyping */
 	text-align: left;
 	padding: 7px;
 }
 
-.Overlay-images {
-	width: 13em;
-	height: 14em;
+.Overlay-headers {
+	font-size: 2.2em;
+	display: table;
+	margin: 2% 50% 2% 2%;
+	text-decoration: underline;
+}
+
+.imageContainer {
+	border: 1px solid black;
+	width: 100%;
+	height: 75%;
+	
+}
+
+.imageContainer > img {
+	display: block;
+	width: auto;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+
+.exitButton {
 	display: inline-block;
-	margin: 0 0 0 10%;
+	position: relative;
+	left: 97.5%;
+}
+
+.imgLeft {
+	width: 4em;
+	height: 3.2em;
+}
+
+.imgRight {
+	width: 4em;
+	height: 3.2em;
 }
 
 /*end */
@@ -212,7 +281,7 @@
 }
 
 #Add-in-holder {
-width: 100%;
+	width: 100%;
 	height: 90%;
 	display: flex;
 	flex-direction: column;
@@ -223,14 +292,16 @@ width: 100%;
 /* end */
 
 #Upcoming-events {
+	overflow: hidden;	
 	height: 70%;
 	max-width: 40%;
 	width: 20%;
 	border:1px solid grey;
+	border-radius: 1.2%;
 	position: absolute;
 	margin-left: 0.5%;
 	margin-top: 4%;
-	background-color: rgb(201, 205, 211);
+	background-color: goldenrod;
 	position: absolute;
 }
 
@@ -255,49 +326,66 @@ width: 100%;
 	margin-left: 96%;
 	margin-top: -12%;
 	border-radius: 100%;
-	background-color: goldenrod;
+	background-color:  goldenrod;
 	position: absolute;
 }
 
 /* WEEKLY CLANEDER STUFF! */
 #Weekly {
+	white-space: nowrap;
 	height: 12%;
-	width: 82%;
-	margin-left: 24.7%;
+	width: 60%;
+	margin-left: 26%;
 	margin-bottom: 1%;
 	margin-top: 0%;
 	position: relative;
 	z-index: 1;
+	text-align: center;
 }
 
 .weeks {
-	border: 2px solid black;
-	text-align: center;
-	font-size: 1.2em;
+	overflow: hidden;
+	align-content: center;
+	border:2px solid black;
+	position: relative;
+	font-size: 150%;
 	height: 70%;
-	width: 8%;
-	/*background-color: goldenrod;*/
-	margin-left: -.2%;
-	margin-right: 
+	width: 7%;
+	margin-left: -1%;
 	padding-top: .3%;
 	padding-bottom: .3%;
 	padding-left: 3%;
-	padding-right: 1%;
+	padding-right: 4%;
 	display: inline-flex;
 	flex-direction: row;
-	border-bottom: none;
+	border-right: none;
 	border-top: none;
+	border-bottom: none;
+	background-color: rgb(244, 245, 247);
 }
 
-#Wednesday {
-	text-align: center;
-	width: 10%;
+
+#Sunday {
+	border-left: none;
+}
+
+#Saturday {
+	border-right:none;
+}
+
+#Wednesday{
+	padding-right: 7%;
+}
+
+#Thursday {
+	padding-right: 5%;
+}
+
+#Friday {
+	padding-right: 3%;
 }
 
 #foot {
-    background-image: url(https://i.vimeocdn.com/portrait/6686684_300x300);
-    background-repeat: no-repeat;
-    background-position: center top;
     background-color: goldenrod;
     height: 10%;
     width:70%;
@@ -308,17 +396,18 @@ width: 100%;
 }
 
 #phone{
-    padding-left: 30%;
+    padding-left: 10%;
     display: inline-flex;
     flex-direction: row;
 }
 #address {
-    padding-left: 25%;
+    padding-left: 10%;
     display: inline-flex;
     flex-direction: row;
 }
 #waipahu {
     display: inline-flex;
     flex-direction: row;
-    padding-left: 18.5%;
+    padding-left: 10%;
 }
+
