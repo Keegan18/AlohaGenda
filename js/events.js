@@ -3,11 +3,11 @@ var events = { //every event is now in the array
 		year: 2018,
 		January: {
 			month: 1, //says what month it is
-			first: [1,"Sample Text",{
-				title: "Good Update!",
-				header1: "oof",
-				par1: "addedd the overlay",
-				img1: "images/school.jpg",
+			first: [1,"New Year, New Me!",{
+				title: "Starting Fresh!!",
+				header1: "It's looking good at school!",
+				par1: "Sunny all the way!",
+				img1: "https://www.youtube.com/watch?v=a_jIhFJ2qRw",
 				header2: "wowzers",
 				par2: "plus this cool flexible feature, fits mulitple items instead of one",
 				img2: "images/To women.jpg",
