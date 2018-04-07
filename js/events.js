@@ -7,7 +7,7 @@ var events = { //every event is now in the array
 				title: "Starting Fresh!!",
 				header1: "It's looking good at school!",
 				par1: "Sunny all the way!",
-				img1: "https://www.youtube.com/watch?v=a_jIhFJ2qRw",
+				img1: "https://www.inflexion.org/wp-content/uploads/2017/10/waipahu_high_school.jpg",
 				header2: "wowzers",
 				par2: "plus this cool flexible feature, fits mulitple items instead of one",
 				img2: "images/To women.jpg",
