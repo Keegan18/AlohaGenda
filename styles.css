@@ -17,6 +17,8 @@
 	background-color: rgb(15, 22, 101);
 	padding-top: 1%;
 	padding-bottom: 1%;
+	border: 2px solid;
+	border-color: rgb(36, 104, 214);
 }
 
 /* everything for the top bar starts here */
@@ -133,11 +135,12 @@
 	border-radius: 0.5%;
 	height: auto;
 	width: auto;
+	border-radius: 3.14%;
 	max-width: 72%;
 	max-height: 90%;
 	margin-left: 24%;
 	position: relative;
-	background-color: rgb(15, 22, 101);
+	background-color: rgb(244, 245, 247);
 }
 
 .Days {
@@ -148,8 +151,13 @@
 	margin: 0.4em;
 	padding: 2%;
 	border: 1px solid goldenrod;
+<<<<<<< HEAD
+	border-radius: 10%;
+	background-color: rgb(244, 245, 247);
+=======
 	border-radius: 7.12%;
 	background-color: goldenrod;
+>>>>>>> da1ed6a42167a5dca13fdf87fe389d0fda4c0245
 }
 
 .Descriptions {
@@ -363,3 +371,4 @@
     flex-direction: row;
     padding-left: 10%;
 }
+
