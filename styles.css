@@ -1,3 +1,4 @@
+
 * {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -21,7 +22,7 @@
 
 /* everything for the top bar starts here */
 #tb {
-	width: 35%;
+	width: 40.5%;
 	margin-left: 37%;
 	border: 0.5px solid #d3d3d3;
 	display: inline-flex;
@@ -53,6 +54,7 @@
 }
 
 #Month-name {
+	width: 30%;
 	font-size: 200%;
 	display: inline-block;
 	text-align:center;
@@ -105,7 +107,7 @@
 }
 
 #submit {
-	width: 28%;
+	width: 31%;
 	height: 50%;
 	display: inline-flex;
 	background-color: #42f4d7;
@@ -402,3 +404,67 @@
     flex-direction: row;
     padding-left: 10%;
 }
+
+@media only screen and (max-width: 1680px) {
+	div#Weekly {
+		margin-left: 24%;
+	}
+	div.weeks {
+		padding-right: 7%;
+	}
+	div#Wednesday {
+		padding-right: 12%;
+	}
+	div#Thursday {
+		padding-right: 9%;
+	}
+	div#Friday {
+		padding-right: 5%;
+	}
+	input#search {
+		width: 65%;
+	}
+	input#submit {
+		width: 30%;
+	}
+	div#tb {
+		width: 55%;
+		margin-left: 33%;
+	}
+}
+
+@media only screen and (max-width: 1469px) {
+	button#LB {
+		width: 2.5%;
+		margin-top: -20%;
+	}
+	button#RB {
+		width: 2.5%;
+		margin-top: -20%;
+	}
+	div#Calendar {
+		margin-left: 24.5%;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	button#LB {
+		width: 2.5%;
+		margin-top: -23%;
+	}
+	button#RB {
+		width: 2.5%;
+		margin-top: -23%;
+	}
+	div#tb {
+		width: 62%;
+		margin-left: 30%;
+	}
+	input#submit {
+		width: 31%;
+	}
+}
+
+
+
+
