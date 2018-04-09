@@ -405,6 +405,7 @@
     padding-left: 10%;
 }
 
+/** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
 @media only screen and (max-width: 1680px) {
 	div#Weekly {
 		margin-left: 24%;
