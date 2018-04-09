@@ -83,11 +83,11 @@ var events = { //every event is now in the array
 		year: 2019,
 		January: {
 			month: 1,
-			Rutles: [1,"The Rutles Live Concert", {
-				title: "THe Rutles & Beatles Live in concert",
-				header1: "Whats being Natural?",
-				par1: "Ultimate combo to which your monf would explode",
-				img1: "images/To women.jpg"
+			Rutles: [21,"MLK Day", {
+				title: "Martin Luther King Jr. Day!",
+				header1: "Respect what he fought for.",
+				par1: "No school today to honor the death of Martin Luther King Jr. and to celerbrate the changes that has been made thanks to him.",
+				img1: "https://www.suisun.com/wp-content/uploads/2013/01/Martin-Luther-King-Jr.-Day.jpg"
 			}]
 		}
 	}
