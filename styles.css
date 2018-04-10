@@ -135,15 +135,16 @@
 	border-radius: 0.5%;
 	height: auto;
 	width: auto;
-	max-width: 72%;
+	max-width: 60%;
 	max-height: 90%;
 	margin-left: 24%;
+	padding-left: 4%;
 	position: relative;
 	background-color: rgb(15, 22, 101);
 }
 
 .Days {
-	width: 3em;
+	width: 8%;
 	height: 5em;
 	display: inline-flex;
 	flex: center;
@@ -309,7 +310,7 @@
 	margin-top: -12%;
 	border-radius: 100%;
 	background-color: goldenrod;
-	position: absolute;
+	position: fixed;
 }
 
 #RB {
@@ -317,19 +318,19 @@
 	text-align: center;
 	width: 2%;
 	height: 5%;
-	margin-left: 96%;
+	margin-left: 88%;
 	margin-top: -12%;
 	border-radius: 100%;
 	background-color:  goldenrod;
-	position: absolute;
+	position: fixed;
 }
 
 /* WEEKLY CLANEDER STUFF! */
 #Weekly {
 	white-space: nowrap;
 	height: 12%;
-	width: 60%;
-	margin-left: 26%;
+	width: 62.5%;
+	margin-left: 24.5%;
 	margin-bottom: 1%;
 	margin-top: 0%;
 	position: relative;
@@ -338,18 +339,17 @@
 }
 
 .weeks {
+	text-align: center;
 	overflow: hidden;
-	align-content: center;
 	border:2px solid black;
 	position: relative;
 	font-size: 150%;
 	height: 70%;
-	width: 7%;
-	margin-left: -1%;
+	width: auto;
 	padding-top: .3%;
 	padding-bottom: .3%;
-	padding-left: 3%;
-	padding-right: 4%;
+	padding-left: 4.3%;
+	padding-right: 4.3%;
 	display: inline-flex;
 	flex-direction: row;
 	border-right: none;
@@ -363,21 +363,38 @@
 	border-left: none;
 }
 
-#Saturday {
-	border-right:none;
+#Monday {
+
 }
 
-#Wednesday{
-	padding-right: 7%;
+#Tuesday {
+
+
+}
+
+#Wednesday {
+
+
 }
 
 #Thursday {
-	padding-right: 5%;
+
+
 }
 
 #Friday {
-	padding-right: 3%;
+	padding-right: 5%;
+	padding-left: 5%;
+
 }
+
+#Saturday {
+	border-right:none;
+
+}
+
+/** End of Weekly stuff **/
+
 
 #foot {
     background-color: goldenrod;
@@ -385,7 +402,7 @@
     width:70%;
     border:2px solid black;
     position: relative;
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 25%;
 }
 
@@ -407,21 +424,6 @@
 
 /** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
 @media only screen and (max-width: 1680px) {
-	div#Weekly {
-		margin-left: 24%;
-	}
-	div.weeks {
-		padding-right: 7%;
-	}
-	div#Wednesday {
-		padding-right: 12%;
-	}
-	div#Thursday {
-		padding-right: 9%;
-	}
-	div#Friday {
-		padding-right: 5%;
-	}
 	input#search {
 		width: 65%;
 	}
@@ -463,6 +465,25 @@
 	}
 	input#submit {
 		width: 31%;
+	}
+	div#Weekly {
+		width: 53%;
+		margin-left: 27%;
+	}
+	div#Monday {
+		padding-right: 3%;
+	}
+	div#Wednesday {
+		padding-right: 3.5%;
+	}
+	div#Thursday {
+		padding-right: 4.4%;
+	}
+	div#Friday {
+		padding-right: 5.8%;
+	}
+	div#Calendar {
+		padding-left: 2%;
 	}
 }
 
