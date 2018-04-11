@@ -485,6 +485,18 @@
 	div#Calendar {
 		padding-left: 2%;
 	}
+	div#foot {
+		font-size: 80%;
+	}
+	p#phone {
+		padding-left: 5%;
+	}
+	p#address {
+		padding-left: 5%;
+	}
+	p#waipahu {
+		padding-left: 5%;
+	}
 }
 
 
