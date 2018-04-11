@@ -29,10 +29,20 @@ function ToggleAdd() {
 	
 }
 
+function SetEverything() {
+	var userStuff = sessionStorage.getItem('userData');
+	if(userStuff !== null) {
+		customEvents = JSON.parse(userStuff);
+	}
+}
+SetEverything();
+console.log(customEvents);
+
 function EventAdd() {
-	var daySelection = document.getElementById("Day-selection").value;
+	var yearSelection = parseInt(document.getElementById("Year-selection").value);
+	var monthSelection = parseInt(document.getElementById("Month-selection").value);
+	var daySelection = parseInt(document.getElementById("Day-selection").value);
 	var quicky = document.getElementById("Quick-descript").value;
-	var monthSelction = document.getElementById("Month-selection").value;
 	var userArray = [daySelection,quicky];
 	var userClass = { };
 	
@@ -50,10 +60,24 @@ function EventAdd() {
 			userClass["par" + parName] = holder[i].value;
 			parName += 1;
 		}
-	}
+	} 
 	userArray.push(userClass);
-	console.log(userArray);
-	console.log(userClass);
+	if(customEvents.yearSelection === undefined) {
+		customEvents[yearSelection] = {
+			year: yearSelection
+		};
+	}
+	
+	if(customEvents[yearSelection][monthNames[monthSelection-1]] === undefined) {
+		customEvents[yearSelection][monthNames[monthSelection-1]] = {
+				month: monthSelection
+		};
+	}
+	
+	
+	customEvents[yearSelection][monthNames[monthSelection-1]][quicky] = userArray;
+	sessionStorage.setItem('userData',JSON.stringify(customEvents));
+	location.reload();
 }
 
 function MoreIndex() {			//empty functions for the add function, will change sooner

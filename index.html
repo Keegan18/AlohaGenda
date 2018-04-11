@@ -12,6 +12,19 @@
 			<h3> Add in a event </h3>
 			<hr />
 			
+			<select id="Year-selection"> 
+				<option value=2018> 2018 </option>
+				<option value=2019> 2019 </option>
+				<option value=2020> 2020 </option>
+				<option value=2021> 2021 </option>
+				<option value=2022> 2022 </option>
+				<option value=2023> 2023 </option>
+				<option value=2024> 2024 </option>
+				<option value=2025> 2025 </option>
+				<option value=2026> 2026 </option>
+				<option value=2027> 2027 </option>
+				<option value=2028> 2028 </option>
+			</select>
 			<div id="Add-in-holder">
 			
 				<select id="Month-selection" onclick="DateOption(this)"> <!-- Selection of Dates -->
@@ -51,7 +64,8 @@
 		<div id="Searching">
 			<form action="">
 			
-	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input type="submit" id="submit" value="Submit"/>
+	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
+				<input onclick="SearchBar()" id="submit" value="Submit"/>
 		
 			</form>
 		</div>

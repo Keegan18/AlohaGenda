@@ -92,3 +92,7 @@ var events = { //every event is now in the array
 		}
 	}
 }
+
+var customEvents = {
+	
+}

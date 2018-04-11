@@ -56,3 +56,19 @@ function inactive(){
 		search.placeholder = "";
 	}
 }
+
+ function SearchBar() {
+	var hold = document.getElementById("search").value.toLowerCase();
+	console.log(hold);
+	if(hold !== "search...") {
+		if(hold === "mlk day 2019" || hold === "overlay-21-month-1-year-2019") {
+			document.getElementById("overlay-21-month-1-year-2019").style.display = "block";
+		} else if (hold === "april fools day 2018" || hold === "overlay-1-month-4-year-2018") {
+			document.getElementById("overlay-1-month-4-year-2018").style.display = "block";
+		} else if (hold === "pi day 2018" || hold === "overlay-14-month-3-year-2018") {
+			document.getElementById("overlay-14-month-3-year-2018").style.display = "block";
+		} else if (hold === "safety fair 2018" || hold === "overlay-1-month-3-year-2018") {
+			document.getElementById("overlay-1-month-3-year-2018").style.display = "block";
+		} 
+	}
+} 
