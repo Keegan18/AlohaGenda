@@ -29,7 +29,7 @@ function ToggleAdd() {
 	
 }
 
-function SetEverything() {
+function SetEverything() { //sets the user info in custom events if their is anything 
 	var userStuff = sessionStorage.getItem('userData');
 	if(userStuff !== null) {
 		customEvents = JSON.parse(userStuff);
@@ -37,6 +37,27 @@ function SetEverything() {
 }
 SetEverything();
 console.log(customEvents);
+
+function AddToMain() {
+	for(var i in events) {
+		console.log(events[i]);
+		for(var d in customEvents) {
+			if(events[i].year === customEvents[d].year) {
+				for(var f in events[i]) {
+					if(customEvents[d][f] !== undefined && events[i][f].month === customEvents[d][f].month && events[i][f] !== 2018) {
+						for(var j in customEvents[d][f]) {
+							if(typeof customEvents[d][f][j] !== "number") {
+								events[i][f]["" + customEvents[d][f][j][1]] = customEvents[d][f][j];
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	console.log(events);
+}
+AddToMain(); //I will make this Algorithm Better 
 
 function EventAdd() {
 	var yearSelection = parseInt(document.getElementById("Year-selection").value);
@@ -75,7 +96,7 @@ function EventAdd() {
 	}
 	
 	
-	customEvents[yearSelection][monthNames[monthSelection-1]][quicky] = userArray;
+	customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1] = userArray;
 	sessionStorage.setItem('userData',JSON.stringify(customEvents));
 	location.reload();
 }
@@ -96,7 +117,7 @@ function MoreIndex() {			//empty functions for the add function, will change soo
 
 function toggleEvents(number,month,year) {
 	var temp = document.getElementById("overlay-"+ number + "-month-" + month + "-year-" + year);
-	//console.log(temp)
+	////console.log(temp)
 	if(temp.style.display === "none")
 		temp.style.display = "block";
 	else
@@ -112,7 +133,7 @@ function daysInMonth (month, year) { //gets the days in a month
 
 function determineEvent(days) {
 	var eventNum = +days.innerHTML.slice(0,1);
-	console.log(eventNum);
+	//console.log(eventNum);
 	for (var oof=0; oof<=overlayStuff.length-1; oof++) {
 		if (eventNum === overlayStuff[oof]) {
 			return overlayStuff[oof]
@@ -141,7 +162,7 @@ function Calendar(events) { //whole calender logic
 		
 		for(var k=1; k <= 12; k++) {
 			var addInMonths = document.createElement("DIV");
-			addInMonths.className = "Months";
+			addInMonths.className += monthNames[k-1];
 			addInMonths.id = "Month-" + k + "-year-" + y;
 			
 			if(k !== month) {
@@ -173,7 +194,7 @@ function Calendar(events) { //whole calender logic
 									overlayStuff.push(placeholder)
 									Overlay(events[p][j][h][2],events[p][j][h][0],events[p][j].month,events[p].year); //j = keys in the first class, h = keys in the second classes
 
-									console.log(addInDays.innerHTML.slice(0,1));
+									//console.log(addInDays.innerHTML.slice(0,1));
 									var placeholder = determineEvent(addInDays);
 
 									addEvent(addInDays, overlayStuff, events[p][j].month,events[p].year);
