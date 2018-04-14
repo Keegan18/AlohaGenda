@@ -28,27 +28,44 @@ var events = { //every event is now in the array
 				header2: "Get Here On Time!"
 			}]
 		},
-		Febuary: {
+		february: {
 			month: 2
 		},
 		March: {
 			month: 3,
-			NationalPigDay: [1,"Safety Fair!", {
+			NationalPigDay: [1,"Safety Fair!",{
 				title: "You all ready for safety fair?",
 				header1: "Bring your cash and tickets to get some snacks durring safety fair!",
 				img1:"https://scontent-lga3-1.cdninstagram.com/vp/40962b045929c9527d4997fb59b22f91/5B15345A/t51.2885-15/s320x320/e35/26865222_391986307881894_9174722701774815232_n.jpg",
 				par1: "It's the safety fair once again. Hope you all got some tickets or some cash to get some delicious treats at all the venues! Make sure to wear cool clothing, because it's gonna be hot!"
 			}],
-			UrMomGayDay: [14,"PI Day!", {
+			UrMomGayDay: [14,"PI Day!",{
 				title: "Happy PI Day Everyone!",
 				header: "Go get some tasty pie!",
 				img1: "https://media1.fdncms.com/stranger/imager/u/original/25870590/17309295_10158349771070402_1610862109579774492_n_1_.jpg",
 				par1: "3.14 is the magic number and date. Go out to a local pie dealer to get amazing deals on pie! "
-			}]
-		},
-		April: {
+			}],
+			Springbreak: [19,"Spring break start",{
+				title: "Spring break!",
+				header1:"enjoy the joys of spring break, mostly just time away from school", 
+				par1:"getting some time away from school and thats basically it, so enjoy it while it lasts",
+				img1:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fr%C3%BChlingsallee_Tulpenbl%C3%BCte_2010_%281%29.jpg/1200px-Fr%C3%BChlingsallee_Tulpenbl%C3%BCte_2010_%281%29.jpg",
+			}],
+			SpringbreakEnd: [23,"Spring break end",{
+				title: "Spring break End",
+				header1: "Back to school!",
+				par1: "welcome back to school, hope your break was good, because its back to work!",
+				img1:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fr%C3%BChlingsallee_Tulpenbl%C3%BCte_2010_%281%29.jpg/1200px-Fr%C3%BChlingsallee_Tulpenbl%C3%BCte_2010_%281%29.jpg",
+			}],
+				Kuhioday: [26, "Kuhio day",{
+				title:"Kuhioday",
+				header1:"a day off of school",
+				par1: "This is a basic holiday so just enjoy your day off of school and you know this could count as a day for you to just catch up with your unfinshed work so enjoy the time you have off and that is all we have to say about that so once again enjoy your day off, and make sure to come back to school the next day, because youll have school on that day aswell",
+       }]
+	},
+	April: {
 			month: 4,
-			OOF: [1,"April Fools Day!", {
+			OOF: [1,"April Fools Day!",{
 				title: "Prank Your Friends!",
 				img1: "https://www.kenyabuzz.com/lifestyle/wp-content/uploads/2017/11/prank-dne.jpg",
 				img2: "http://canyouactually.com/wp-content/uploads/1961.jpg"
@@ -83,7 +100,7 @@ var events = { //every event is now in the array
 		year: 2019,
 		January: {
 			month: 1,
-			Rutles: [21,"MLK Day", {
+			Rutles: [21,"MLK Day",{
 				title: "Martin Luther King Jr. Day!",
 				header1: "Respect what he fought for.",
 				par1: "No school today to honor the death of Martin Luther King Jr. and to celerbrate the changes that has been made thanks to him.",
