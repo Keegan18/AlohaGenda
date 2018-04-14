@@ -96,7 +96,7 @@ function EventAdd() {
 	}
 	
 	
-	customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1] = userArray;
+	//customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1] = userArray;
 	sessionStorage.setItem('userData',JSON.stringify(customEvents));
 	location.reload();
 }
@@ -175,7 +175,7 @@ function Calendar(events) { //whole calender logic
 				var addInDescript = document.createElement("DIV"); //for the description in the divs
 				
 				//adds the date
-				addInDays.className = "Days"; //class name is Days
+				addInDays.className = "Days" + " Day"+i; //class name is Days
 				addInDays.innerHTML = i;
 				
 				addInMonths.appendChild(addInDays); //adds in the days
