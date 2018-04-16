@@ -391,6 +391,7 @@
 
 #Sunday {
 	border-left: none;
+	padding-right: 4.7%;
 }
 
 #Monday {
@@ -403,7 +404,7 @@
 
 #Wednesday {
 	padding-left: 4.1%;
-	padding-right: 4%;
+	padding-right: 4.1%;
 }
 
 #Thursday {
@@ -411,7 +412,7 @@
 }
 
 #Friday {
-	padding-right: 5%;
+	padding-right: 5.2%;
 	padding-left: 5%;
 
 }
