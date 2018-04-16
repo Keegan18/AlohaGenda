@@ -142,7 +142,7 @@
 	width: auto;
 	max-width: 60%;
 	max-height: 90%;
-	left: 2%;
+	left: 24%;
 	padding-left: 4%;
 	position: relative;
 	background-color: rgb(15, 22, 101);
@@ -467,7 +467,7 @@
 		margin-top: -20%;
 	}
 	div#Calendar {
-		margin-left: 24.5%;
+		left: 28%;
 	}
 }
 
