@@ -268,6 +268,13 @@
 	display: inline-block;
 	position: relative;
 	left: 97.5%;
+	color: white;
+	background-color: rgba(0,0,0,0);
+	font-size: 2em;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
 }
 
 .imgLeft {
@@ -553,6 +560,9 @@
 	}
 	p#waipahu {
 		padding-left: 5%;
+	}
+	button.exitButton {
+		margin-left: -1%;
 	}
 }
 
