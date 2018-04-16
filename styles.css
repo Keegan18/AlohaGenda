@@ -438,7 +438,7 @@
     border:2px solid black;
     position: relative;
     margin-top: 18%;
-    margin-left: 22%;
+  	left: 22%;
 }
 
 #phone{
@@ -484,6 +484,9 @@
 }
 
 @media only screen and (max-width: 1280px) {
+	div#h1 {
+		margin-top: -4%;
+	}
 	button#LB {
 	border: 1px solid gold;
 	text-align: center;
@@ -512,9 +515,6 @@
 		margin-top: -27%;
 		margin-bottom: 26%;
 
-	}
-	div#foot {
-		margin-left: 23%;
 	}
 	div#tb {
 		width: 63%;
@@ -551,6 +551,7 @@
 	}
 	div#foot {
 		font-size: 80%;
+		left: 24%;
 	}
 	p#phone {
 		padding-left: 5%;
