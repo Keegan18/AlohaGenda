@@ -135,13 +135,14 @@
 
 
 #Calendar {
-	border: 0.9px solid goldenrod;
+	display: inline-block;
+	border: 0.9px solid goldenrod0;
 	border-radius: 0.5%;
 	height: auto;
 	width: auto;
 	max-width: 60%;
 	max-height: 90%;
-	margin-left: 24%;
+	left: 2%;
 	padding-left: 4%;
 	position: relative;
 	background-color: rgb(15, 22, 101);
@@ -330,7 +331,7 @@
 	margin-top: -12%;
 	border-radius: 100%;
 	background-color: goldenrod;
-	position: fixed;
+	position: relative;
 }
 
 #RB {
@@ -342,7 +343,7 @@
 	margin-top: -12%;
 	border-radius: 100%;
 	background-color:  goldenrod;
-	position: fixed;
+	position: relative;
 }
 
 /* WEEKLY CLANEDER STUFF! */
