@@ -162,7 +162,7 @@ function Calendar(events) { //whole calender logic
 		
 		for(var k=1; k <= 12; k++) {
 			var addInMonths = document.createElement("DIV");
-			addInMonths.className += monthNames[k-1];
+			addInMonths.className = "Day-container "+ monthNames[k-1];
 			addInMonths.id = "Month-" + k + "-year-" + y;
 			
 			if(k !== month) {

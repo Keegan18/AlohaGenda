@@ -160,6 +160,12 @@
 	background-color: goldenrod;
 }
 
+.Day-container {
+	width: 100%;
+	width: 100%;
+	height: 20%;
+}
+
 .Descriptions {
 	position: relative;
 	margin-top: 20%;		/* Styling could be better */
