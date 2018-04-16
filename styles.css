@@ -54,7 +54,7 @@
 	padding-right: 5%;
 /** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
 	margin-bottom: 1%;
-	margin-top: 1%;
+	margin-top: 0%;
 }
 
 #Month-name {
@@ -68,7 +68,7 @@
 	border:0.5px solid #d3d3d3;
 	border-top: none;
 	border-bottom: none;
-	margin-top: 1%;
+	margin-top: 2%;
 }
 
 #Year-number {
@@ -81,7 +81,7 @@
 	border:0.5px solid #d3d3d3;
 	border-top: none;
 	border-bottom: none;
-	margin-top: 1%;
+	margin-top: 2%;
 }
 
 /* I need help putting these in a good place! */
@@ -89,7 +89,7 @@
 	padding-bottom: 2%;
 	padding-left: 3%;
 	padding-right: 3%;
-	margin-top: 1%;
+	margin-top: 2%;
 }
 
 #search {
