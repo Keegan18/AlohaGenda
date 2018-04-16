@@ -83,20 +83,17 @@ function EventAdd() {
 		}
 	} 
 	userArray.push(userClass);
-	if(customEvents.yearSelection === undefined) {
-		customEvents[yearSelection] = {
-			year: yearSelection
-		};
-	}
 	
-	if(customEvents[yearSelection][monthNames[monthSelection-1]] === undefined) {
-		customEvents[yearSelection][monthNames[monthSelection-1]] = {
-				month: monthSelection
-		};
-	}
+	customEvents[yearSelection] = {
+		year: yearSelection
+	};
+	
+	customEvents[yearSelection][monthNames[monthSelection-1]] = {
+		month: monthSelection
+	};
 	
 	
-	//customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1] = userArray;
+	customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1]] = userArray;
 	sessionStorage.setItem('userData',JSON.stringify(customEvents));
 	location.reload();
 }
