@@ -83,20 +83,17 @@ function EventAdd() {
 		}
 	} 
 	userArray.push(userClass);
-	if(customEvents.yearSelection === undefined) {
-		customEvents[yearSelection] = {
-			year: yearSelection
-		};
-	}
 	
-	if(customEvents[yearSelection][monthNames[monthSelection-1]] === undefined) {
-		customEvents[yearSelection][monthNames[monthSelection-1]] = {
-				month: monthSelection
-		};
-	}
+	customEvents[yearSelection] = {
+		year: yearSelection
+	};
+	
+	customEvents[yearSelection][monthNames[monthSelection-1]] = {
+		month: monthSelection
+	};
 	
 	
-	//customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1] = userArray;
+	customEvents[yearSelection][monthNames[monthSelection-1]]["" + userArray[1]] = userArray;
 	sessionStorage.setItem('userData',JSON.stringify(customEvents));
 	location.reload();
 }
@@ -162,7 +159,7 @@ function Calendar(events) { //whole calender logic
 		
 		for(var k=1; k <= 12; k++) {
 			var addInMonths = document.createElement("DIV");
-			addInMonths.className += monthNames[k-1];
+			addInMonths.className = "Day-container "+ monthNames[k-1];
 			addInMonths.id = "Month-" + k + "-year-" + y;
 			
 			if(k !== month) {

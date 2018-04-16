@@ -27,7 +27,7 @@
 /* everything for the top bar starts here */
 #tb {
 	width: 40.5%;
-	margin-left: 37%;
+	margin-left: 34%;
 	border: 0.5px solid #d3d3d3;
 	display: inline-flex;
 	flex-direction: row;
@@ -54,11 +54,11 @@
 	padding-right: 5%;
 /** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
 	margin-bottom: 1%;
-	margin-top: 0%;
+	margin-top: 2.2%;
 }
 
 #Month-name {
-	width: 30%;
+	width: 50%;
 	font-size: 200%;
 	display: inline-block;
 	text-align:center;
@@ -96,7 +96,7 @@
 	position: relative;
 	display: inline-flex;
 	overflow: hidden;
-	width: 65%;
+	width: 60%;
 	height: 50%;
 	background-color: white;
 	color: black;
@@ -111,7 +111,7 @@
 }
 
 #submit {
-	width: 31%;
+	width: 30%;
 	height: 50%;
 	display: inline-flex;
 	background-color: #42f4d7;
@@ -122,6 +122,8 @@
 	cursor: pointer;
 	border-bottom-right-radius: 10px;
 	border-top-right-radius:10px;
+	margin-left: -2%;
+	z-index: 1;
 }
 
 /* Changes the color of the button when hovered over it, feel free to change the color. */
@@ -158,6 +160,12 @@
 	border: 1px solid goldenrod;
 	border-radius: 7.12%;
 	background-color: goldenrod;
+}
+
+.Day-container {
+	width: 100%;
+	width: 100%;
+	height: 20%;
 }
 
 .Descriptions {
@@ -460,13 +468,14 @@
 /** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
 @media only screen and (max-width: 1680px) {
 	input#search {
-		width: 65%;
+		width: 50%;
 	}
 	input#submit {
-		width: 30%;
+		width: 25%;
+		margin-left: -1.75%;
 	}
 	div#tb {
-		width: 55%;
+		width: 50%;
 		margin-left: 33%;
 	}
 }
@@ -517,11 +526,15 @@
 
 	}
 	div#tb {
-		width: 63%;
+		width: 59%;
 		margin-left: 30%;
 	}
+	input#search {
+		width: 60%;
+	}
 	input#submit {
-		width: 31%;
+		width: 30%;
+		margin-left: -2%;
 	}
 	div#Weekly {
 		width: 54%;

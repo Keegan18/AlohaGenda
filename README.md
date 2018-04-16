@@ -31,3 +31,10 @@ This is a calendar
 
 <input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
 <input type="submit" id="submit" value="Submit" onclick="SearchBar()"/>
+
+<form action="">
+			
+	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
+				<button onclick="" id="submit"> Submit </button> 
+		
+			</form>
