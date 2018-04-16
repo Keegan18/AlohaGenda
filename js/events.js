@@ -17,6 +17,7 @@ var events = { //every event is now in the array
 			},1],												 //three array variable: date,month,Event Description,Detailed Description
 			job5: [5,"School Starts Soon!", {
 				title: "Are you prepared?",
+				header1: "Time to go shopping!",
 				par1: "Don't forget to buy all the needed supplies, such as paper and pens!",
 				img1: "https://s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2016/08/17183105/ThinkstockPhotos-484783000.jpg"
 			}],
@@ -91,4 +92,8 @@ var events = { //every event is now in the array
 			}]
 		}
 	}
+}
+
+var customEvents = {
+	
 }

@@ -25,3 +25,9 @@ This is a calendar
 	-Adding in pictures for the add feature
 	-Add all the redundant stuff in for the dates
 	-Aargons future dream
+	
+	
+	
+
+<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
+<input type="submit" id="submit" value="Submit" onclick="SearchBar()"/>
