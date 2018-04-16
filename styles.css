@@ -139,7 +139,7 @@
 	border: 0.9px solid goldenrod0;
 	border-radius: 0.5%;
 	height: auto;
-	width: auto;
+	width: 53.5%;
 	max-width: 60%;
 	max-height: 90%;
 	left: 26%;
@@ -326,7 +326,6 @@
 	height: auto;
 	position: relative;
 	margin-top: -19%;
-	margin-bottom: 18%;
 }
 
 #LB {
@@ -431,8 +430,8 @@
     width:70%;
     border:2px solid black;
     position: relative;
-    margin-top: 2.5%;
-    margin-left: 20%;
+    margin-top: 18%;
+    margin-left: 22%;
 }
 
 #phone{
@@ -511,7 +510,7 @@
 		margin-left: 23%;
 	}
 	div#tb {
-		width: 62%;
+		width: 63%;
 		margin-left: 30%;
 	}
 	input#submit {
@@ -541,6 +540,7 @@
 	}
 	div#Calendar {
 		padding-left: 2%;
+		width: 60%;
 	}
 	div#foot {
 		font-size: 80%;
