@@ -5,6 +5,8 @@
 
 .body {
 	background-color: rgb(244, 245, 247);
+	height: auto;
+	width: auto;
 }
 
 #h1 {
@@ -174,9 +176,11 @@
 /*everything for the overlay starts here*/
 
 .overlay {
-	width: 100%;
+	width: 102%;
 	height: 100%;
 	display: none;
+	margin-top: -0.7%;
+	margin-left: -2%;
 	position: fixed;
 	background-color: RGBA(0,0,0,0.5);
 	z-index: 2;
@@ -186,24 +190,28 @@
 	width: 55em;
 	height: 36em;
 	margin: auto;
-	background-color:grey;
+	background-color:rgb(15, 22, 101);;
 }
 
 .containerTitle {
-	text-align: left;
+	text-align: center;
 	padding: 2px;
+	background-color: rgb(15, 22, 101);
+	color: goldenrod;
+	font-size: 2em;
 }
 
 .containerLine {
-	
+	border: none;
 }
 
 .containerFlex {
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	overflow: scroll;
+	background-color: grey; 
 }
 
 .containerFlexNoImage {
@@ -224,20 +232,26 @@
 	border: 1px solid black; /* for prototyping */
 	text-align: left;
 	padding: 7px;
+	background-color: lightgrey;
 }
 
 .Overlay-headers {
+	width: auto;
 	font-size: 2.2em;
 	display: table;
 	margin: 2% 50% 2% 2%;
 	text-decoration: underline;
+	background-color: grey;
 }
 
 .imageContainer {
 	border: 1px solid black;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
 	width: 100%;
 	height: 75%;
-	
+	background-color: grey;
 }
 
 .imageContainer > img {
@@ -256,11 +270,15 @@
 .imgLeft {
 	width: 4em;
 	height: 3.2em;
+	position: relative;
+	margin-left: 2%;
 }
 
 .imgRight {
 	width: 4em;
 	height: 3.2em;
+	position: relative;
+	margin-left: 85%;
 }
 
 /*end */
