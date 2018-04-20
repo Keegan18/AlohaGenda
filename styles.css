@@ -302,12 +302,16 @@
 }
 
 #Add-in-holder {
-	width: 100%;
-	height: 90%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	overflow: scroll;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: scroll;
+    background-image: url(https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/teamPicThumb117610-12068-mxe91g.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 40%;
 }
 
 /* end */
