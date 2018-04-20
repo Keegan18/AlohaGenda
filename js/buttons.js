@@ -45,7 +45,7 @@ function active(){
 	var search = document.getElementById("search");
 	if(search.value == "Search..."){
 		search.value = ""
-		search.placeholder = "Search..."
+		search.placeholder = "Search...";
 	}
 }
 
@@ -57,18 +57,35 @@ function inactive(){
 	}
 }
 
+function percentOf(searchArr,mainArr) {
+	console.log(searchArr);
+	console.log(mainArr);
+	var j = 0;
+	var i = 0;
+	var percenTan = searchArr.length;
+	var numberOfRight = 0;
+	while(j < searchArr.length) {
+		
+		if(i >= mainArr.length-1) {
+			j += 1;
+		}
+		
+		if(searchArr[j] === mainArr[i]) {
+			console.log(i);
+			numberOfRight += 1;
+		}
+		
+		i += 1
+	}
+	console.log(numberOfRight / percenTan);
+}
+
  function SearchBar() {
-	var hold = document.getElementById("search").value.toLowerCase();
-	console.log(hold);
-	if(hold !== "search...") {
-		if(hold === "mlk day 2019" || hold === "overlay-21-month-1-year-2019") {
-			document.getElementById("overlay-21-month-1-year-2019").style.display = "block";
-		} else if (hold === "april fools day 2018" || hold === "overlay-1-month-4-year-2018") {
-			document.getElementById("overlay-1-month-4-year-2018").style.display = "block";
-		} else if (hold === "pi day 2018" || hold === "overlay-14-month-3-year-2018") {
-			document.getElementById("overlay-14-month-3-year-2018").style.display = "block";
-		} else if (hold === "safety fair 2018" || hold === "overlay-1-month-3-year-2018") {
-			document.getElementById("overlay-1-month-3-year-2018").style.display = "block";
-		} 
+	var hold = document.getElementById("search").value.toLowerCase().split(" ");
+	var searchOverlays = document.getElementsByClassName("overlay");
+	for(var i=0; i < searchOverlays.length; i++) {
+		
+		var tempArr = searchOverlays[i].childNodes[1].childNodes[0].innerHTML.toLowerCase().split(" ");
+		percentOf(tempArr,hold);
 	}
 } 
