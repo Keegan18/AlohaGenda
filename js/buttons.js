@@ -45,7 +45,7 @@ function active(){
 	var search = document.getElementById("search");
 	if(search.value == "Search..."){
 		search.value = ""
-		search.placeholder = "Search..."
+		search.placeholder = "Search...";
 	}
 }
 
@@ -56,3 +56,33 @@ function inactive(){
 		search.placeholder = "";
 	}
 }
+
+function percentOf(searchArr,mainArr) {
+	var j = 0;
+	var i = 0;
+
+	var percenTan = searchArr.length;
+	var numberOfRight = 0;
+
+	for(i; i < searchArr.length; i++) {
+		for(j = 0; j < mainArr.length; j++) {
+			if(mainArr[j] === searchArr[i]) {
+				numberOfRight += 1;
+			}
+		}
+	}
+	return numberOfRight / percenTan;
+}
+
+ function SearchBar() {
+	var hold = document.getElementById("search").value.toLowerCase().split(" ");
+	var searchOverlays = document.getElementsByClassName("overlay");
+	for(var i=0; i < searchOverlays.length; i++) {
+		
+		var tempArr = searchOverlays[i].childNodes[1].childNodes[0].innerHTML.toLowerCase().split(" ");
+		
+		if(percentOf(tempArr,hold) > 0.3) {
+			searchOverlays[i].style.display = "block";
+		}
+	}
+} 

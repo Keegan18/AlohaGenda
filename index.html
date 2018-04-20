@@ -12,6 +12,19 @@
 			<h3> Add in a event </h3>
 			<hr />
 			
+			<select id="Year-selection"> 
+				<option value=2018> 2018 </option>
+				<option value=2019> 2019 </option>
+				<option value=2020> 2020 </option>
+				<option value=2021> 2021 </option>
+				<option value=2022> 2022 </option>
+				<option value=2023> 2023 </option>
+				<option value=2024> 2024 </option>
+				<option value=2025> 2025 </option>
+				<option value=2026> 2026 </option>
+				<option value=2027> 2027 </option>
+				<option value=2028> 2028 </option>
+			</select>
 			<div id="Add-in-holder">
 			
 				<select id="Month-selection" onclick="DateOption(this)"> <!-- Selection of Dates -->
@@ -48,13 +61,12 @@
 
 		<div id="Month-name">	</div>
 		<div id= "Year-number"> </div>
-		<div id="Searching">
-			<form action="">
-			
-	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input type="submit" id="submit" value="Submit"/>
+		<form action="" id="Searching">
+				
+	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
+				<input onclick="SearchBar()" id="submit" value="Submit"/>
 		
-			</form>
-		</div>
+		</form>
 	</div>
 	
 	<div id="h1">
@@ -66,7 +78,7 @@
 
 
 	<div id="Upcoming-events"> 
-		<p>Upcoming </p>
+		<p>Upcoming Events</p>
 		<hr />
 		<div id="Upcoming-list">
 			<ul id="list">
@@ -100,13 +112,13 @@
 		
 	</div>
 
-	<div id="foot">
+	<!--<div id="foot">
 		<a  id="waipahu" href="http://www.edline.net/pages/waipahu_high_school" target="_blank"> <strong> Waipahu High School </strong> </a>
 
 		<p id="phone"> <strong>Phone:</strong>(808)307-9555 </p>
 
 		<p id="address"> <strong>Address:</strong>94-1211 Farrington Highway, Waipahu, HI 96797 </p>
-	</div>
+	</div> -->
 	<script src="js/variables.js"></script>
 	<script src="js/events.js"></script>
 	<script src="js/overlay.js"></script>
