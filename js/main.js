@@ -35,6 +35,7 @@ function SetEverything() { //sets the user info in custom events if their is any
 		customEvents = JSON.parse(userStuff);
 	}
 }
+
 SetEverything();
 console.log(customEvents);
 
@@ -175,8 +176,6 @@ function Calendar(events) { //whole calender logic
 				addInDays.className = "Days" + " Day"+i; //class name is Days
 				addInDays.innerHTML = i;
 				
-				addInMonths.appendChild(addInDays); //adds in the days
-				
 				//adds the Description & DIV for the image
 				addInDescript.className = "Descriptions"; //class name is Descriptions
 				addInDays.appendChild(addInDescript);
@@ -206,6 +205,14 @@ function Calendar(events) { //whole calender logic
 					listInfo.innerHTML = addInDescript.innerHTML;
 					document.getElementById("list").appendChild(listInfo);
 				}
+				if((i === date) && (k === month) && (y === year)) {
+					addInDays.style.transition = "width 1s,height 1s";
+					addInDays.style.width = "8%";
+					addInDays.style.height = "5em";
+					addInDays.style.color = "red";
+				}
+				
+				addInMonths.appendChild(addInDays); //adds in the days
 			}
 			addInYears.appendChild(addInMonths);
 		}
