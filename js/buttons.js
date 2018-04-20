@@ -58,26 +58,20 @@ function inactive(){
 }
 
 function percentOf(searchArr,mainArr) {
-	console.log(searchArr);
-	console.log(mainArr);
 	var j = 0;
 	var i = 0;
+
 	var percenTan = searchArr.length;
 	var numberOfRight = 0;
-	while(j < searchArr.length) {
-		
-		if(i >= mainArr.length-1) {
-			j += 1;
+
+	for(i; i < searchArr.length; i++) {
+		for(j = 0; j < mainArr.length; j++) {
+			if(mainArr[j] === searchArr[i]) {
+				numberOfRight += 1;
+			}
 		}
-		
-		if(searchArr[j] === mainArr[i]) {
-			console.log(i);
-			numberOfRight += 1;
-		}
-		
-		i += 1
 	}
-	console.log(numberOfRight / percenTan);
+	return numberOfRight / percenTan;
 }
 
  function SearchBar() {
@@ -86,6 +80,9 @@ function percentOf(searchArr,mainArr) {
 	for(var i=0; i < searchOverlays.length; i++) {
 		
 		var tempArr = searchOverlays[i].childNodes[1].childNodes[0].innerHTML.toLowerCase().split(" ");
-		percentOf(tempArr,hold);
+		
+		if(percentOf(tempArr,hold) > 0.3) {
+			searchOverlays[i].style.display = "block";
+		}
 	}
 } 
