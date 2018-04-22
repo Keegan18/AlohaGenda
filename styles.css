@@ -385,7 +385,6 @@
 	position: relative;
 	z-index: 1;
 	padding-left: 6%;
-	border: 1px solid black;
 }
 
 .weeks {
@@ -414,17 +413,16 @@
 }
 
 #Monday {
-	padding-right: 
+	padding-right: 4.5%;
 }
 
 #Tuesday {
-	padding-right: 
-	margin-left: 
+
 }
 
 #Wednesday {
 	padding-left: ;
-	padding-right: 
+	padding-right: 4.4%;
 }
 
 #Thursday {
@@ -432,14 +430,13 @@
 }
 
 #Friday {
-	padding-right: 
-	padding-left: 
-
+	padding-right: 5.7%;
+	margin-right: 0.2%;
 }
 
 #Saturday {
 	border-right:none;
-
+	padding-left: 4.8%;
 }
 
 /** End of Weekly stuff **/
