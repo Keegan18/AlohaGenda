@@ -3,7 +3,7 @@
 }
 
 .body {
-	background-color: rgb(244, 245, 247);
+	background-color: #D2FF96;
 	height: auto;
 	width: auto;
 	overflow: hidden;
@@ -22,6 +22,11 @@
 	padding-bottom: 2.5%;
 	left: -0.8%;
 	margin-top: -6.1%;
+}
+
+#aloha {
+	color: #45F0DF;
+	font-size: 45px;
 }
 
 /* everything for the top bar starts here */
@@ -49,8 +54,8 @@
 #add {
 	font-size: 300%;
 	display:inline-block;
-	color: goldenrod;
-	background-color: rgb(244, 245, 247);
+	color: #FCFF56;
+	background-color: #eafffc;
 	padding-left: 5%;
 	padding-right: 5%;
 /** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
@@ -63,7 +68,7 @@
 	font-size: 300%;
 	display: inline-block;
 	text-align:center;
-	color: goldenrod;
+	color: #45F0DF;
 	padding-left: 1%;
 	padding-right: 1%;
 	border:0.5px solid black;
@@ -76,7 +81,7 @@
 	font-size: 300%;
 	display: inline-block;
 	text-align:center;
-	color: goldenrod;
+	color: #45F0DF;
 	padding-left: 5%;
 	padding-right: 5%;
 	border:0.5px solid black;
@@ -142,7 +147,7 @@
 
 #Calendar {
 	display: inline-block;
-	border: 1.2px solid rgb(15, 22, 101);
+	border: 1.2px, #45D0DF;
 	height: 70%;
 	width: 73.2%;
 	max-width: 100%;
@@ -150,7 +155,7 @@
 	left: 21.1%;
 	padding-left: 6%;
 	position: relative;
-	background-color: rgb(15, 22, 101);
+	background-color: #9AD2CB;
 }
 
 .Days {
@@ -162,7 +167,7 @@
 	padding: 2%;
 	border: 1px solid goldenrod;
 	border-radius: 7.12%;
-	background-color: goldenrod;
+	background-color: #FCFF56;
 }
 
 .Descriptions {
@@ -322,11 +327,11 @@
 	height: 100%;
 	max-width: 40%;
 	width: 21.39%;
-	border:1px solid goldenrod;
+	border:1px ivory;
 	position: absolute;
 	left: -0.05%;
-	background-color: goldenrod;
-	color: white;
+	background-color: #B7F0AD;
+	color: Black;
 	font-size: 200%;
 	font-style: italic;
 	text-align: left;
