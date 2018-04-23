@@ -81,7 +81,7 @@ function percentOf(searchArr,mainArr) {
 		
 		var tempArr = searchOverlays[i].childNodes[1].childNodes[0].innerHTML.toLowerCase().split(" ");
 		
-		if(percentOf(tempArr,hold) > 0.3) {
+		if(percentOf(tempArr,hold) > 0.1) {
 			searchOverlays[i].style.display = "block";
 		}
 	}
