@@ -473,6 +473,10 @@
 }
 
 /** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
+@media only screen and (max-width: 1366px) {
+ }
+
+
 @media only screen and (max-width: 1280px) {
 	div#h1 {
 		margin-top: -6%;
@@ -516,35 +520,36 @@
 	}
 	button#LB {
 		left: 21.65%;
-		top: 17.6%;
+		top: 17.7%;
 		padding-bottom: 45%;
 	}
 	button#RB {
-		top: 17.6%;
+		top: 17.7%;
 		padding-bottom: 45%;
 	}
 	div#Weekly {
-		width: 54%;
-		margin-left: 2.1%;
+		width: 65%;
+		left: 19.5%;
 		margin-top: -6.7%;
 	}
 	div#Sunday {
-		padding-right: 3.8%;
+		padding-right: ;
 	}
 	div#Monday {
-		padding-right: 3.6%;
+		padding-right: 4%;
 	}
 	div#Tuesday {
-		padding-right: 4.4%;
+		padding-right: 5%;
 	}
 	div#Wednesday {
-		padding-right: 3.4%;
+		padding-right: 3.9%;
 	}
 	div#Thursday {
-		padding-right: 3.8%;
+		padding-right: ;
 	}
 	div#Friday {
-		padding-right: 5.9%;
+		padding-left: 6%;
+		padding-right: 5.3%;
 	}
 }
 
