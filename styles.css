@@ -7,11 +7,10 @@
 	background-color: #D2FF96;
 	height: auto;
 	width: auto;
-	overflow: hidden; 
+
 }
 
-#left-Side {
-	float: left;
+#top-Area {
 	width: 21%;
 	max-width: 100%;
 	height: 100%;
@@ -26,8 +25,8 @@
 	width: 100%;
 	height: 20%;
 	max-height: 100%;
-	padding-top: 12%;
-	padding-bottom: 12%;
+	padding-top: 18%;
+	padding-bottom: 18%;
 	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
@@ -35,36 +34,8 @@
 	float: left;
 }
 
-#Upcoming-events {
-	overflow: hidden;	
-	width: 100%;
-	max-height: 100%;
-	height: 100%;
-	border:1px ivory;
-	background-color: #B7F0AD;
-	color: black;
-	font-size: 200%;
-	font-style: italic;
-	text-align: left;
-	position: relative;
-	z-index: 1;
-	float: left;
-	padding-bottom: 100%;
-}
-
-#right-Side {
-	left: 21.5%;
-	width: 78.5%;
-	max-width: 100%;
-	height: 100%;
-	max-height: 100%;
-	position: relative;
-	text-align: center;
-}
-
-/* everything for the top bar starts here */
 #tb {
-	width: 65%;
+	width: 75%;
 	border: 0.5px solid black;
 	display: inline-flex;
 	flex-direction: row;
@@ -72,8 +43,10 @@
 	border-left: none;
 	border-right: none;
 	position: relative;
+	left: 10%;
 	margin-top: 1.5%;
 	margin-bottom: 2%;
+	float: center;
 }
 
 #tb > * {
@@ -183,23 +156,48 @@
 /*end*/
 
 
+#bottom-Area {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
+#Upcoming-events {
+	overflow: hidden;	
+	width: 21%;
+	max-height: 100%;
+	height: 100%;
+	background-color: #B7F0AD;
+	color: black;
+	font-size: 200%;
+	font-style: italic;
+	text-align: left;
+	position: relative;
+	z-index: 1;
+}
+
+/* everything for the top bar starts here */
+
+
+
 #Calendar {
 	display: inline-block;
 	border: 1.2px, #45D0DF;
-	height: 70%;
-	width: auto;
+	height: 100%;
+	width: 93%;
 	max-width: 100%;
 	max-height: 100%;
-	padding-left: ;
 	position: relative;
 	background-color: #9AD2CB;
-	padding-bottom: 20%;
+	padding-left: 7%;
+	padding-bottom: 10%;
 	z-index: 5;
 }
 
 .Days {
 	width: 8.1%;
-	height: 4.7em;
+	height: 4em;
 	display: inline-flex;
 	flex: center;
 	margin: 0.4em;
@@ -216,7 +214,7 @@
 	left: ;
 	position: relative;
 	z-index: 1;
-	margin-bottom: 2%;
+	margin-bottom: 1%;
 }
 
 .weeks {
