@@ -86,3 +86,9 @@ function percentOf(searchArr,mainArr) {
 		}
 	}
 } 
+
+function SwitchCags(option) {
+	var temp = "js/events/" + option;
+	sessionStorage.setItem('category', temp);
+	location.reload();
+}

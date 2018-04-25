@@ -65,7 +65,7 @@
 		<form action="" id="Searching">
 				
 	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
-				<input onclick="SearchBar()" id="submit" value="Submit"/>
+				<p><input onclick="SearchBar()" id="submit" value="Submit"/></p>
 		
 		</form>
 	</div>
@@ -108,9 +108,14 @@
 
 	<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
 			 
-	 <button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
+	<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
 	
 
+	<div id="Select-cag" >
+		<button onclick="SwitchCags('sports.js')">Sports</button>
+		<button onclick="SwitchCags('studentActivites.js')"> Student Activites</button>
+		<button onclick="SwitchCags('mainEvents')"> Main </button>
+	</div>
 	<!--<div id="foot">
 		<a  id="waipahu" href="http://www.edline.net/pages/waipahu_high_school" target="_blank"> <strong> Waipahu High School </strong> </a>
 
@@ -119,8 +124,8 @@
 		<p id="address"> <strong>Address:</strong>94-1211 Farrington Highway, Waipahu, HI 96797 </p>
 	</div> -->
 	<script src="js/variables.js"></script>
-	<script src="js/events.js"></script>
-	<script src="js/overlay.js"></script>
+	
+	<script id="var" src="js/overlay.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/buttons.js"></script>
 </body>

@@ -220,4 +220,7 @@ function Calendar(events) { //whole calender logic
 	}
 }
 
-window.onload = Calendar(events);
+window.onload = function(){
+	console.log('this is happening too!');
+	Calendar(events);
+};
