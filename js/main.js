@@ -37,7 +37,7 @@ function SetEverything() { //sets the user info in custom events if their is any
 }
 
 SetEverything();
-console.log(customEvents);
+//console.log(customEvents);
 
 function AddToMain() {
 	for(var i in events) {

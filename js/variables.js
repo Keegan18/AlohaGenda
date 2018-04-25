@@ -15,15 +15,15 @@ var currentYear = year; //what year is getting viewed
 console.log(currentMonth);
 
 function CagStartUp() {
-	console.log("Im FIRST!");
-	var temp = document.createElement("script");
 	if(sessionStorage.getItem('category') !== null) {
-		temp.src = sessionStorage.getItem('category');
-	} else {
-		console.log("egg")
-		temp.src = 'js/events/mainEvents.js';
+		switch(sessionStorage.getItem('category')) {
+			case 'sports':
+				events = sports
+				break;
+			case 'studentActivities':
+				events = studentActivities
+				break;
+		}
 	}
-	temp.id="gay";
-	document.body.insertBefore(temp,document.getElementById("var"));
 }
 CagStartUp();

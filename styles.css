@@ -458,6 +458,15 @@
 	background-color:  #D2FF96;
 }
 
+#Select-dropdown {
+	position: fixed;
+	width: 75%;
+	height: 6%;
+	bottom: 0%;
+	margin: 0 auto;
+	border: 1px solid black;
+	z-index: 3;
+}
 
 #Sunday {
 	border-left: none;
