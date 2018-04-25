@@ -1,3 +1,4 @@
+
 * {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -9,34 +10,51 @@
 	overflow: hidden; 
 }
 
+#left-Side {
+	float: left;
+	width: 21.2%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
 #h1 {
 	overflow: hidden;
-	width: 22%;
-	text-align: center;
-	color: goldenrod;
 	position: relative;
+	font-size: 200%;
+	text-align: center;
+	width: 100%;
+	height: 20%;
+	max-height: 100%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	padding-top: 2.6%;
-	padding-bottom: 2.6%;
-	left: -0.8%;
-	margin-top: -6.1%;
+	float: left;
 }
 
-#aloha {
-	color: #45F0DF;
-	font-size: 45px;
-	font-family: 'Kalam';
-	height: auto;
-	width: auto;
-	text-align: center;
+#Upcoming-events {
+	overflow: hidden;	
+	width: 100%;
+	max-height: 100%;
+	height: 100%;
+	border:1px ivory;
+	background-color: #B7F0AD;
+	color: black;
+	font-size: 200%;
+	font-style: italic;
+	text-align: left;
+	position: relative;
+	z-index: 1;
+	float: left;
 }
 
 /* everything for the top bar starts here */
 #tb {
 	width: 65%;
-	left: 27%;
+	left: 5%;
 	border: 0.5px solid black;
 	display: inline-flex;
 	flex-direction: row;
@@ -44,6 +62,8 @@
 	border-left: none;
 	border-right: none;
 	position: relative;
+	margin-top: 1.5%;
+	margin-bottom: 2%;
 }
 
 #tb > * {
@@ -65,6 +85,7 @@
 /** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
 	margin-bottom: 0.1%;
 	margin-top: 1%;
+	position: relative;
 }
 
 #Month-name {
@@ -79,6 +100,7 @@
 	border-top: none;
 	border-bottom: none;
 	margin-top: 1%;
+	position: relative;
 }
 
 #Year-number {
@@ -93,6 +115,7 @@
 	border-bottom: none;
 	border-left: none;
 	margin-top: 1%;
+	position: relative;
 }
 
 /* I need help putting these in a good place! */
@@ -101,6 +124,7 @@
 	padding-left: 4%;
 	padding-right: -5%;
 	margin-top: 1%;
+	position: relative;
 }
 
 #search {
@@ -153,14 +177,14 @@
 	display: inline-block;
 	border: 1.2px, #45D0DF;
 	height: 70%;
-	width: 73.2%;
+	width: 73.7%;
 	max-width: 100%;
 	max-height: 100%;
-	left: 21.1%;
-	padding-left: 6%;
+	padding-left: 5%;
 	position: relative;
 	background-color: #9AD2CB;
 	padding-bottom: 20%;
+	z-index: 5;
 }
 
 .Days {
@@ -328,25 +352,6 @@
 
 /* end */
 
-#Upcoming-events {
-	overflow: hidden;	
-	max-height: 100%;
-	height: 100%;
-	max-width: 40%;
-	width: 21.5%;
-	border:1px ivory;
-	position: absolute;
-	left: -0.05%;
-	background-color: #B7F0AD;
-	color: black;
-	font-size: 200%;
-	font-style: italic;
-	text-align: left;
-	position: absolute;
-	z-index: 1;
-}
-
-
 #LB {
 	border: 1px solid lightgrey;
 	text-align: center;
@@ -383,13 +388,11 @@
 #Weekly {
 	white-space: nowrap;
 	height: 12%;
-	width: 72%;
-	left: 21.1%;
-	margin-bottom: 0.5%;
-	margin-top: -2.5%;
+	width: 50%;
+	left: 12%;
 	position: relative;
 	z-index: 1;
-	padding-left: 6%;
+	margin-bottom: 2%;
 }
 
 .weeks {
@@ -418,7 +421,7 @@
 }
 
 #Monday {
-	padding-right: 4.5%;
+	padding-right: 
 }
 
 #Tuesday {
@@ -427,7 +430,7 @@
 
 #Wednesday {
 	padding-left: ;
-	padding-right: 4.4%;
+	padding-right: 
 }
 
 #Thursday {
@@ -435,13 +438,13 @@
 }
 
 #Friday {
-	padding-right: 5.7%;
-	margin-right: 0.2%;
+	padding-right: 
+	margin-right: 
 }
 
 #Saturday {
 	border-right:none;
-	padding-left: 4.8%;
+	padding-left: 
 }
 
 /** End of Weekly stuff **/
@@ -473,86 +476,8 @@
     padding-left: 10%;
 }
 
+
 /** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
-@media only screen and (max-width: 1366px) {
- }
-
-
-@media only screen and (max-width: 1280px) {
-	div#h1 {
-		margin-top: -6%;
-		padding-top: 1%;
-		padding-bottom: 4%;
-		margin-bottom: -3.5%;
-	}
-	div#aloha {
-		margin-top: 5%;
-	}
-	div#tb {
-		width: 70%;
-		left: 25%;
-	}
-	div#Month-name {
-		width:50%;
-	}
-	form#Searching {
-		padding-bottom: 0%;
-	}
-	input#search {
-		height: 32%;
-		width: 50%;
-	}
-	input#submit {
-		width: 25%;
-		height: 32%;
-		margin-left: -1.4%;
-	}
-	div#Calendar {
-		left: 21.25%;
-		padding-left: 4%;
-		width: 74.5%;
-	}
-	div.Days {
-		height: 5.5em;
-	}
-	div#Upcoming-events  {
-		width: 21.7%;
-		height: 100%;
-	}
-	button#LB {
-		left: 21.65%;
-		top: 17%;
-		padding-bottom: 50%;
-	}
-	button#RB {
-		top: 17%;
-		padding-bottom: 50%;
-	}
-	div#Weekly {
-		width: 65%;
-		left: 19.5%;
-		margin-top: -6.7%;
-	}
-	div#Sunday {
-		padding-right: ;
-	}
-	div#Monday {
-		padding-right: 4%;
-	}
-	div#Tuesday {
-		padding-right: 5%;
-	}
-	div#Wednesday {
-		padding-right: 3.9%;
-	}
-	div#Thursday {
-		padding-right: ;
-	}
-	div#Friday {
-		padding-left: 6%;
-		padding-right: 5.5%;
-	}
-}
 
 
 
