@@ -258,6 +258,11 @@
 	background-color:rgb(15, 22, 101);;
 }
 
+#Quick-descript {
+	padding-bottom: 7%;
+	overflow: hidden;
+}
+
 .containerTitle {
 	text-align: center;
 	padding: 2px;
@@ -350,8 +355,8 @@
 
 /* everything for Add feature starts here */
 #Add-in-Overlay { /* change to class overlay function later */
-	width: 110%;
-	height: 100%;
+	width: 98.3%;
+	height: 98.3%;
 	background-color: RGBA(0,0,0,0.5);
 	z-index: 2;
 	display: none;
