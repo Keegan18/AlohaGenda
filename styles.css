@@ -1,4 +1,3 @@
-
 * {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -213,6 +212,7 @@
 	width: 75%;
 	position: relative;
 	z-index: 1;
+	text-align: center;
 }
 
 .weeks {
@@ -477,5 +477,12 @@
     padding-left: 10%;
 }
 
-
-
+#Select-dropdown {
+	position: fixed;
+	width: 75%;
+	height: 6%;
+	bottom: 0%;
+	margin: 0 auto;
+	border: 1px solid black;
+	z-index: 1;
+}

@@ -37,7 +37,7 @@ function SetEverything() { //sets the user info in custom events if their is any
 }
 
 SetEverything();
-console.log(customEvents);
+//console.log(customEvents);
 
 function AddToMain() {
 	for(var i in events) {
@@ -149,6 +149,7 @@ function addEvent(day, arr,month,year) {
 }
 
 function Calendar(events) { //whole calender logic
+	var week = 1
 	for(var y=year; y <= year + yearOn; y++) { //adds in the years
 		var addInYears = document.createElement("DIV");
 		addInYears.className = "Years";
@@ -175,6 +176,12 @@ function Calendar(events) { //whole calender logic
 				//adds the date
 				addInDays.className = "Days" + " Day"+i; //class name is Days
 				addInDays.innerHTML = i;
+				if( i % 7 !== 0) {
+					addInDays.className += " Week" + week;
+				} else {
+					addInDays.className += " Week" + week;
+					week += 1;
+				}
 				
 				//adds the Description & DIV for the image
 				addInDescript.className = "Descriptions"; //class name is Descriptions
@@ -220,4 +227,6 @@ function Calendar(events) { //whole calender logic
 	}
 }
 
-window.onload = Calendar(events);
+window.onload = function(){
+	Calendar(events);
+};

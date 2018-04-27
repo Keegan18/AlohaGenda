@@ -57,7 +57,6 @@
 		</div>
 	</div>
 	
-	
 	<div id="top-Area">
 		<div id="h1">
 			Aloha Genda	
@@ -105,12 +104,14 @@
 		</div>
 
 		<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
-			 
 		<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
 	</div>
-
 	
-
+	<div id="Select-dropdown" >
+		<button onclick="SwitchCags('sports')">Sports</button>
+		<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
+		<button onclick="SwitchCags('mainEvents')"> Main </button>
+	</div>
 	<!--<div id="foot">
 		<a  id="waipahu" href="http://www.edline.net/pages/waipahu_high_school" target="_blank"> <strong> Waipahu High School </strong> </a>
 
@@ -118,9 +119,11 @@
 
 		<p id="address"> <strong>Address:</strong>94-1211 Farrington Highway, Waipahu, HI 96797 </p>
 	</div> -->
+	<script src="js/events/mainEvents.js"> </script>
+	<script src="js/events/studentActivities.js"> </script>
+	<script src="js/events/sports.js"> </script>
 	<script src="js/variables.js"></script>
-	<script src="js/events.js"></script>
-	<script src="js/overlay.js"></script>
+	<script id="var" src="js/overlay.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/buttons.js"></script>
 </body>
