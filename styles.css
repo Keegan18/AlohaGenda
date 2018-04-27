@@ -213,7 +213,6 @@
 	width: 75%;
 	position: relative;
 	z-index: 1;
-	text-align: center;
 }
 
 .weeks {
@@ -229,7 +228,7 @@
 	border-right: none;
 	border-top: none;
 	border-bottom: none;
-	background-color:  #D2FF96;
+	background-color: #9AD2CB;
 }
 
 /* WEEKLY CLANEDER STUFF! */
