@@ -175,7 +175,7 @@
 	font-style: italic;
 	text-align: left;
 	z-index: 1;
-	padding-bottom: 55%;
+	padding-bottom: 75%;
 }
 
 /* everything for the top bar starts here */
@@ -210,14 +210,13 @@
 #Weekly {
 	white-space: nowrap;
 	height: 12%;
-	width: 50%;
-	left: 10%;
+	width: 75%;
 	position: relative;
 	z-index: 1;
+	text-align: center;
 }
 
 .weeks {
-	text-align: center;
 	overflow: hidden;
 	border:2px solid black;
 	position: relative;
@@ -225,8 +224,6 @@
 	height: 70%;
 	padding-top: .3%;
 	padding-bottom: .3%;
-	padding-left: 5%;
-	padding-right: 5%;
 	display: inline-flex;
 	flex-direction: row;
 	border-right: none;
@@ -234,7 +231,6 @@
 	border-bottom: none;
 	background-color:  #D2FF96;
 }
-
 
 .Descriptions {
 	position: relative;
