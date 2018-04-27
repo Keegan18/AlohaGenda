@@ -222,9 +222,9 @@ function Calendar(events) { //whole calender logic
 				}
 				if((i === date) && (k === month) && (y === year)) {
 					addInDays.style.transition = "width 1s,height 1s";
-					addInDays.style.width = "8%";
-					addInDays.style.height = "5em";
-					addInDays.style.color = "red";
+					addInDays.style.backgroundColor = "lightgreen";
+					addInDays.style.border = "1px solid lightgreen"
+					addInDays.style.boxShadow = "30px 25px 5px black;";
 				}
 				
 				addInMonths.appendChild(addInDays); //adds in the days

@@ -204,6 +204,7 @@
 	border: 1px solid goldenrod;
 	border-radius: 7.12%;
 	background-color: #FCFF56;
+	overflow: hidden;
 }
 
 .weekendNames {
