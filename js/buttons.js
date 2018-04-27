@@ -93,7 +93,7 @@ function SwitchCags(option) {
 }
 
 function ToggleDrop(option) {
-	var temp = document.getElementById("top-down-button");
+	var temp = option.parentNode.getElementsByClassName('top-down-items')[0];
 	if(temp.style.display === "none") {
 		temp.style.display = "block";
 	} else {
