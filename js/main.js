@@ -169,6 +169,14 @@ function Calendar(events) { //whole calender logic
 			}
 			
 			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				if(i === 1) {
+					for(var h=0; h < 7; h++) {
+						var weeks = document.createElement("DIV");
+						weeks.innerHTML = weeknames[h];
+						weeks.className = weeknames[h] + " weekendNames";
+						addInMonths.appendChild(weeks);
+					}
+				}
 				
 				var addInDays = document.createElement("DIV"); //for days
 				var addInDescript = document.createElement("DIV"); //for the description in the divs
