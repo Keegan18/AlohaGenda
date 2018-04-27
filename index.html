@@ -59,21 +59,33 @@
 	
 	<div id="top-Area">
 	
-		<div id="top-down">
+		<div class="top-down" id="oof">
 		
-			<button id="drop-button" onclick="ToggleDrop(this)"> oof </button>
+			<button class="drop-button" onclick="ToggleDrop(this)"> oof </button>
 			
-			<div id="top-down-button">
+			<div class="top-down-items">
 			<button onclick="SwitchCags('sports')">Sports</button>
 			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
 			<button onclick="SwitchCags('mainEvents')"> Main </button>
+			
+			</div>
 		
+		</div>
+		
+		<div class="top-down" id="hold">
+		
+			<button class="drop-button" onclick="ToggleDrop(this)"> Hold </button>
+			
+			<div class="top-down-items">
+			
 			<form action="" id="Searching">
 			
 	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
 				<input onclick="SearchBar()" id="submit" value="Submit"/>
 			
 			</form>
+			
+			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
 			
 			</div>
 		
@@ -85,8 +97,6 @@
 		</div>
 
 		<div id="tb">
-			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
-
 			<div id="Month-name">	</div>
 			<div id= "Year-number"> </div>
 		</div>
