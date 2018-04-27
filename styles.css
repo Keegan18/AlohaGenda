@@ -163,7 +163,7 @@
 #Upcoming-events {
 	display: inline-block;
 	width: 22.05%;
-	height: 1%;
+	max-height: 1%;
 	background-color: #B7F0AD;
 	color: black;
 	font-size: 200%;
