@@ -4,9 +4,9 @@
 
 .body {
 	background-color: #D2FF96;
-	overflow: hidden;
 	height: auto;
 	width: auto;
+	overflow: hidden;
 }
 
 #top-Area {
@@ -174,7 +174,7 @@
 	font-style: italic;
 	text-align: left;
 	z-index: 1;
-	padding-bottom: 75%;
+	padding-bottom: 70%;
 }
 
 /* everything for the top bar starts here */
@@ -191,12 +191,12 @@
 	position: relative;
 	background-color: #9AD2CB;
 	padding-left: 5%;
-	padding-bottom: 50%;
+	padding-bottom: 30%;
 }
 
 .Days, .weekendNames {
 	width: 8.1%;
-	height: 4em;
+	height: 3.7em;
 	display: inline-flex;
 	flex: center;
 	margin: 0.4em;
@@ -207,7 +207,8 @@
 }
 
 .weekendNames {
-	height: 1.5em;
+	height: 0.5em;
+	text-align: center;
 }
 
 /* WEEKLY CLANEDER STUFF! */
@@ -400,7 +401,7 @@
 	max-height: 100%;
 	background-color: lightgrey;
 	padding-top: 25%;
-	padding-bottom: 50%;
+	padding-bottom: 63%;
 	right: 77.7%;
 	position: relative;
 	display: inline-block;
@@ -415,43 +416,11 @@
 	max-height: 100%;
 	background-color: lightgrey;
 	padding-top: 25%;
-	padding-bottom: 50%;
+	padding-bottom: 63%;
 	position: relative;
 	display: inline-block;
 }
 
-
-#Sunday {
-	border-left: none;
-	padding-right: 
-}
-
-#Monday {
-	padding-right: 
-}
-
-#Tuesday {
-
-}
-
-#Wednesday {
-	padding-left: ;
-	padding-right: 
-}
-
-#Thursday {
-	padding-right: 
-}
-
-#Friday {
-	padding-right: 
-	margin-right: 
-}
-
-#Saturday {
-	border-right:none;
-	padding-left: 
-}
 
 /** End of Weekly stuff **/
 
