@@ -28,13 +28,67 @@
 #aloha {
 	color: #45F0DF;
 	font-size: 45px;
-	background: -webkit-linear-gradient(#eee, #45f0df);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	-webkit-animation: color-change 9s infinite;
+    -moz-animation: color-change 9s infinite;
+    -o-animation: color-change 9s infinite;
+    -ms-animation: color-change 9s infinite;
+    animation: color-change 9s infinite;
+    text-shadow: 2px 2px black;
 	font-family: 'Kalam';
 	height: auto;
 	width: auto;
 	text-align: center;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: red; }
+    14.3% {color: orange;}
+    28.6% { color: yellow; }
+    42.9% {color: green;}
+    57.2% { color: blue; }
+	71.5% {color: indigo;}
+	85.8% {color: violet;}
+	100% {color: ivory;}
+}
+@-moz-keyframes color-change {
+    0% { color: red; }
+    14.3% {color: orange;}
+    28.6% { color: yellow; }
+    42.9% {color: green;}
+    57.2% { color: blue; }
+	71.5% {color: indigo;}
+	85.8% {color: violet;}
+	100% {color: ivory;}
+}
+@-ms-keyframes color-change {
+    0% { color: red; }
+    14.3% {color: orange;}
+    28.6% { color: yellow; }
+    42.9% {color: green;}
+    57.2% { color: blue; }
+	71.5% {color: indigo;}
+	85.8% {color: violet;}
+	100% {color: ivory;}
+}
+@-o-keyframes color-change {
+    0% { color: red; }
+    14.3% {color: orange;}
+    28.6% { color: yellow; }
+    42.9% {color: green;}
+    57.2% { color: blue; }
+	71.5% {color: indigo;}
+	85.8% {color: violet;}
+	100% {color: ivory;}
+}
+@keyframes color-change {
+    0% { color: red; }
+    14.3% {color: orange;}
+    28.6% { color: yellow; }
+    42.9% {color: green;}
+    57.2% { color: blue; }
+	71.5% {color: indigo;}
+	85.8% {color: violet;}
+	100% {color: ivory;}
 }
 
 /* everything for the top bar starts here */
@@ -62,13 +116,25 @@
 #add {
 	font-size: 120%;
 	display:inline-block;
-	color: #45F0DF;
-	background-color: #D2FF96;
+	color: tomato;
+	
+	background-color: #d2ff96;
+	text-align: center;
+	text-decoration: none;
 	padding-left: 5%;
 	padding-right: 5%;
 /** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
 	margin-bottom: 0.1%;
 	margin-top: 1%;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#add:hover {
+	background-color: #45f0df;
+	color: white;
+	border: 4px solid orange;
 }
 
 #Month-name {
@@ -76,7 +142,8 @@
 	font-size: 300%;
 	display: inline-block;
 	text-align:center;
-	color: #45F0DF;
+	color: #ffff66;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	padding-left: 1%;
 	padding-right: 1%;
 	border:0.5px solid black;
@@ -89,7 +156,7 @@
 	font-size: 300%;
 	display: inline-block;
 	text-align:center;
-	color: #45F0DF;
+	color: black;
 	padding-left: 5%;
 	padding-right: 5%;
 	border:0.5px solid black;
@@ -270,17 +337,23 @@
 
 }
 
+#add_Event {
+	color: orange;
+	font-family: 'Kalam';
+}
+
 #Quick-descript {
-	padding-bottom: 7%;
-	width: 64em;
-	height: 8em;
+	padding-bottom: 9%;
+	width: 63em;
+	height: 3em;
 	overflow: auto;
 	resize: none;
 	background-color: #f8f8f8;
 }
 
 .Paragraph {
-	padding-bottom: 9%;
+	padding-bottom: 7%;
+	height: 5em;
 	overflow: auto;
 	background-color: #f8f8f8;
 	resize: none;
