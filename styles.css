@@ -202,34 +202,10 @@
 	overflow: hidden;
 }
 
+/* WEEKLY CLANEDER STUFF! */
+
 .weekendNames {
 	height: 1.5em;
-}
-
-/* WEEKLY CLANEDER STUFF! */
-#Weekly {
-	white-space: nowrap;
-	height: 12%;
-	width: 100%;
-	position: relative;
-	z-index: 1;
-}
-
-.weeks {
-	overflow: hidden;
-	border:2px solid black;
-	position: relative;
-	font-size: 150%;
-	height: 70%;
-	width: 8.8%;
-	padding: 2%;
-	padding-top: 0.5%;
-	display: inline-flex;
-	flex: center;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	background-color: #9AD2CB;
 }
 
 /* WEEKLY CLANEDER STUFF! */
