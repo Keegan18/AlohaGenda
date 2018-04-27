@@ -220,6 +220,11 @@
 	margin-left: 82.6%;
 }
 
+#Select-cag {
+	position: absolute;
+	z-index: 3;
+	top: 0%;
+}
 
 
 .Descriptions {
@@ -395,33 +400,30 @@
 #LB {
 	border: 1px solid lightgrey;
 	text-align: center;
-	width: 1.3%;
-	height: 70%;
 	max-height: 100%;
-	background-color: lightgrey;
 	padding-top: 20%;
 	padding-bottom: 21.9%;
-	top: 20.8%;
 	right: 77.22%;
-	position: absolute;
 	display: inline-block;
-	z-index: 1;
 }
 
 #RB {
 	border: 1px solid lightgrey;
 	text-align: center;
-	width: 1.3%;
-	height: 70%;
 	max-height: 100%;
-	background-color: lightgrey;
 	padding-top: 20%;
 	padding-bottom: 21.9%;
-	top: 20.8%;
 	right: 0%;
-	position: absolute;
-	display: inline-block;
-	z-index: 1;
+}
+
+#RB, #LB {
+		background-color: rgba(0,0,0,0);
+		width: 4%;
+		height: 70%;
+		top: 20.8%;
+		z-index: 1;
+		display: inline-block;
+		position: absolute;
 }
 
 /* WEEKLY CLANEDER STUFF! */
@@ -456,6 +458,28 @@
 	background-color:  #D2FF96;
 }
 
+#Select-dropdown {
+	position: fixed;
+	width: 75%;
+	height: 6%;
+	bottom: 0%;
+	margin: 0 auto;
+	border: 1px solid black;
+	z-index: 1;
+}
+
+#Month-dropdown {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+}
+
+#Month-name:hover #Month-dropdown {
+	display:block;
+}
 
 #Sunday {
 	border-left: none;

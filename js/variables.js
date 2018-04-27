@@ -13,3 +13,17 @@ var counter = 0;
 var currentMonth = month; //what month is currently getting viewed
 var currentYear = year; //what year is getting viewed
 console.log(currentMonth);
+
+function CagStartUp() {
+	if(sessionStorage.getItem('category') !== null) {
+		switch(sessionStorage.getItem('category')) {
+			case 'sports':
+				events = sports
+				break;
+			case 'studentActivities':
+				events = studentActivities
+				break;
+		}
+	}
+}
+CagStartUp();
