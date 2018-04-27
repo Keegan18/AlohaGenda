@@ -4,7 +4,6 @@
 
 .body {
 	background-color: #D2FF96;
-	overflow: hidden;
 	height: auto;
 	width: auto;
 }
@@ -204,6 +203,7 @@
 	border: 1px solid goldenrod;
 	border-radius: 7.12%;
 	background-color: #FCFF56;
+	overflow: hidden;
 }
 
 .weekendNames {
