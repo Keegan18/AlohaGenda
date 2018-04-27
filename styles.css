@@ -28,6 +28,9 @@
 #aloha {
 	color: #45F0DF;
 	font-size: 45px;
+	background: -webkit-linear-gradient(#eee, #45f0df);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 	font-family: 'Kalam';
 	height: auto;
 	width: auto;
@@ -258,9 +261,29 @@
 
 .infoContainer {
 	width: 55em;
-	height: 36em;
+	height: 46em;
+	overflow: auto;
 	margin: auto;
-	background-color:rgb(15, 22, 101);;
+	background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#Quick-descript {
+	padding-bottom: 7%;
+	width: 64em;
+	height: 8em;
+	overflow: auto;
+	resize: none;
+	background-color: #f8f8f8;
+}
+
+.Paragraph {
+	padding-bottom: 9%;
+	overflow: auto;
+	background-color: #f8f8f8;
+	resize: none;
 }
 
 .containerTitle {
@@ -355,8 +378,8 @@
 
 /* everything for Add feature starts here */
 #Add-in-Overlay { /* change to class overlay function later */
-	width: 110%;
-	height: 100%;
+	width: 98.3%;
+	height: 98.3%;
 	background-color: RGBA(0,0,0,0.5);
 	z-index: 2;
 	display: none;
@@ -388,7 +411,8 @@
 	position: absolute;
 	left: -0.05%;
 	background-color: #B7F0AD;
-	color: black;
+	color: ivory;
+	text-shadow: 3px 3px black;
 	font-size: 200%;
 	font-style: italic;
 	text-align: left;
