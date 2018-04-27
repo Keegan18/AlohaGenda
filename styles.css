@@ -164,7 +164,7 @@
 
 #Upcoming-events {
 	overflow: hidden;	
-	width: 21.8%;
+	width: 24.5%;
 	max-height: 70%;
 	background-color: #B7F0AD;
 	color: black;
@@ -182,7 +182,7 @@
 	display: inline-flex;
 	border: 1.2px, #45D0DF;
 	height: 100%;
-	width: 80%;
+	width: 90%;
 	max-width: 100%;
 	max-height: 100%;
 	position: relative;
