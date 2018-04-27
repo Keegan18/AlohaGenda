@@ -5,9 +5,9 @@
 
 .body {
 	background-color: #D2FF96;
+	overflow: hidden;
 	height: auto;
 	width: auto;
-	overflow: hidden;
 }
 
 #top-Area {
@@ -206,7 +206,7 @@
 	border-radius: 7.12%;
 	background-color: #FCFF56;
 }
-
+/* WEEKLY CLANEDER STUFF! */
 #Weekly {
 	white-space: nowrap;
 	height: 12%;
@@ -231,6 +231,9 @@
 	border-bottom: none;
 	background-color:  #D2FF96;
 }
+
+/* WEEKLY CLANEDER STUFF! */
+
 
 .Descriptions {
 	position: relative;
@@ -411,10 +414,8 @@
 	padding-bottom: 50%;
 	position: relative;
 	display: inline-block;
-	z-index: 1;
 }
 
-/* WEEKLY CLANEDER STUFF! */
 
 #Sunday {
 	border-left: none;
@@ -476,10 +477,6 @@
     flex-direction: row;
     padding-left: 10%;
 }
-
-
-/** Media Queries area, We can use more later on if it's nit looking good at certain resolutions. Maybe for all the most common resolutions that Ms.Takara showed us? **/
-
 
 
 
