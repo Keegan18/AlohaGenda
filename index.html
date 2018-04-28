@@ -11,7 +11,7 @@
 
 	<div id= "Add-in-Overlay"> <!-- Overlay for add function -->
 		<div class="infoContainer">
-			<h3> <font color="goldenrod"> Add in a event </font></h3>
+			<h3 id="add_Event"> Add in a event </font></h3>
 			<hr />
 			
 			<select id="Year-selection"> 
@@ -46,10 +46,12 @@
 				
 				<select id="Day-selection"> </select>
 				
-				<input id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </input>
+				<!--<input id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </input>-->
+				<textarea id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </textarea>
 				<input id="Title" placeholder="Title" name="Title"> </input>
 				<input class="Header" placeholder="Header" name="Header"> </input>
-				<input class="Paragraph" placeholder="Paragraph" name="Paragraph"> </input>
+				<!--<input class="Paragraph" placeholder="Paragraph" name="Paragraph"> </input>-->
+				<textarea class = "Paragraph" placeholder="Paragraph" name="Paragraph"> </textarea>
 				<button id="more" onclick="MoreIndex()"> Add More </button>
 				<button id="Add-button" onclick="EventAdd()"> Add  </button>
 				<button onclick="ToggleAdd()"> close </button>
