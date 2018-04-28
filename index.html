@@ -8,6 +8,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 </head>
 <body class="body">
+
 	<div id= "Add-in-Overlay"> <!-- Overlay for add function -->
 		<div class="infoContainer">
 			<h3 id="add_Event"> Add in a event </font></h3>
@@ -58,74 +59,72 @@
 		</div>
 	</div>
 	
-
-	<div id="tb">
-		<button id="add" onclick="ToggleAdd()"> Add Event </button> 
-
-		<div id="Month-name">	</div>
+	<div id="top-Area">
+	
+		<div class="top-down" id="oof">
 		
-		<div id="Month-dropdown">
-			<button> 2018 </button>
-			<button> 2018 </button>
-			<button> 2018 </button>
-			<button> 2018 </button>
+			<button class="drop-button" onclick="ToggleDrop(this)"> oof </button>
+			
+			<div class="top-down-items">
+			<button onclick="SwitchCags('sports')">Sports</button>
+			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
+			<button onclick="SwitchCags('mainEvents')"> Main </button>
+			
+			</div>
+		
 		</div>
 		
-		<div id= "Year-number"> </div>
-		<form action="" id="Searching">
-				
-	   		<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
-				<p><input onclick="SearchBar()" id="submit" value="Submit"/></p>
+		<div class="top-down" id="hold">
 		
-		</form>
-	</div>
-	
-	<div id="h1">
-		<h1 id="aloha"> 
+			<button class="drop-button" onclick="ToggleDrop(this)"> Hold </button>
+			
+			<div class="top-down-items">
+			
+			<form action="" id="Searching">
+			
+	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
+				<input onclick="SearchBar()" id="submit" value="Submit"/>
+			
+			</form>
+			
+			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
+			
+			</div>
+		
+		</div>
+		
+		
+		<div id="h1">
 			Aloha Genda	
-		</h1>
-	</div>
-
-
-
-	<div id="Upcoming-events"> 
-		<p>Upcoming Events</p>
-		<hr />
-		<div id="Upcoming-list">
-			<ul id="list">
-			</ul>
 		</div>
+
+		<div id="tb">
+			<div id="Month-name">	</div>
+			<div id= "Year-number"> </div>
+		</div>
+	
+
 	</div>
 
-	<div id="Weekly">
+	<div id="bottom-Area">
+
+		<div id="Upcoming-events"> 
+			<p>Upcoming Events</p>
+			<hr /> 
+			<div id="Upcoming-list">
+				<ul id="list">
+				</ul>
+			</div> 
+		</div>
 		
-		<div class="weeks" id="Sunday"> Sun </div>
-		<div class="weeks" id="Monday"> Mon </div>
-		<div class="weeks" id="Tuesday"> Tue </div>
-		<div class="weeks" id="Wednesday"> Wed </div>
-		<div class="weeks" id="Thursday"> Thu </div>
-		<div class="weeks" id="Friday"> Fri </div>
-		<div class="weeks" id="Saturday"> Sat </div>
+		<div id="Calendar">
+	
+		</div>
 
+		<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
+		<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
 	</div>
-		
 	
-	
-	<div id="Calendar">
-	
-	</div>
-
-
-	<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
-			 
-	<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
-	
-
-	<div id="Select-dropdown" >
-		<button onclick="SwitchCags('sports')">Sports</button>
-		<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
-		<button onclick="SwitchCags('mainEvents')"> Main </button>
-	</div>
 	<!--<div id="foot">
 		<a  id="waipahu" href="http://www.edline.net/pages/waipahu_high_school" target="_blank"> <strong> Waipahu High School </strong> </a>
 

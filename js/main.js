@@ -169,6 +169,14 @@ function Calendar(events) { //whole calender logic
 			}
 			
 			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				if(i === 1) {
+					for(var h=0; h < 7; h++) {
+						var weeks = document.createElement("DIV");
+						weeks.innerHTML = weeknames[h];
+						weeks.className = weeknames[h] + " weekendNames";
+						addInMonths.appendChild(weeks);
+					}
+				}
 				
 				var addInDays = document.createElement("DIV"); //for days
 				var addInDescript = document.createElement("DIV"); //for the description in the divs
@@ -214,9 +222,8 @@ function Calendar(events) { //whole calender logic
 				}
 				if((i === date) && (k === month) && (y === year)) {
 					addInDays.style.transition = "width 1s,height 1s";
-					addInDays.style.width = "8%";
-					addInDays.style.height = "5em";
-					addInDays.style.color = "red";
+					addInDays.style.backgroundColor = "gold";
+					addInDays.style.boxShadow = "30px 25px 5px black;";
 				}
 				
 				addInMonths.appendChild(addInDays); //adds in the days
