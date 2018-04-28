@@ -466,10 +466,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: scroll;
-    background-image: url(https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/teamPicThumb117610-12068-mxe91g.png);
+    background-image: url(https://i.vimeocdn.com/portrait/6686684_300x300);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 40%;
+    background-size: 25%;
 }
 
 /* end */
