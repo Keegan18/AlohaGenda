@@ -31,8 +31,13 @@
 }
 
 #tb {
+<<<<<<< HEAD
 	height: 70%;
 	width: 70%;
+=======
+	width: 50%;
+	height: auto;
+>>>>>>> d0dfb4a521f985a13e8eebce7d7ccd52de78d087
 	display: inline-flex;
 	flex-direction: row;
 	position: relative;
@@ -438,7 +443,6 @@
     border: none;
     cursor: pointer;
 }
-
 .top-down { /* button in general */
 	position: relative;
 	display: inline-block;
@@ -446,7 +450,6 @@
 	width: 10%;
 	left: 20%;
 }
-
 .top-down-items { /* these are the contents */
 	display: none;
 	position: absolute; 
@@ -471,4 +474,5 @@
 
 #Categories {
 	left: 12%;
+	
 }
