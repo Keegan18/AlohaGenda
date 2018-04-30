@@ -101,27 +101,17 @@
 /* everything for the top bar starts here */
 
 #tb {
-	width: 60%;
-	border: 0.5px solid black;
+	width: 50%;
+	height: auto;
 	display: inline-flex;
 	flex-direction: row;
-	border-top: none;
-	border-left: none;
-	border-right: none;
 	position: relative;
 	margin-top: 1.5%;
 	margin-bottom: 2%;
-	left: 7%;
+	left: 15%;
+	overflow: hidden;
 }
 
-#tb > * {
-	border: 0.5px solid black;
-	border-left: none;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	padding-left: 2%;
-}
 
 #add {
 	font-size: 120%;
@@ -133,7 +123,6 @@
 	text-decoration: none;
 	padding-left: 5%;
 	padding-right: 5%;
-/** Add bottom border would dissapear at some points since the button would overlap, so I added some bottom space and evened it out for other things to keep it all inline. **/
 	margin-bottom: 0.1%;
 	margin-top: 1%;
 	-webkit-transition-duration: 0.4s; /* Safari */
@@ -152,18 +141,23 @@
 	font-size: 2.5em;
 	display: inline-block;
 	text-align:center;
+<<<<<<< HEAD
 	color: #ffff66;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	padding-left: 1%;
 	padding-right: 1%;
+=======
+	color: #45F0DF;
+>>>>>>> d0dfb4a521f985a13e8eebce7d7ccd52de78d087
 	border:0.5px solid black;
 	border-top: none;
-	border-bottom: none;
+	border-left: none;
 	margin-top: 1%;
 	position: relative;
 }
 
 #Year-number {
+	width: 20%;
 	font-size: 2.5em;
 	display: inline-block;
 	text-align:center;
@@ -172,8 +166,8 @@
 	padding-right: 5%;
 	border:0.5px solid black;
 	border-top: none;
-	border-bottom: none;
 	border-left: none;
+	border-right: none;
 	margin-top: 1%;
 	position: relative;
 }
@@ -234,16 +228,16 @@
 #bottom-Area {
 	width: 100%;
 	max-width: 100%;
-	height: 80%;
+	height: 100%;
 	max-height: 100%;
 	display: flex;
 	flex-direction: row;
 }
 
 #Upcoming-events {
-	display: inline-block;
-	width: 22.05%;
-	max-height: 1%;
+	overflow: hidden;	
+	width: 21%;
+	max-height: 70%;
 	background-color: #B7F0AD;
 	color: black;
 	font-size: 200%;
@@ -257,21 +251,20 @@
 
 
 #Calendar {
-	display: inline-block;
+	display: inline-flex;
 	border: 1.2px, #45D0DF;
 	height: 100%;
-	width: 75%;
+	width: 76%;
 	max-width: 100%;
 	max-height: 100%;
 	position: relative;
 	background-color: #9AD2CB;
-	padding-left: 5%;
-	padding-bottom: 50%;
+	padding-right: 2%;
 }
 
 .Days, .weekendNames {
 	width: 8.1%;
-	height: 4em;
+	height: 5em;
 	display: inline-flex;
 	flex: center;
 	margin: 0.4em;
@@ -282,6 +275,16 @@
 	overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.weekendNames {
+	height: 0.5em;
+	text-align: center;
+	background-color: gold;
+	border: 1px solid gold;
+}
+
+>>>>>>> d0dfb4a521f985a13e8eebce7d7ccd52de78d087
 /* WEEKLY CLANEDER STUFF! */
 
 .weekendNames {
@@ -491,63 +494,25 @@
 #LB {
 	border: 1px solid lightgrey;
 	text-align: center;
-	width: 1.3%;
-	height: 70%;
-	max-height: 100%;
+	width: 1.5%;
+	max-height: 70%;
 	background-color: lightgrey;
-	padding-top: 25%;
-	padding-bottom: 50%;
-	right: 77.7%;
 	position: relative;
-	display: inline-block;
 	z-index: 1;
+	right: 1.7%;
 }
 
 #RB {
 	border: 1px solid lightgrey;
 	text-align: center;
-	width: 1.3%;
-	height: 70%;
-	max-height: 100%;
+	width: 1.5%;
+	max-height: 70%;
 	background-color: lightgrey;
-	padding-top: 25%;
-	padding-bottom: 50%;
 	position: relative;
-	display: inline-block;
+	z-index: 1;
+	left: 101.2%;
 }
 
-
-#Sunday {
-	border-left: none;
-	padding-right: 
-}
-
-#Monday {
-	padding-right: 
-}
-
-#Tuesday {
-
-}
-
-#Wednesday {
-	padding-left: ;
-	padding-right: 
-}
-
-#Thursday {
-	padding-right: 
-}
-
-#Friday {
-	padding-right: 
-	margin-right: 
-}
-
-#Saturday {
-	border-right:none;
-	padding-left: 
-}
 
 /** End of Weekly stuff **/
 
@@ -579,6 +544,12 @@
     padding-left: 10%;
 }
 
+.top-down { /* button in general */
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+}
+
 .top-down > .drop-button {
     background-color: #3498DB;
     color: white;
@@ -588,12 +559,6 @@
     cursor: pointer;
 }
 
-.top-down { /* button in general */
-	position: absolute;
-	display: inline-block;
-	z-index: 2;
-}
-
 .top-down-items { /* these are the contents */
 	display: none;
 	position: absolute;
@@ -601,7 +566,7 @@
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 1;
 }
 
 .top-down-items > * { /*buttons for the dropdown */
@@ -612,5 +577,9 @@
 }
 
 #hold {
-	left: 0%;
+	
+}
+
+#top-Area {
+	border: 1px solid black;
 }

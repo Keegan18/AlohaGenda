@@ -222,7 +222,8 @@ function Calendar(events) { //whole calender logic
 				}
 				if((i === date) && (k === month) && (y === year)) {
 					addInDays.style.transition = "width 1s,height 1s";
-					addInDays.style.backgroundColor = "gold";
+					addInDays.style.backgroundColor = "lightgreen";
+					addInDays.style.border = "1px solid lightgreen"
 					addInDays.style.boxShadow = "30px 25px 5px black;";
 				}
 				
