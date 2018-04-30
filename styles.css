@@ -8,6 +8,18 @@
 	width: 100%;
 }
 
+/* Top Bar Stuff */
+#tb {
+	height: 70%;
+	width: 70%;
+	display: inline-flex;
+	flex-direction: row;
+	position: relative;
+	left: 12%;
+	overflow: hidden;
+	margin-bottom: 2%;
+}
+
 #top-Area {
 	width: 100%;
 	max-width: 100%;
@@ -29,18 +41,6 @@
 	padding-top: 4%;
 	float: left;
 }
-
-#tb {
-	height: 70%;
-	width: 70%;
-	display: inline-flex;
-	flex-direction: row;
-	position: relative;
-	left: 12%;
-	overflow: hidden;
-	margin-bottom: 2%;
-}
-
 
 #add {
 	font-size: 120%;
@@ -84,7 +84,62 @@
 	position: relative;
 }
 
-/* I need help putting these in a good place! */
+/* Button Stuff */
+.top-down { /* button in general */
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	width: 15%;
+	height: 20%;
+	text-align: center;
+	left: 20%;
+	transition: box-shadow 1s;
+}
+
+.top-down > .drop-button {
+    background-color: #3498DB;
+    color: white;
+	width: 100%;
+    padding: 7%;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.top-down:hover {
+	box-shadow: 5px 5px 18px #888888;
+}
+
+.top-down-items { /* these are the contents */
+	display: none;
+	position: absolute; 
+    background-color: #f1f1f1;
+    width: 90%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.top-down-items > * { /*buttons for the dropdown */
+	color: black;
+    padding: 7%;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+#SA {
+	margin-left: 15.2%;
+	top: 35%;
+	left: 10%;
+}
+
+#Categories {
+	left: 12%;
+}
+/* End of Buttons */
+
+/* Search Bar Stuff */
 
 #Searching{
 
@@ -126,14 +181,16 @@
 	left: -16%;
 }
 
-/* Changes the color of the button when hovered over it, feel free to change the color. */
 #submit:hover {
 	background-color: tomato;
 }
+/* Search End */
 
-/* Dem "go to next month." buttons */
+/* End of Top Bar Stuff */
 
-/*end*/
+/*----------------------------------*/
+
+/* everything for the Bottom Area starts here */
 
 
 #bottom-Area {
@@ -157,9 +214,6 @@
 	z-index: 1;
 }
 
-/* everything for the top bar starts here */
-
-
 
 #Calendar {
 	display: inline-flex;
@@ -173,21 +227,45 @@
 	padding-right: 2%;
 }
 
+/* Buttons */
+#LB {
+	border: 1px solid lightgrey;
+	text-align: center;
+	width: 1.5%;
+	max-height: 70%;
+	background-color: lightgrey;
+	position: relative;
+	z-index: 1;
+	right: 1.7%;
+}
+
+#RB {
+	border: 1px solid lightgrey;
+	text-align: center;
+	width: 1.5%;
+	max-height: 70%;
+	background-color: lightgrey;
+	position: relative;
+	z-index: 1;
+	left: 101.2%;
+}
+/* Buttons */
+
 .Days, .weekendNames {
 	width: 8.1%;
-	height: 5em;
 	display: inline-flex;
 	flex: center;
 	margin: 0.4em;
 	padding: 2%;
-	border: 1px solid goldenrod;
 	border-radius: 7.12%;
-	background-color: #FCFF56;
 	overflow: hidden;
 }
 
 .Days {
 	transition: box-shadow 1s;
+	height: 5em;
+	background-color: #FCFF56;
+	border: 1px solid goldenrod;
 }
 
 .weekendNames {
@@ -195,6 +273,7 @@
 	text-align: center;
 	background-color: gold;
 	border: 1px solid gold;
+	text-align: center;
 }
 
 .Days:hover {
@@ -202,50 +281,38 @@
 	cursor: pointer;
 }
 
-/* WEEKLY CLANEDER STUFF! */
-#Weekly {
-	white-space: nowrap;
-	height: 12%;
-	width: 100%;
-	position: relative;
-	z-index: 1;
+/*Footer Stuff */
+#foot {
+    background-color: goldenrod;
+    height: 10%;
+    width:70%;
+    border:2px solid black;
+    position: relative;
+    margin-top: 18%;
+    margin-left: 22%;
 }
 
-.weeks {
-	overflow: hidden;
-	border:2px solid black;
-	position: relative;
-	font-size: 150%;
-	height: 70%;
-	width: 8.8%;
-	padding: 2%;
-	padding-top: 0.5%;
-	display: inline-flex;
-	flex: center;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	background-color: #9AD2CB;
+#phone{
+    padding-left: 10%;
+    display: inline-flex;
+    flex-direction: row;
+}
+#address {
+    padding-left: 10%;
+    display: inline-flex;
+    flex-direction: row;
 }
 
-/* WEEKLY CLANEDER STUFF! */
-
-
-.Descriptions {
-	position: relative;
-	margin-top: 20%;		/* Styling could be better */
-	display: inline-block;
-	text-align: center;
+#waipahu {
+    display: inline-flex;
+    flex-direction: row;
+    padding-left: 10%;
 }
+/* footer End */
 
-.DescriptionImages {
-	width: 68%;
-	height: 68%;
-}
+/* Bottom Area End */
 
-#overlay-test {
-	margin-top: 10%;
-}
+/*-----------------------------------*/
 
 /*everything for the overlay starts here*/
 
@@ -272,7 +339,7 @@
 	padding: 2px;
 	background-color: rgb(15, 22, 101);
 	color: goldenrod;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 .containerLine {
@@ -355,9 +422,12 @@
 	margin-left: 85%;
 }
 
-/*end */
+/* Overlay end */
+
+/*--------------------------------------*/
 
 /* everything for Add feature starts here */
+
 #Add-in-Overlay { /* change to class overlay function later */
 	width: 102%;
 	height: 102%;
@@ -382,103 +452,4 @@
     background-size: 40%;
 }
 
-/* end */
-
-#LB {
-	border: 1px solid lightgrey;
-	text-align: center;
-	width: 1.5%;
-	max-height: 70%;
-	background-color: lightgrey;
-	position: relative;
-	z-index: 1;
-	right: 1.7%;
-}
-
-#RB {
-	border: 1px solid lightgrey;
-	text-align: center;
-	width: 1.5%;
-	max-height: 70%;
-	background-color: lightgrey;
-	position: relative;
-	z-index: 1;
-	left: 101.2%;
-}
-
-
-/** End of Weekly stuff **/
-
-
-#foot {
-    background-color: goldenrod;
-    height: 10%;
-    width:70%;
-    border:2px solid black;
-    position: relative;
-    margin-top: 18%;
-    margin-left: 22%;
-}
-
-#phone{
-    padding-left: 10%;
-    display: inline-flex;
-    flex-direction: row;
-}
-#address {
-    padding-left: 10%;
-    display: inline-flex;
-    flex-direction: row;
-}
-
-#waipahu {
-    display: inline-flex;
-    flex-direction: row;
-    padding-left: 10%;
-}
-
-.top-down > .drop-button {
-    background-color: #3498DB;
-    color: white;
-	width: 100%;
-    padding: 7%;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-}
-.top-down { /* button in general */
-	position: relative;
-	display: inline-block;
-	z-index: 1;
-	width: 15%;
-	height: 20%;
-	text-align: center;
-	left: 20%;
-}
-.top-down-items { /* these are the contents */
-	display: none;
-	position: absolute; 
-    background-color: #f1f1f1;
-    width: 90%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.top-down-items > * { /*buttons for the dropdown */
-	color: black;
-    padding: 7%;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-}
-
-#SA {
-	margin-left: 15.2%;
-	top: 35%;
-	left: 10%;
-}
-
-#Categories {
-	left: 12%;
-}
+/* Add Feature end */

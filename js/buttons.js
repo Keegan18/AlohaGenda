@@ -94,7 +94,7 @@ function SwitchCags(option) {
 
 function ToggleDrop(option) {
 	var temp = option.parentNode.getElementsByClassName('top-down-items')[0];
-	if(temp.style.display === "none") {
+	if(temp.style.display === "none" && option.parentNode.matches(':hover') === true) {
 		temp.style.display = "block";
 	} else {
 		temp.style.display = "none";
