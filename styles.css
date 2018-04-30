@@ -34,6 +34,7 @@
 
 #tb {
 	width: 50%;
+	height: auto;
 	display: inline-flex;
 	flex-direction: row;
 	position: relative;
@@ -430,6 +431,12 @@
     padding-left: 10%;
 }
 
+.top-down { /* button in general */
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+}
+
 .top-down > .drop-button {
     background-color: #3498DB;
     color: white;
@@ -437,12 +444,6 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
-
-.top-down { /* button in general */
-	position: absolute;
-	display: inline-block;
-	z-index: 1;
 }
 
 .top-down-items { /* these are the contents */
@@ -463,5 +464,9 @@
 }
 
 #hold {
-	left: 0%;
+	
+}
+
+#top-Area {
+	border: 1px solid black;
 }
