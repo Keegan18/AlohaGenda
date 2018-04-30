@@ -18,12 +18,11 @@
 #h1 {
 	overflow: hidden;
 	position: relative;
-	font-size: 200%;
+	font-size: 250%;
 	text-align: center;
 	width: 21%;
 	height: 100%;
 	max-height: 100%;
-	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -269,19 +268,21 @@
 	border-radius: 7.12%;
 	background-color: #FCFF56;
 	overflow: hidden;
+	transition: box-shadow 1s;
 }
 
-.weekendNames {
-	height: 0.5em;
-	text-align: center;
-	background-color: gold;
-	border: 1px solid gold;
+.Days:hover {
+	box-shadow: 5px 10px 18px #888888;
+	cursor: pointer;
 }
 
 /* WEEKLY CLANEDER STUFF! */
 
 .weekendNames {
 	height: 1.5em;
+	text-align: center;
+	background-color: gold;
+	border: 1px solid gold;
 }
 
 /* WEEKLY CLANEDER STUFF! */
