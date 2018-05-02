@@ -91,3 +91,12 @@ function SwitchCags(option) {
 	sessionStorage.setItem('category', option);
 	location.reload();
 }
+
+function ToggleDrop(option) {
+	var temp = option.parentNode.getElementsByClassName('top-down-items')[0];
+	if(temp.style.display === "none") {
+		temp.style.display = "block";
+	} else {
+		temp.style.display = "none";
+	}
+}
