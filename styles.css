@@ -491,6 +491,37 @@
 	background-color: #f8f8f8;
 }
 
+#Add-in-Overlay { /* change to class overlay function later */
+	width: 102%;
+	height: 102%;
+	margin-top: -0.6%;
+	margin-left: -2%;
+	background-color: RGBA(0,0,0,0.5);
+	z-index: 2;
+	display: none;
+	position: fixed;
+}
+
+#Add-in-holder {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+    background-image: url(https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/teamPicThumb117610-12068-mxe91g.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 40%;
+}
+
+.Paragraph {
+	padding-bottom: 7%;
+	height: 5em;
+	overflow: auto;
+	background-color: #f8f8f8;
+	resize: none;
+}
 /* Add Feature end */
 
 /* stuff */
@@ -546,36 +577,6 @@
 	100% {color: ivory;}
 }
 
-.Paragraph {
-	padding-bottom: 7%;
-	height: 5em;
-	overflow: auto;
-	background-color: #f8f8f8;
-	resize: none;
-}
 
-#Add-in-Overlay { /* change to class overlay function later */
-	width: 102%;
-	height: 102%;
-	margin-top: -0.6%;
-	margin-left: -2%;
-	background-color: RGBA(0,0,0,0.5);
-	z-index: 2;
-	display: none;
-	position: fixed;
-}
-
-#Add-in-holder {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    overflow: auto;
-    background-image: url(https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/teamPicThumb117610-12068-mxe91g.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 40%;
-}
 
 
