@@ -19,31 +19,23 @@
 	overflow: hidden;
 	position: relative;
 	font-size: 200%;
-	text-align: center;
 	width: 21%;
 	height: 100%;
 	max-height: 100%;
-	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	padding-top: 4%;
 	padding-bottom: 4%;
 	float: left;
-}
-
-#aloha {
 	color: ivory;
-	font-size: 45px;
-	-webkit-animation: color-change 3s;
-    -moz-animation: color-change 3s;
-    -o-animation: color-change 3s;
-    -ms-animation: color-change 3s;
-    animation: color-change 3s;
+	-webkit-animation: color-change 2.5s;
+    -moz-animation: color-change 2.5s;
+    -o-animation: color-change 2.5s;
+    -ms-animation: color-change 2.5s;
+    animation: color-change 2.5s;
     text-shadow: 2px 4px black;
 	font-family: 'Kalam';
-	height: auto;
-	width: auto;
 	text-align: center;
 }
 
