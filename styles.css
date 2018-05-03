@@ -457,6 +457,40 @@
     background-size: 40%;
 }
 
+.infoContainer {
+	width: 55em;
+	height: 46em;
+	overflow: auto;
+	margin: auto;
+	background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#Year-selection {
+	width: 4em;
+	display: inline-block;
+}
+
+#Month-selection {
+	width: 7.5em;
+	display: inline-block;
+}
+
+#Day-selection {
+	width: 4em;
+}
+
+#Quick-descript {
+	padding-bottom: 9%;
+	width: 64.3em;
+	height: 3em;
+	overflow: hidden;
+	resize: none;
+	background-color: #f8f8f8;
+}
+
 /* Add Feature end */
 
 /* stuff */
@@ -544,36 +578,4 @@
     background-size: 40%;
 }
 
-.infoContainer {
-	width: 55em;
-	height: 46em;
-	overflow: auto;
-	margin: auto;
-	background: #43C6AC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
-
-#Year-selection {
-	width: 4em;
-	display: inline-block;
-}
-
-#Month-selection {
-	width: 7.5em;
-	display: inline-block;
-}
-
-#Day-selection {
-	width: 4em;
-}
-
-#Quick-descript {
-	padding-bottom: 9%;
-	width: 64.3em;
-	height: 3em;
-	overflow: hidden;
-	resize: none;
-	background-color: #f8f8f8;
-}
