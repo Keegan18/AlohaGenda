@@ -74,39 +74,6 @@
 	</div>
 	
 	<div id="top-Area">
-	
-		<div class="top-down" id="oof">
-		
-			<button class="drop-button" onclick="ToggleDrop(this)"> oof </button>
-			
-			<div class="top-down-items">
-			<button onclick="SwitchCags('sports')">Sports</button>
-			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
-			<button onclick="SwitchCags('mainEvents')"> Main </button>
-			
-			</div>
-		
-		</div>
-		
-		<div class="top-down" id="hold">
-		
-			<button class="drop-button" onclick="ToggleDrop(this)"> Hold </button>
-			
-			<div class="top-down-items">
-			
-			<form action="" id="Searching">
-			
-	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/>
-				<input onclick="SearchBar()" id="submit" value="Submit"/>
-			
-			</form>
-			
-			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
-			
-			</div>
-		
-		</div>
-		
 		
 		<div id="h1">
 			Aloha Genda	
@@ -117,7 +84,36 @@
 			<div id= "Year-number"> </div>
 		</div>
 	
-
+		<div class="top-down" id="Categories">
+		
+			<button class="drop-button" onclick="ToggleDrop(this)"> Categories </button>
+			
+			<div class="top-down-items">
+			<button onclick="SwitchCags('sports')">Sports</button>
+			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
+			<button onclick="SwitchCags('mainEvents')"> Main </button>
+			
+			</div>
+		
+		</div>
+		
+		<div class="top-down" id="SA">
+		
+			<button class="drop-button" onclick="ToggleDrop(this)"> Features </button>
+			
+			<div class="top-down-items">
+			
+			<form action="" id="Searching">
+			
+	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input onclick="SearchBar()" id="submit" value="Submit"/>
+			
+			</form>
+			
+			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
+			
+			</div>
+		
+		</div>
 	</div>
 
 	<div id="bottom-Area">
@@ -132,11 +128,11 @@
 		</div>
 		
 		<div id="Calendar">
+			<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
+			<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>			
 	
 		</div>
 
-		<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
-		<button id="LB" placeholder="<" onclick="ClickPrevious()"> < </button>
 	</div>
 	
 	<!--<div id="foot">
