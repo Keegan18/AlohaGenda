@@ -88,7 +88,8 @@ function percentOf(searchArr,mainArr) {
 } 
 
 function SwitchCags(option) {
-	sessionStorage.setItem('category', option);
+	sessionStorage.setItem('category', option.value);
+	sessionStorage.setItem('categoryName', option.innerHTML);
 	location.reload();
 }
 

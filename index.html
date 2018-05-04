@@ -60,6 +60,12 @@
 				
 				<select id="Day-selection"> </select>
 				
+				<select id="Category-selection">
+					<option value="events"> Main </option>
+					<option value="sports"> Sports </option>
+					<option value="studentActivities"> Student Activities </option>
+				</select>
+				
 				<!--<input id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </input>-->
 				<textarea id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </textarea>
 				<input id="Title" placeholder="Title" name="Title"> </input>
@@ -82,6 +88,7 @@
 		<div id="tb">
 			<div id="Month-name">	</div>
 			<div id= "Year-number"> </div>
+			<div id = "Category-section"> </div>
 		</div>
 	
 		<div class="top-down" id="Categories">
@@ -89,9 +96,9 @@
 			<button class="drop-button" onclick="ToggleDrop(this)"> Categories </button>
 			
 			<div class="top-down-items">
-			<button onclick="SwitchCags('sports')">Sports</button>
-			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
-			<button onclick="SwitchCags('mainEvents')"> Main </button>
+			<button onclick="SwitchCags(this)" value='sports'>Sports</button>
+			<button onclick="SwitchCags(this)" value='studentActivities'> Student Activities</button>
+			<button onclick="SwitchCags(this)" value='mainEvents'> Main </button>
 			
 			</div>
 		

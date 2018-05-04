@@ -1,5 +1,18 @@
 document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1]; //gets the  current month
 document.getElementById("Year-number").innerHTML = currentYear;
+document.getElementById('Category-section').innerHTML = (sessionStorage.getItem('categoryName') !== null) ? sessionStorage.getItem('categoryName') : 'Main';
+
+function SetEverything() { //sets the user info in custom events if their is anything 
+	var userStuff = sessionStorage.getItem('userData');
+	var cat = sessionStorage.getItem('customCat');
+	console.log(studentActivities);
+	
+	if(userStuff !== null) {
+		customevents = JSON.parse(userStuff);
+	}
+}
+
+SetEverything();
 
 function DateOption(option) {
 	Days = daysInMonth(option.value,year);
@@ -18,6 +31,10 @@ function DateOption(option) {
 	}
 }
 
+
+
+DateOption(document.getElementById("Month-selection"));
+
 /* everything for the ADD function */
 var overlay = document.getElementById("Add-in-Overlay");
 
@@ -29,26 +46,36 @@ function ToggleAdd() {
 	
 }
 
-function SetEverything() { //sets the user info in custom events if their is anything 
-	var userStuff = sessionStorage.getItem('userData');
-	if(userStuff !== null) {
-		customEvents = JSON.parse(userStuff);
-	}
-}
-
-SetEverything();
 //console.log(customEvents);
 
 function AddToMain() {
-	for(var i in events) {
-		console.log(events[i]);
-		for(var d in customEvents) {
-			if(events[i].year === customEvents[d].year) {
-				for(var f in events[i]) {
-					if(customEvents[d][f] !== undefined && events[i][f].month === customEvents[d][f].month && events[i][f] !== 2018) {
-						for(var j in customEvents[d][f]) {
-							if(typeof customEvents[d][f][j] !== "number") {
-								events[i][f]["" + customEvents[d][f][j][1]] = customEvents[d][f][j];
+	var catSelect = sessionStorage.getItem('customCat');
+	var eve;
+	if(catSelect !== undefined) {
+		
+		if(catSelect === 'sports') {
+			console.log('sports');
+			eve = sports;
+		}
+		else if(catSelect === 'events') {
+			console.log('events');
+			eve = events;
+		}
+		else {
+			console.log('students');
+			eve = studentActivities;
+		}
+		
+		for(var i in events) {
+			console.log(events[i]);
+			for(var d in customEvents) {
+				if(eve[i].year === customEvents[d].year) {
+					for(var f in eve[i]) {
+						if(eve[d][f] !== undefined && events[i][f].month === customEvents[d][f].month && eve[i][f] !== 2018) {
+							for(var j in customEvents[d][f]) {
+								if(typeof customEvents[d][f][j] !== "number") {
+									eve[i][f]["" + customEvents[d][f][j][1]] = customEvents[d][f][j];
+								}
 							}
 						}
 					}
@@ -56,7 +83,7 @@ function AddToMain() {
 			}
 		}
 	}
-	console.log(events);
+	console.log(eve);
 }
 AddToMain(); //I will make this Algorithm Better 
 
@@ -64,9 +91,13 @@ function EventAdd() {
 	var yearSelection = parseInt(document.getElementById("Year-selection").value);
 	var monthSelection = parseInt(document.getElementById("Month-selection").value);
 	var daySelection = parseInt(document.getElementById("Day-selection").value);
+	var categorySelection = document.getElementById("Category-selection").value;
 	var quicky = document.getElementById("Quick-descript").value;
 	var userArray = [daySelection,quicky];
 	var userClass = { };
+	
+	console.log(categorySelection);
+	sessionStorage.setItem('customCat', categorySelection);
 	
 	var parName = 1;
 	headerName += 1;
@@ -169,6 +200,10 @@ function Calendar(events) { //whole calender logic
 			}
 			
 			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				
+				var addInDays = document.createElement("DIV"); //for days
+				var addInDescript = document.createElement("DIV"); //for the description in the divs
+				
 				if(i === 1) {
 					for(var h=0; h < 7; h++) {
 						var weeks = document.createElement("DIV");
@@ -176,10 +211,29 @@ function Calendar(events) { //whole calender logic
 						weeks.className = weeknames[h] + " weekendNames";
 						addInMonths.appendChild(weeks);
 					}
+					var tempDate = new Date(monthNames[k-1] + " " + i + "," + " " + y); //temp day helps out with getting the space for the start of the months
+					
+					switch(tempDate.getDay()) {
+						case 1:
+							addInDays.style.marginLeft = '13.6%';
+							break;
+						case 2:
+							addInDays.style.marginLeft = '26.8%';
+							break;
+						case 3:
+							addInDays.style.marginLeft = '40%';
+							break;
+						case 4:
+							addInDays.style.marginLeft = '53%';
+							break;
+						case 5:
+							addInDays.style.marginLeft = '66%';
+							break;
+						case 6:
+							addInDays.style.marginLeft = '79.8%';
+							break;
+					} 
 				}
-				
-				var addInDays = document.createElement("DIV"); //for days
-				var addInDescript = document.createElement("DIV"); //for the description in the divs
 				
 				//adds the date
 				addInDays.className = "Days" + " Day"+i; //class name is Days

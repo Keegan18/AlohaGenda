@@ -135,6 +135,4 @@ function Overlay(className,number,month,year) {
 		Overlay.imgIndex += 1;
 		imgShowIndex();
 	}
-	
-	console.log(moreDescript.id);
 }
