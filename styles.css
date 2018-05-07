@@ -154,6 +154,8 @@
 	left: 20.48%;
 }
 
+
+
 #Categories {
 	left: 12%;
 }
@@ -222,17 +224,24 @@
 	flex-direction: row;
 }
 
+
 #Upcoming-events {
 	overflow: hidden;	
-	width: 21%;
-	max-height: 70%;
+	width: auto;
+	height: 15em;
 	background-color: #B7F0AD;
 	color: black;
 	font-size: 200%;
 	font-style: italic;
 	text-align: left;
 	z-index: 1;
+	
 }
+
+#upcoming-drop {
+	width: 150%;
+}
+
 
 
 #Calendar {
