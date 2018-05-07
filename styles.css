@@ -1,26 +1,42 @@
-.body {
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
 	background-color: #D2FF96;
-	text-align: center;
+	height: 100%;
+	width: 100%;
+	display: ;
+	overflow-x: hidden;
 }
 
 /* Top Bar Stuff */
 #tb {
-	height: 70%;
-	width: 70%;
+	height: 22%;
+	width: 50%;
 	display: inline-flex;
 	flex-direction: row;
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 2%;
+	top: 2.5em;
 }
 
+#top-Area {
+	width: 100%;
+	max-width: 100%;
+	height: 20%;
+	max-height: 100%;
+}
 
 #h1 {
 	position: relative;
 	font-size: 200%;
 	text-align: center;
-	width: 21%;
-	height: 100%;
+	width: 25%;
+	height: 60%;
 	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
@@ -78,7 +94,7 @@
 }
 
 #Category-section {
-	width: 10%;
+	width: 25%;
 	font-size: 3em;
 	display: inline-block;
 	text-align:center;
@@ -102,7 +118,8 @@
 }
 
 #main-button {
-	
+	  left: -24.75%;
+    top: -2em;
 }
 
 .top-down > .drop-button {
@@ -225,8 +242,8 @@
 #Calendar {
 	display: inline-flex;
 	border: 1.2px, #45D0DF;
-	height: 100%;
-	width: 98.5%;
+	height: 85%;
+	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
 	max-height: 100%;
@@ -250,7 +267,7 @@
 	border: 1px solid lightgrey;
 	text-align: center;
 	width: 1.5%;
-	max-height: 70%;
+	max-height: 100%;
 	background-color: lightgrey;
 	position: relative;
 	z-index: 1;
@@ -261,11 +278,10 @@
 	border: 1px solid lightgrey;
 	text-align: center;
 	width: 1.5%;
-	max-height: 70%;
+	max-height: 100%;
 	background-color: lightgrey;
 	position: relative;
-	z-index: 1;
-	left: 100%;
+	left: 100.5%;
 }
 /* Buttons */
 
@@ -281,7 +297,7 @@
 
 .Days {
 	transition: box-shadow 1s;
-	height: 4.5em;
+	height: 4.7em;
 	background-color: #FCFF56;
 	border: 1px solid goldenrod;
 }
