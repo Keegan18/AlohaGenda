@@ -115,5 +115,8 @@ function ToggleDrop(option) {
 }
 
 function ToggleDrops(option) {
-	document.getElementById("main-items").style.display = "block";
+	if(document.getElementById("main-items").style.display === "none")
+		document.getElementById("main-items").style.display = "block";
+	else
+		document.getElementById("main-items").style.display = "none";
 }
