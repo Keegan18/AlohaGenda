@@ -99,14 +99,21 @@ function ToggleDrop(option) {
 	for(var i=0; i < temo.length; i++) {
 		temo[i].style.display = "none";
 	}
-	if(option.innerHTML === "Categories") {
+	if(temp === " Categories ") {
+		console.log("categories");
 		document.getElementById("Category-container").style.display = "block";
 	}
-	else if(option.innerHTML === "Features") {
+	else if(temp === " Features ") {
+		console.log("Features");
 		document.getElementById("Search_and_stuff").style.display = "block";
 	}
 	
-	else if(option.innerHTML === "Upcoming") {
+	else if(temp === " Upcoming ") {
+		console.log("Upcoming");
 		document.getElementById("upcoming-drop").style.display = "block";
 	}
+}
+
+function ToggleDrops(option) {
+	document.getElementById("main-items").style.display = "block";
 }
