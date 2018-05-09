@@ -27,8 +27,12 @@ body {
 #TB {
 	position: relative;
 	width: 100%;
-	display: flex;
 	text-align: center;
+}
+
+#center	{
+	width: 100%;
+	display: flex;
 }
 
 #Month-name {
@@ -38,7 +42,6 @@ body {
 	color: #45F0DF;
 	border:0.5px solid black;
 	border-bottom: none;
-	position: relative;
 }
 
 #Year-number {
@@ -46,15 +49,13 @@ body {
 	font-size: 3em;
 	text-align:center;
 	color: #45F0DF;
-	position: relative;
 }
 
 #Category-section {
-	width: 25%;
+	width: 20%;
 	font-size: 3em;
 	text-align:center;
 	color: #45F0DF;
-	position: relative;
 }
 
 /* Button Stuff */
@@ -65,7 +66,7 @@ body {
 	width: 15%;
 	text-align: center;
 	transition: box-shadow 1s;
-	margin-left: 50%;
+	margin-left: 51.5%;
 }
 
 #main-button {
