@@ -27,6 +27,7 @@ body {
 #TB {
 	position: relative;
 	width: 100%;
+	display: flex;
 	text-align: center;
 }
 
@@ -64,14 +65,11 @@ body {
 	width: 15%;
 	text-align: center;
 	transition: box-shadow 1s;
-	margin-top: 1%;
-	margin-bottom: 1%;
 	margin-left: 50%;
 }
 
 #main-button {
 	left: -8.75%;
-    top: -2em;
 }
 
 .top-down > .drop-button {
@@ -235,11 +233,14 @@ body {
 	height: auto;
 	width: 100%;
 	text-align: left;
+	left: -1.5%;
 }
 
 .Years {
 	width: 100%;
 	height: auto;
+	padding-left: 5%;
+	padding-right: 1%;
 }
 
 
@@ -268,9 +269,10 @@ body {
 /* Buttons */
 
 .Days, .weekendNames {
-	width: 8.5%;
+	position: relative;
+	width: 8.6%;
 	display: inline-flex;
-	flex: center;
+	text-align: center;
 	margin: 0.4em;
 	padding: 2%;
 	border-radius: 7.12%;
