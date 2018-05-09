@@ -98,21 +98,22 @@
 				<div class="top-down" id="Categories">
 		
 					<button class="drop-button" onclick="ToggleDrop(this)"> Categories </button>
-					
-					<div class="top-down-items">
-					<button onclick="SwitchCags(this)" value='sports'>Sports</button>
-					<button onclick="SwitchCags(this)" value='studentActivities'> Student Activities</button>
-					<button onclick="SwitchCags(this)" value='mainEvents'> Main </button>
-					
-					</div>
 		
 				</div>
 		
 				<div class="top-down" id="SA">
 		
 					<button class="drop-button" onclick="ToggleDrop(this)"> Features </button>
-					
-					<div class="top-down-items">
+				
+				</div>
+	
+				<div class="top-down" id="Upcoming">
+		
+					<button class="drop-button" onclick="ToggleDrop(this)"> Upcoming </button>
+		
+				</div>
+			
+					<div class="top-down-items-lower" id="Search_and_stuff">
 					
 					<form action="" id="Searching">
 					
@@ -122,28 +123,26 @@
 					
 					<button id="add" onclick="ToggleAdd()"> Add Event </button> 
 					
-					</div>
-		
 				</div>
-	
-				<div class="top-down" id="Upcoming">
-		
-					<button class="drop-button" onclick="ToggleDrop(this)"> Upcoming </button>
-					
-					<div class="top-down-items" id="upcoming-drop">
-						<div id="Upcoming-events"> 
-						
-							<p>Upcoming Events</p>
-							<hr /> 
-							<div id="Upcoming-list">
-								<ul id="list">
-								</ul>
-							</div>
-							
+				
+				<div class="top-down-items-lower" id="upcoming-drop">
+					<div id="Upcoming-events"> 
+						<p>Upcoming Events</p>
+						<hr /> 
+						<div id="Upcoming-list">
+							<ul id="list">
+							</ul>
 						</div>
-					
+							
 					</div>
-		
+					
+				</div>
+				
+				<div class="top-down-items-lower" id="Category-container">
+					<button onclick="SwitchCags(this)" value='sports' class="Cat-button">Sports</button>
+					<button onclick="SwitchCags(this)" value='studentActivities' class="Cat-button"> Student Activities</button>
+					<button onclick="SwitchCags(this)" value='mainEvents' class="Cat-button"> Main </button>
+				
 				</div>
 			
 			</div> <!-- oof -->

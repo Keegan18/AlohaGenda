@@ -94,10 +94,19 @@ function SwitchCags(option) {
 }
 
 function ToggleDrop(option) {
-	var temp = option.parentNode.getElementsByClassName('top-down-items')[0];
-	if(temp.style.display === "none" && option.parentNode.matches(':hover') === true) {
-		temp.style.display = "block";
-	} else {
-		temp.style.display = "none";
+	var temp = option.innerHTML;
+	var temo = document.getElementsByClassName("top-down-items-lower");
+	for(var i=0; i < temo.length; i++) {
+		temo[i].style.display = "none";
+	}
+	if(option.innerHTML === "Categories") {
+		document.getElementById("Category-container").style.display = "block";
+	}
+	else if(option.innerHTML === "Features") {
+		document.getElementById("Search_and_stuff").style.display = "block";
+	}
+	
+	else if(option.innerHTML === "Upcoming") {
+		document.getElementById("upcoming-drop").style.display = "block";
 	}
 }
