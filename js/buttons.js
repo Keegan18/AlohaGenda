@@ -141,7 +141,6 @@ function ColorChange() {
 	var hold = document.getElementsByClassName('Day-container');
 	for(var i=0; i < hold; i++) {
 		if(hold[i].style.display === "block") {
-			switch(hold[i]);
 		}
 	}
 }
