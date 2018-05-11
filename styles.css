@@ -1,3 +1,4 @@
+
 html, body {
 	width: 100%;
 	height: auto;
@@ -6,7 +7,10 @@ html, body {
 }
 
 body {
-	background-color: #D2FF96;
+/* 	background-color: #BFFAFF ;      	 /* Winter */
+/*	background-color: #B2D500 ;			 /* Spring */
+/*	background-color: #E9F76C ;			 /* Summer */
+ 	background-color: #CF5C36 ;			 /* Autumn */
 	height: 100%;
 	width: 100%;
 	display: ;
@@ -40,6 +44,11 @@ body {
 	position: relative;
 	width: 100%;
 	text-align: center;
+	margin-top: 2%;
+/*  color: #036AB6 ;  	 	/* Winter */
+/*  color: #FDE027 ;		/* Spring */ 
+/*	color: #F6AD4E ;		/* Summer */
+    color: #470500 ;		/* Sutumn */
 }
 
 #center	{
@@ -55,7 +64,6 @@ body {
 	width: 20%;
 	font-size: 3em;
 	text-align:center;
-	color: #45F0DF;
 	/* border:0.5px solid black; */
 	border-bottom: none;
 }
@@ -64,14 +72,12 @@ body {
 	width: 20%;
 	font-size: 3em;
 	text-align:center;
-	color: #45F0DF;
 }
 
 #Category-section {
 	width: 20%;
 	font-size: 3em;
 	text-align:center;
-	color: #45F0DF;
 }
 
 /* Button Stuff */
@@ -255,7 +261,10 @@ body {
 	height: 120%;
 	width: 100%;
 	position: relative;
-	background-color: #9AD2CB;
+/*	background-color: #DDF6FD ;  		  /* Winter */
+/* 	background-color: #EDF28A ;	   	      /* Spring */
+/*	background-color: #FDEFAA ;			  /* Summer */
+    background-color: #EC8E2C ;			  /* Autumn */
 }
 
 .Day-container {
@@ -280,7 +289,7 @@ body {
 	text-align: center;
 	width: 1.5%;
 	height: auto;
-	background-color: lightgrey;
+	background-color: #C9DAF4;
 	position: relative;
 	right: 1.5%;
 }
@@ -290,7 +299,7 @@ body {
 	text-align: center;
 	width: 1.5%;
 	height: auto;
-	background-color: lightgrey;
+	background-color: #C9DAF4;
 	position: relative;
 	left: 98.5%;
 }
@@ -310,15 +319,33 @@ body {
 .Days {
 	transition: box-shadow 1s;
 	height: 3em;
-	background-color: #FCFF56;
-	border: 1px solid goldenrod;
+/* 	background-color: #9BD3E8; 			   /* Winter */
+/*	border: 1px solid #9BD3E8;   */
+
+/*  background-color: #24A955 ;			   /* Spring */
+/*	border: 1px solid #24A955 ;  */		
+
+/*  background-color: #F6AD4E ;			 	/* Summer */
+/*	border: 1px solid #F6AD4E ;	 */
+
+    background-color: #F6AD4E;				/* Autumn */
+    border: 1px solid #F6AD4E; 	 */	
 }
 
 .weekendNames {
 	height: 0.5em;
 	text-align: center;
-	background-color: gold;
-	border: 1px solid gold;
+/*  background-color: #6ECAED; 			   /* Winter */
+/*	border: 1px solid #6ECAED;   */
+
+/*  background-color: #5FA123 ;	 		   /* Spring */		  	
+/*	border: 1px solid #5FA123 ;  */	
+
+/*  background-color:#1EA9E4 ;			   /* Summer */
+/*	border: 1px solid #1EA9E4;	 */
+
+    background-color: #D6593E;			   /* Autumn */
+  	border: 1px solid #D6593E; 		 */		
 	text-align: center;
 }
 
