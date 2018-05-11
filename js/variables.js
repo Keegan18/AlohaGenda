@@ -13,7 +13,14 @@ var counter = 0;
 
 var currentMonth = month; //what month is currently getting viewed
 var currentYear = year; //what year is getting viewed
-console.log(currentMonth);
+
+var EssentialsBro = {
+	body: document.getElementsByClassName('body')[0],
+	topBar: document.getElementById('TB'),
+	calendar: document.getElementById('Calendar'),
+	weekendNames: document.getElementsByClassName('weekendNames'),
+	days: document.getElementsByClassName('Days'),
+}
 
 function CagStartUp() {
 	if(sessionStorage.getItem('category') !== null) {

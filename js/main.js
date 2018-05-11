@@ -2,13 +2,12 @@ document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1]; //
 document.getElementById("Year-number").innerHTML = currentYear;
 document.getElementById('Category-section').innerHTML = (sessionStorage.getItem('categoryName') !== null) ? sessionStorage.getItem('categoryName') : 'Main';
 
+console.log(sessionStorage.getItem("seasonToggle"));
+
 function SetEverything() { //sets the user info in custom events if their is anything 
 	var userStuff = sessionStorage.getItem('userData');
-	var cat = sessionStorage.getItem('customCat');
-	console.log(studentActivities);
-	
 	if(userStuff !== null) {
-		customevents = JSON.parse(userStuff);
+		customEvents = JSON.parse(userStuff);
 	}
 }
 
@@ -49,33 +48,15 @@ function ToggleAdd() {
 //console.log(customEvents);
 
 function AddToMain() {
-	var catSelect = sessionStorage.getItem('customCat');
-	var eve;
-	if(catSelect !== undefined) {
-		
-		if(catSelect === 'sports') {
-			console.log('sports');
-			eve = sports;
-		}
-		else if(catSelect === 'events') {
-			console.log('events');
-			eve = events;
-		}
-		else {
-			console.log('students');
-			eve = studentActivities;
-		}
-		
-		for(var i in events) {
-			console.log(events[i]);
-			for(var d in customEvents) {
-				if(eve[i].year === customEvents[d].year) {
-					for(var f in eve[i]) {
-						if(eve[d][f] !== undefined && events[i][f].month === customEvents[d][f].month && eve[i][f] !== 2018) {
-							for(var j in customEvents[d][f]) {
-								if(typeof customEvents[d][f][j] !== "number") {
-									eve[i][f]["" + customEvents[d][f][j][1]] = customEvents[d][f][j];
-								}
+	for(var i in events) {
+		console.log(events[i]);
+		for(var d in customEvents) {
+			if(events[i].year === customEvents[d].year) {
+				for(var f in events[i]) {
+					if(customEvents[d][f] !== undefined && events[i][f].month === customEvents[d][f].month && events[i][f] !== 2018) {
+						for(var j in customEvents[d][f]) {
+							if(typeof customEvents[d][f][j] !== "number") {
+								events[i][f]["" + customEvents[d][f][j][1]] = customEvents[d][f][j];
 							}
 						}
 					}
@@ -83,7 +64,7 @@ function AddToMain() {
 			}
 		}
 	}
-	console.log(eve);
+	console.log(events);
 }
 AddToMain(); //I will make this Algorithm Better 
 
@@ -91,13 +72,9 @@ function EventAdd() {
 	var yearSelection = parseInt(document.getElementById("Year-selection").value);
 	var monthSelection = parseInt(document.getElementById("Month-selection").value);
 	var daySelection = parseInt(document.getElementById("Day-selection").value);
-	var categorySelection = document.getElementById("Category-selection").value;
 	var quicky = document.getElementById("Quick-descript").value;
 	var userArray = [daySelection,quicky];
 	var userClass = { };
-	
-	console.log(categorySelection);
-	sessionStorage.setItem('customCat', categorySelection);
 	
 	var parName = 1;
 	headerName += 1;
@@ -215,22 +192,22 @@ function Calendar(events) { //whole calender logic
 					
 					switch(tempDate.getDay()) {
 						case 1:
-							addInDays.style.marginLeft = '13.6%';
+							addInDays.style.marginLeft = '14.6%';
 							break;
 						case 2:
-							addInDays.style.marginLeft = '26.8%';
+							addInDays.style.marginLeft = '28%';
 							break;
 						case 3:
 							addInDays.style.marginLeft = '40%';
 							break;
 						case 4:
-							addInDays.style.marginLeft = '53%';
+							addInDays.style.marginLeft = '56%';
 							break;
 						case 5:
-							addInDays.style.marginLeft = '66%';
+							addInDays.style.marginLeft = '70%';
 							break;
 						case 6:
-							addInDays.style.marginLeft = '79.8%';
+							addInDays.style.marginLeft = '83%';
 							break;
 					} 
 				}
@@ -276,8 +253,8 @@ function Calendar(events) { //whole calender logic
 				}
 				if((i === date) && (k === month) && (y === year)) {
 					addInDays.style.transition = "width 1s,height 1s";
-					addInDays.style.backgroundColor = "lightgreen";
-					addInDays.style.border = "1px solid lightgreen"
+					addInDays.style.backgroundColor = "#80FF72";
+					addInDays.style.border = "1px solid #80FF72"
 					addInDays.style.boxShadow = "30px 25px 5px black;";
 				}
 				
@@ -291,5 +268,6 @@ function Calendar(events) { //whole calender logic
 
 window.onload = function(){
 	Calendar(events);
-	ColorChange();
+	if(sessionStorage.getItem("seasonToggle"))
+		ColorChange(month);
 };

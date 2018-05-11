@@ -141,7 +141,7 @@ body {
 #main-items {
 	width: 55em;
 	height: 26em;
-	left: -50%;
+	left: -150%;
 	border-radius: 10px;
 }
 
@@ -642,7 +642,4 @@ body {
     width: 63.5%;
     position: relative;
     top: -35%;
-}
-
-.Day-container {
 }
