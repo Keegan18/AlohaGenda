@@ -120,3 +120,28 @@ function ToggleDrops(option) {
 	else
 		document.getElementById("main-items").style.display = "none";
 }
+
+function Checkset() {
+	if(sessionStorage.getItem("seasonToggle") === null) {
+		console.log("storage doesn't exist, setting it now");
+		sessionStorage.setItem("seasonToggle", true);
+	} else if(sessionStorage.getItem("seasonToggle")) {
+		sessionStorage.removeItem("seasonToggle");
+		console.log("setting fals3");
+		sessionStorage.setItem("seasonToggle", false);
+		console.log(sessionStorage.getItem("seasonToggle"));
+	} else if(sessionStorage.getItem("seasonToggle") !== true) {
+		sessionStorage.removeItem("seasonToggle");
+		console.log("setting true");
+		sessionStorage.setItem("seasonToggle", true);
+	}
+}
+
+function ColorChange() {
+	var hold = document.getElementsByClassName('Day-container');
+	for(var i=0; i < hold; i++) {
+		if(hold[i].style.display === "block") {
+			switch(hold[i]);
+		}
+	}
+}

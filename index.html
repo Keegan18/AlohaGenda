@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>AlohaGenda</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="seasons.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 </head>
@@ -81,7 +82,7 @@
 		
 		<div class= "top-down" id="main-button"> 
 		
-			<button class="drop-button" onclick ="ToggleDrops(this)"> ^ </button>
+			<button class="drop-button" id="oof" onclick ="ToggleDrops(this)"> ^ </button>
 			
 			<div class="top-down-items" id="main-items"> <!-- oof -->
 			
@@ -116,7 +117,7 @@
 					</form>
 					
 					<button id="add" onclick="ToggleAdd()"> Add Event </button> 
-					
+					<button id="season" onclick="Checkset()"> Seasonal Colors </button> 
 				</div>
 				
 				<div class="top-down-items-lower" id="upcoming-drop">

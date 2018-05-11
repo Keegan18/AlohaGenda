@@ -38,3 +38,15 @@ This is a calendar
 				<button onclick="" id="submit"> Submit </button> 
 		
 			</form>
+			
+			
+			
+			
+	border: 0px;
+    text-align: center;
+    width: 5%;
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    position: relative;
+    color: white;
+    font-size: 2.5em;
