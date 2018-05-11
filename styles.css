@@ -1,38 +1,163 @@
-* {
-	font-family: 'Ubuntu', sans-serif;
+html, body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
 }
 
-.body {
+body {
 	background-color: #D2FF96;
 	height: 100%;
 	width: 100%;
+	display: ;
+	overflow-x: hidden;
 }
 
 /* Top Bar Stuff */
-#tb {
-	height: 70%;
-	width: 70%;
-	display: inline-flex;
-	flex-direction: row;
+
+#add, #season {
+	font-size: 120%;
+	display:inline-block;
+	border:1px solid grey;
+	padding-left: 5%;
+	width: 30%;
+    height: 2.2em;
+	padding-right: 5%;
+	margin-right: 10%;
+	margin-top: 12%;
 	position: relative;
-	left: 12%;
-	overflow: hidden;
-	margin-bottom: 2%;
 }
 
-#top-Area {
+#Search_and_stuff {
+	display: none;
+}
+
+#Category-container {
+	margin: 0 -7%;
+	display: none;
+}
+#TB {
+	position: relative;
 	width: 100%;
-	max-width: 100%;
-	height: 30%;
-	max-height: 100%;
+	text-align: center;
+}
+
+#center	{
+	width: 100%;
+	display: flex;
+}
+
+#center	> * {
+	margin-left:10%;
+}
+
+#Month-name {
+	width: 20%;
+	font-size: 3em;
+	text-align:center;
+	color: #45F0DF;
+	/* border:0.5px solid black; */
+	border-bottom: none;
+}
+
+#Year-number {
+	width: 20%;
+	font-size: 3em;
+	text-align:center;
+	color: #45F0DF;
+}
+
+#Category-section {
+	width: 20%;
+	font-size: 3em;
+	text-align:center;
+	color: #45F0DF;
+}
+
+/* Button Stuff */
+.top-down, #main-button { /* button in general */
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	width: 15%;
+	text-align: center;
+	transition: box-shadow 1s;
+}
+
+#main-button {
+	left: -8.75%;
+	margin-left: 51.5%;
+}
+
+.drop-button, .Cat-button {
+	border-radius: 1.5px;
+    background-color: #3498DB;
+    color: white;
+    padding: 7%;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+
+}
+
+.drop-button {
+	width: 100%;
+	height: 3.2em;
+	margin-top: 2%;
+}
+
+#oof {
+	margin-top: 0;
+	padding: 0;
+	height: auto;
+}
+
+.Cat-button {
+	display: inline-block;
+	width: 30%;
+	height: 2em;
+}
+
+.top-down:hover {
+	box-shadow: 5px 5px 18px #888888;
+}
+
+.top-down-items { /* these are the contents */
+	display: none;
+	position: absolute; 
+    background-color: #f1f1f1;
+    width: 90%;
+    overflow-x:hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#main-items > #Categories, #SA, #Upcoming{
+	padding: 0%;
+	width: 30%;
+	top: 5%;
+}
+
+#main-items {
+	width: 55em;
+	height: 26em;
+	left: -150%;
+	border-radius: 10px;
+}
+
+.top-down-items > * { /*buttons for the dropdown */
+	color: black;
+    padding: 4% 7% 0 7%;
+    text-decoration: none;
+    width: 100%;
 }
 
 #h1 {
+	display: block;
 	position: relative;
+	right: 1.2em;
 	font-size: 200%;
 	text-align: center;
-	width: 21%;
-	height: 100%;
 	color: #45F0DF;
 	background-image: url(https://wallpapertag.com/wallpaper/full/8/c/6/144292-island-background-1920x1080-windows.jpg);
 	background-size: 100%;
@@ -47,118 +172,22 @@
     animation: color-change 3s;
 }
 
-#add {
-	font-size: 120%;
-	display:inline-block;
-	border:1px solid grey;
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-bottom: 0.1%;
-	margin-top: 1%;
-	position: relative;
-}
-
-#Month-name {
-	width: 30%;
-	font-size: 3em;
-	display: inline-block;
-	text-align:center;
-	color: #45F0DF;
-	border:0.5px solid black;
-	border-top: none;
-	border-left: none;
-	padding-right: 1%;
-	padding-left: 1%;
-	margin-top: 1%;
-	position: relative;
-}
-
-#Year-number {
-	width: 20%;
-	font-size: 3em;
-	display: inline-block;
-	text-align:center;
-	color: #45F0DF;
-	padding-left: 5%;
-	padding-right: 5%;
-	border:0.5px solid black;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	margin-top: 1%;
-	position: relative;
-}
-
-/* Button Stuff */
-.top-down { /* button in general */
-	position: relative;
-	display: inline-block;
-	z-index: 1;
-	width: 15%;
-	height: 20%;
-	text-align: center;
-	left: 20%;
-	transition: box-shadow 1s;
-}
-
-.top-down > .drop-button {
-    background-color: #3498DB;
-    color: white;
-		width: 100%;
-    padding: 7%;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-}
-
-.top-down:hover {
-	box-shadow: 5px 5px 18px #888888;
-}
-
-.top-down-items { /* these are the contents */
-	display: none;
-	position: absolute; 
-    background-color: #f1f1f1;
-    width: 90%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.top-down-items > * { /*buttons for the dropdown */
-	color: black;
-    padding: 7%;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-}
-
-#SA {
-	margin-left: 15.2%;
-	top: 35%;
-	left: 10%;
-}
-
-#Categories {
-	left: 12%;
-}
 /* End of Buttons */
 
 /* Search Bar Stuff */
 
 #Searching{
-
+	margin-right: 9%;
 	max-width: 100%;
-	text-align: left;
 }
 
 #search {
 	position: relative;
 	display: inline-flex;
 	overflow: hidden;
-	width: 60%;
-	height: 50%;
-	max-height: 100%;
+	width: 30%;
+    height: 2.2em;
+    max-height: 100%;
 	background-color: white;
 	color: black;
 	border: 1px solid black;
@@ -170,9 +199,9 @@
 }
 
 #submit {
-	width: 30%;
+	width: 11%;
 	max-height: 100%;
-	height: 100%;
+	height: 2.2em;
 	display: inline-flex;
 	background-color: #42f4d7;
 	color: black;
@@ -199,19 +228,19 @@
 
 
 #bottom-Area {
+	display: flex;
 	width: 100%;
 	max-width: 100%;
-	height: 100%;
+	height: 80%;
 	max-height: 100%;
-	display: flex;
 	flex-direction: row;
 }
 
+
 #Upcoming-events {
 	overflow: hidden;	
-	width: 21%;
-	max-height: 70%;
-	background-color: #B7F0AD;
+	width: 102.5;
+	height: 100%;
 	color: black;
 	font-size: 200%;
 	font-style: italic;
@@ -219,47 +248,63 @@
 	z-index: 1;
 }
 
-
 #Calendar {
 	display: inline-flex;
-	border: 1.2px, #45D0DF;
-	height: 100%;
-	width: 76%;
-	max-width: 100%;
-	max-height: 100%;
+	border: 0.5px solid black;
+	border-right: none;
+	height: 120%;
+	width: 100%;
 	position: relative;
 	background-color: #9AD2CB;
-	padding-right: 2%;
 }
+
+.Day-container {
+	position: relative;
+	height: auto;
+	width: 100%;
+	text-align: left;
+	left: -1.5%;
+}
+
+.Years {
+	width: 100%;
+	height: auto;
+	padding-left: 2.2%;
+	padding-right: 1%;
+}
+
 
 /* Buttons */
 #LB {
-	border: 1px solid lightgrey;
+	border: 1px solid rgba(0,0,0,0);
 	text-align: center;
-	width: 1.5%;
-	max-height: 70%;
-	background-color: lightgrey;
+	color: white;
+	font-size: 2em;
+	width: 5%;
+	height: auto;
+	background-color: rgba(0,0,0,0);
 	position: relative;
-	z-index: 1;
-	right: 1.7%;
+	right: 1.5%;
 }
 
 #RB {
-	border: 1px solid lightgrey;
+	border: 1px solid rgba(0,0,0,0);
+	color: white;
+	font-size: 2em;
 	text-align: center;
-	width: 1.5%;
-	max-height: 70%;
-	background-color: lightgrey;
+	width: 5%;
+	height: auto;
+	background-color: rgba(0,0,0,0);
 	position: relative;
-	z-index: 1;
-	left: 101.2%;
+	left: 95.5%;
 }
 /* Buttons */
 
 .Days, .weekendNames {
-	width: 8.1%;
+	position: relative;
+	width: 8.6%;
 	display: inline-flex;
-	flex: center;
+	text-align: center;
 	margin: 0.4em;
 	padding: 2%;
 	border-radius: 7.12%;
@@ -268,7 +313,7 @@
 
 .Days {
 	transition: box-shadow 1s;
-	height: 5em;
+	height: 3em;
 	background-color: #FCFF56;
 	border: 1px solid goldenrod;
 }
@@ -577,6 +622,28 @@
 	100% {color: ivory;}
 }
 
+* {
+	font-family: 'Ubuntu', sans-serif;
+}
 
+#upcoming-drop {
+	width: auto;
+	padding-left: 4.5%;
+	display: none;
+	height: 50%;
+}
 
+#Upcoming-title {
+	margin: 0% 0% 0% 0%;
+	height: 100%;
+	padding: 10% 2% 0 0;
+    display: inline-block;
+    border-right: 1px solid black;
+}
 
+#Upcoming-list {
+    display: inline-block;
+    width: 63.5%;
+    position: relative;
+    top: -35%;
+}

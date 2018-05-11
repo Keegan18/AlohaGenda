@@ -1,5 +1,17 @@
 document.getElementById("Month-name").innerHTML = monthNames[currentMonth-1]; //gets the  current month
 document.getElementById("Year-number").innerHTML = currentYear;
+document.getElementById('Category-section').innerHTML = (sessionStorage.getItem('categoryName') !== null) ? sessionStorage.getItem('categoryName') : 'Main';
+
+console.log(sessionStorage.getItem("seasonToggle"));
+
+function SetEverything() { //sets the user info in custom events if their is anything 
+	var userStuff = sessionStorage.getItem('userData');
+	if(userStuff !== null) {
+		customEvents = JSON.parse(userStuff);
+	}
+}
+
+SetEverything();
 
 function DateOption(option) {
 	Days = daysInMonth(option.value,year);
@@ -18,6 +30,10 @@ function DateOption(option) {
 	}
 }
 
+
+
+DateOption(document.getElementById("Month-selection"));
+
 /* everything for the ADD function */
 var overlay = document.getElementById("Add-in-Overlay");
 
@@ -29,14 +45,6 @@ function ToggleAdd() {
 	
 }
 
-function SetEverything() { //sets the user info in custom events if their is anything 
-	var userStuff = sessionStorage.getItem('userData');
-	if(userStuff !== null) {
-		customEvents = JSON.parse(userStuff);
-	}
-}
-
-SetEverything();
 //console.log(customEvents);
 
 function AddToMain() {
@@ -169,6 +177,10 @@ function Calendar(events) { //whole calender logic
 			}
 			
 			for(var i=1; i <= daysInMonth(k,year); i++) {  //checks the days in the month to reiterate
+				
+				var addInDays = document.createElement("DIV"); //for days
+				var addInDescript = document.createElement("DIV"); //for the description in the divs
+				
 				if(i === 1) {
 					for(var h=0; h < 7; h++) {
 						var weeks = document.createElement("DIV");
@@ -176,10 +188,29 @@ function Calendar(events) { //whole calender logic
 						weeks.className = weeknames[h] + " weekendNames";
 						addInMonths.appendChild(weeks);
 					}
+					var tempDate = new Date(monthNames[k-1] + " " + i + "," + " " + y); //temp day helps out with getting the space for the start of the months
+					
+					switch(tempDate.getDay()) {
+						case 1:
+							addInDays.style.marginLeft = '14.6%';
+							break;
+						case 2:
+							addInDays.style.marginLeft = '28%';
+							break;
+						case 3:
+							addInDays.style.marginLeft = '40%';
+							break;
+						case 4:
+							addInDays.style.marginLeft = '56%';
+							break;
+						case 5:
+							addInDays.style.marginLeft = '70%';
+							break;
+						case 6:
+							addInDays.style.marginLeft = '83%';
+							break;
+					} 
 				}
-				
-				var addInDays = document.createElement("DIV"); //for days
-				var addInDescript = document.createElement("DIV"); //for the description in the divs
 				
 				//adds the date
 				addInDays.className = "Days" + " Day"+i; //class name is Days
@@ -222,8 +253,8 @@ function Calendar(events) { //whole calender logic
 				}
 				if((i === date) && (k === month) && (y === year)) {
 					addInDays.style.transition = "width 1s,height 1s";
-					addInDays.style.backgroundColor = "lightgreen";
-					addInDays.style.border = "1px solid lightgreen"
+					addInDays.style.backgroundColor = "#80FF72";
+					addInDays.style.border = "1px solid #80FF72"
 					addInDays.style.boxShadow = "30px 25px 5px black;";
 				}
 				
@@ -237,4 +268,6 @@ function Calendar(events) { //whole calender logic
 
 window.onload = function(){
 	Calendar(events);
+	if(sessionStorage.getItem("seasonToggle"))
+		ColorChange(month);
 };

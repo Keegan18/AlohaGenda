@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>AlohaGenda</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="seasons.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 </head>
@@ -60,72 +61,97 @@
 				
 				<select id="Day-selection"> </select>
 				
+				<select id="Category-selection">
+					<option value="events"> Main </option>
+					<option value="sports"> Sports </option>
+					<option value="studentActivities"> Student Activities </option>
+				</select>
+				
 				<!--<input id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </input>-->
 				<textarea id="Quick-descript" placeholder="Quick Description" name="Quick-descript"> </textarea>
 				<input id="Title" placeholder="Title" name="Title"> </input>
 				<input class="Header" placeholder="Header" name="Header"> </input>
 				<!--<input class="Paragraph" placeholder="Paragraph" name="Paragraph"> </input>-->
 				<textarea class = "Paragraph" placeholder="Paragraph" name="Paragraph"> </textarea>
-				<button id="more" onclick="MoreIndex()"> Add More </button>
+				<!--<button id="more" onclick="MoreIndex()"> Add More </button> -->
 				<button id="Add-button" onclick="EventAdd()"> Add  </button>
 				<button onclick="ToggleAdd()"> close </button>
 			</div>
 		</div>
 	</div>
-	
-	<div id="top-Area">
 		
-		<div id="h1">
-			Aloha Genda	
+		<div class= "top-down" id="main-button"> 
+		
+			<button class="drop-button" id="oof" onclick ="ToggleDrops(this)"> ^ </button>
+			
+			<div class="top-down-items" id="main-items"> <!-- oof -->
+			
+				<div id="h1">
+					Aloha Genda	
+				</div>
+				
+				<div class="top-down" id="Categories">
+		
+					<button class="drop-button" onclick="ToggleDrop(this)"> Categories </button>
+		
+				</div>
+		
+				<div class="top-down" id="SA">
+		
+					<button class="drop-button" onclick="ToggleDrop(this)"> Features </button>
+				
+				</div>
+	
+				<div class="top-down" id="Upcoming">
+		
+					<button class="drop-button" onclick="ToggleDrop(this)"> Upcoming </button>
+		
+				</div>
+			
+					<div class="top-down-items-lower" id="Search_and_stuff">
+					
+					<form action="" id="Searching">
+					
+						<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input onclick="SearchBar()" id="submit" value="Submit"/>
+					
+					</form>
+					
+					<button id="add" onclick="ToggleAdd()"> Add Event </button> 
+					<button id="season" onclick="Checkset()"> Seasonal Colors </button> 
+				</div>
+				
+				<div class="top-down-items-lower" id="upcoming-drop">
+					<div id="Upcoming-events"> 
+						<p id="Upcoming-title">Upcoming Events</p>
+						<div id="Upcoming-list">
+							<ul id="list">
+							</ul>
+						</div>
+							
+					</div>
+					
+				</div>
+				
+				<div class="top-down-items-lower" id="Category-container">
+					<button onclick="SwitchCags(this)" value='sports' class="Cat-button">Sports</button>
+					<button onclick="SwitchCags(this)" value='studentActivities' class="Cat-button"> Student Activities</button>
+					<button onclick="SwitchCags(this)" value='mainEvents' class="Cat-button"> Main </button>
+				
+				</div>
+			
+			</div> <!-- oof -->
+			
 		</div>
 
-		<div id="tb">
-			<div id="Month-name">	</div>
+	<div id="TB">
+		<div id="center">
 			<div id= "Year-number"> </div>
-		</div>
-	
-		<div class="top-down" id="Categories">
-		
-			<button class="drop-button" onclick="ToggleDrop(this)"> Categories </button>
-			
-			<div class="top-down-items">
-			<button onclick="SwitchCags('sports')">Sports</button>
-			<button onclick="SwitchCags('studentActivities')"> Student Activites</button>
-			<button onclick="SwitchCags('mainEvents')"> Main </button>
-			
-			</div>
-		
-		</div>
-		
-		<div class="top-down" id="SA">
-		
-			<button class="drop-button" onclick="ToggleDrop(this)"> Features </button>
-			
-			<div class="top-down-items">
-			
-			<form action="" id="Searching">
-			
-	   			<input type="text" placeholder="" value="Search..." id="search" maxlength="50" autocomplete="on" onmousedown="active()" ="" onblur="inactive()"/><input onclick="SearchBar()" id="submit" value="Submit"/>
-			
-			</form>
-			
-			<button id="add" onclick="ToggleAdd()"> Add Event </button> 
-			
-			</div>
-		
+			<div id="Month-name">	</div>		
+			<div id = "Category-section"> </div>
 		</div>
 	</div>
 
 	<div id="bottom-Area">
-
-		<div id="Upcoming-events"> 
-			<p>Upcoming Events</p>
-			<hr /> 
-			<div id="Upcoming-list">
-				<ul id="list">
-				</ul>
-			</div> 
-		</div>
 		
 		<div id="Calendar">
 			<button id="RB" placeholder=">" onclick="ClickNext()"> > </button>
