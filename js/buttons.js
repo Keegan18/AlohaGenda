@@ -139,8 +139,19 @@ function Checkset() {
 
 function ColorChange() {
 	var hold = document.getElementsByClassName('Day-container');
-	for(var i=0; i < hold; i++) {
-		if(hold[i].style.display === "block") {
+	for(var i=0; i < hold.length; i++) {
+		console.log(hold[i].id + " " + hold[i].style.display);
+		if(hold[i].style.display !== "none") {
+			if(hold[i].id.includes("-12-") || hold[i].id.includes("-1-") || hold[i].id.includes("-2-")) {
+				//WinterChange();
+			} else if(hold[i].id.includes("-3-") || hold[i].id.includes("-4-") || hold[i].id.includes("-5-")) {
+				//SpringChange();
+				console.log("oof");
+			} else if(hold[i].id.includes("-6-") || hold[i].id.includes("-7-") || hold[i].id.includes("-8-")) {
+				//SummerChange();
+			} else if(hold[i].id.includes("-9-") || hold[i].id.includes("-10-") || hold[i].id.includes("-11-")) {
+				//AutumnChange();
+			}
 		}
 	}
 }

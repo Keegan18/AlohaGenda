@@ -291,4 +291,5 @@ function Calendar(events) { //whole calender logic
 
 window.onload = function(){
 	Calendar(events);
+	ColorChange();
 };
