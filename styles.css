@@ -269,30 +269,34 @@ body {
 .Years {
 	width: 100%;
 	height: auto;
-	padding-left: 5%;
+	padding-left: 2.2%;
 	padding-right: 1%;
 }
 
 
 /* Buttons */
 #LB {
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,0);
 	text-align: center;
-	width: 1.5%;
+	color: white;
+	font-size: 2em;
+	width: 5%;
 	height: auto;
-	background-color: lightgrey;
+	background-color: rgba(0,0,0,0);
 	position: relative;
 	right: 1.5%;
 }
 
 #RB {
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,0);
+	color: white;
+	font-size: 2em;
 	text-align: center;
-	width: 1.5%;
+	width: 5%;
 	height: auto;
-	background-color: lightgrey;
+	background-color: rgba(0,0,0,0);
 	position: relative;
-	left: 98.5%;
+	left: 95.5%;
 }
 /* Buttons */
 
