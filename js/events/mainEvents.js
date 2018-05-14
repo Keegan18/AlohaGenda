@@ -45,6 +45,12 @@ var events = { //every event is now in the array
 				header: "Go get some tasty pie!",
 				img1: "https://media1.fdncms.com/stranger/imager/u/original/25870590/17309295_10158349771070402_1610862109579774492_n_1_.jpg",
 				par1: "3.14 is the magic number and date. Go out to a local pie dealer to get amazing deals on pie! "
+			}],
+			Kohio: [26,"Kuhio Day!", {
+				title: "3 day weekend!",
+				header1: "No school!",
+				img1:"https://www.kalakauamiddle.org/ourpages/auto/2014/8/12/45598718/Prince-Kuhio.jpg",
+				par1: "Remind all your friends thats there is no school on this date!"
 			}]
 		},
 		April: {
@@ -56,10 +62,28 @@ var events = { //every event is now in the array
 			}]
 		},
 		May: {
-			month: 5
+			month: 5,
+			SpringFair: [4, "Spring Fair!", {
+				title: "Bring your cash!",
+				img1: "http://www.hawaiipublicschools.org/PublishingImages/3-BEYOND/3-HEALTHNUT/1-Nutrition/Beef1.jpg",
+				img2: "https://pbs.twimg.com/media/C9wnCTyUwAA9wWc.jpg",
+				header: "Delicious foods!",
+				par1: "Make sure to try out some yummy snacks. Last hour of school day reserved for Spring fair."
+			}],
+			Memorial: [28, "Memorial Day", {
+				title: "No School!",
+				img1: "http://cdn.shopify.com/s/files/1/0809/7571/articles/memorial-day_2018_1024x1024.jpg?v=1526062234",
+				header: "Respect and Honor",
+				par1: "Never forget this memorable day."
+			}]
 		},
 		June: {
 			month: 6,
+			LastDay: [1, "teachers Last Day", {
+				title: "Teachers last day of school",
+				img1: "https://www.inflexion.org/wp-content/uploads/2017/10/waipahu_high_school.jpg",
+				header: "See ya next year!"
+			}]
 		},
 		July: {
 			month: 7
