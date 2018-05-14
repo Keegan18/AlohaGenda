@@ -268,6 +268,8 @@ function Calendar(events) { //whole calender logic
 
 window.onload = function(){
 	Calendar(events);
-	if(sessionStorage.getItem("seasonToggle"))
+	if(sessionStorage.getItem("seasonToggle")) {
 		ColorChange(month);
+	}
+	console.log(sessionStorage.getItem("seasonToggle"));
 };
