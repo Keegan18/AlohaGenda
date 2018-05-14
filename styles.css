@@ -269,7 +269,7 @@ body {
 	height: auto;
 	width: 100%;
 	text-align: left;
-	left: -1.5%;
+	left: -3%;
 }
 
 .Years {
@@ -290,7 +290,7 @@ body {
 	height: auto;
 	background-color: rgba(0,0,0,0);
 	position: relative;
-	right: 3%;
+	right: 5%;
 }
 
 #RB {
@@ -308,7 +308,7 @@ body {
 
 .Days, .weekendNames {
 	position: relative;
-	width: 8.6%;
+	width: 8.5%;
 	display: inline-flex;
 	text-align: center;
 	margin: 0.4em;
@@ -373,11 +373,9 @@ body {
 /*everything for the overlay starts here*/
 
 .overlay {
-	width: 102%;
-	height: 102%;
+	width: 100%;
+	height: 100%;
 	display: none;
-	margin-top: -0.6%;
-	margin-left: -2%;
 	position: fixed;
 	background-color: RGBA(0,0,0,0.5);
 	z-index: 2;
@@ -387,7 +385,8 @@ body {
 	width: 55em;
 	height: 36em;
 	margin: auto;
-	background-color:rgb(15, 22, 101);;
+	background-color:rgb(15, 22, 101);
+	overflow-y: hidden;
 }
 
 .containerTitle {
@@ -511,7 +510,7 @@ body {
 .infoContainer {
 	width: 55em;
 	height: 46em;
-	overflow: auto;
+	overflow-y: hidden;
 	margin: auto;
 	background: #43C6AC;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */

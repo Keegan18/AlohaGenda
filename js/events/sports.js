@@ -14,5 +14,14 @@ var sports = {
 				par2: 'dont mind if I do'
 			}]
 		},
+		May: {
+			month: 5,
+			FootBallPreactice: [24,"Football Practice", {
+				title: "Show up for practice",
+				header: "Basic training",
+				img1: "http://www.staradvertiser.com/wp-content/uploads/2017/09/SPT-High-School-Football-0036-1.jpg",
+				par1: "4 laps around the field, tackleing practice, and practice games if time allows so."
+			}]
+		},
 	}
 };
