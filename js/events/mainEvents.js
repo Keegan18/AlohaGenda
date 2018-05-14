@@ -79,7 +79,7 @@ var events = { //every event is now in the array
 		},
 		June: {
 			month: 6,
-			LastDay: [1, "teachers Last Day", {
+			LastDay: [1, "Teachers Last Day", {
 				title: "Teachers last day of school",
 				img1: "https://www.inflexion.org/wp-content/uploads/2017/10/waipahu_high_school.jpg",
 				header: "See ya next year!"
