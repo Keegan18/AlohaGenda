@@ -151,68 +151,81 @@ function WinterChange() {
 	var i=0;
 	console.log("ran in Winter change");
 	EssentialsBro.body.style.backgroundColor = "#BFFAFF"; //styles for body
-	EssentialsBro.topBar.style.backgroundColor = "#036AB6 "; //styles for top bar
-	EssentialsBro.calendar.style.backgroundColor = "#DDF6FD"; //styles for calendar
+	
+	EssentialsBro.topBar.style.background = "rgb(221,246,253)"; //styles for top bar
+	EssentialsBro.topBar.style.background = "linear-gradient(0deg, rgba(221,246,253,1) 0%, rgba(191,250,255,1) 100%)"; //styles for top bar
+	
+	EssentialsBro.calendar.style.background = "rgb(3,106,182)"; //styles for calendar
+	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(3,106,182,1) 1%, rgba(221,246,253,1) 86%)"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#6ECAED";
 		EssentialsBro.weekendNames[i].style.border = "1px solid #6ECAED";
 	}
 	for(i=0; i < EssentialsBro.days.length; i++) { //styles for the days
-		EssentialsBro.days[i].style.backgroundColor = "#9BD3E8"
-		EssentialsBro.days[i].style.border = "1px solid #9BD3E8"
+		EssentialsBro.days[i].style.backgroundColor = "#9BD3E8";
+		EssentialsBro.days[i].style.border = "1px solid #9BD3E8";
 	}
 }
 
 function SpringChange() {
 	var i=0;
 	console.log("ran in spring change");
-	EssentialsBro.body.style.backgroundColor = "#B2D500";
-	EssentialsBro.topBar.style.backgroundColor = "#FDE027";
-	EssentialsBro.calendar.style.backgroundColor = "#EDF28A";
+	EssentialsBro.body.style.background = "#FDE027";
+	EssentialsBro.topBar.style.background = "#FDE027";
+	
+	EssentialsBro.calendar.style.background = "rgb(178,213,0)";
+	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(178,213,0,1) 0%, rgba(237,242,138,1) 19%, rgba(253,224,39,1) 82%)";
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) {
-		EssentialsBro.weekendNames[i].style.backgroundColor = "#5FA123";
-		EssentialsBro.weekendNames[i].style.border = "1px solid #5FA123";
+		EssentialsBro.weekendNames[i].style.backgroundColor = "#e4e910";
+		EssentialsBro.weekendNames[i].style.border = "1px solid #e4e910";
 	}
 	
 	for(i=0; i < EssentialsBro.days.length; i++) {
-		EssentialsBro.days[i].style.backgroundColor = "#5FA123"
-		EssentialsBro.days[i].style.border = "1px solid #5FA123"
+		EssentialsBro.days[i].style.backgroundColor = "#f0d10c";
+		EssentialsBro.days[i].style.border = "1px solid #f0d10c";
 	}
 }
 
 function SummerChange() {
 	var i=0;
 	console.log("ran in Summer change");
-	EssentialsBro.body.style.backgroundColor = "#E9F76C"; //styles for body
-	EssentialsBro.topBar.style.backgroundColor = "#F6AD4E"; //styles for top bar
-	EssentialsBro.calendar.style.backgroundColor = "#FDEFAA"; //styles for calendar
+	EssentialsBro.body.style.background = "#0eadf0"; //styles for body
+	EssentialsBro.topBar.style.background = "#0eadf0"; //styles for top bar
+	
+	EssentialsBro.calendar.style.background = "rgb(246,173,78)"; //styles for calendar
+	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(255,144,0,1) 11%, rgba(253,224,39,1) 66%, rgba(14,173,240,1) 100%)"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#1EA9E4";
 		EssentialsBro.weekendNames[i].style.border = "1px solid #1EA9E4";
 	}
 	for(i=0; i < EssentialsBro.days.length; i++) { //styles for the days
-		EssentialsBro.days[i].style.backgroundColor = "#F6AD4E"
-		EssentialsBro.days[i].style.border = "1px solid #F6AD4E"
+		EssentialsBro.days[i].style.backgroundColor = "#F6AD4E";
+		EssentialsBro.days[i].style.border = "1px solid #F6AD4E";
 	}
 }
 
 function AutumnChange() {
 	var i=0;
 	console.log("ran in Autumn change");
-	EssentialsBro.body.style.backgroundColor = "#CF5C36"; //styles for body
-	EssentialsBro.topBar.style.backgroundColor = "#470500"; //styles for top bar
-	EssentialsBro.calendar.style.backgroundColor = "#EC8E2C-"; //styles for calendar
+	EssentialsBro.body.style.background = "#ec8e2c"; //styles for body
+	EssentialsBro.topBar.style.background = "#ec8e2c"; //styles for top bar
+	
+//background: rgb(71,5,0);
+//background: linear-gradient(0deg, rgba(71,5,0,0.958420868347339) 8%, rgba(207,92,54,1) 49%, rgba(236,142,44,1) 88%);
+	
+	EssentialsBro.calendar.style.background = "rgb(71,5,0)"; //styles for calendar
+	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(71,5,0,0.958420868347339) 8%, rgba(207,92,54,1) 49%, rgba(236,142,44,1) 88%)"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#D6593E";
 		EssentialsBro.weekendNames[i].style.border = "1px solid #D6593E";
 	}
 	for(i=0; i < EssentialsBro.days.length; i++) { //styles for the days
-		EssentialsBro.days[i].style.backgroundColor = "#F6AD4E"
-		EssentialsBro.days[i].style.border = "1px solid #F6AD4E"
+		EssentialsBro.days[i].style.backgroundColor = "#F6AD4E";
+		EssentialsBro.days[i].style.border = "1px solid #F6AD4E";
 	}
 }
 

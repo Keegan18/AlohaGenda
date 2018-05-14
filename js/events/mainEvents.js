@@ -56,10 +56,16 @@ var events = { //every event is now in the array
 			}]
 		},
 		June: {
-			month: 5
+			month: 6
 		},
 		May: {
-			month: 6
+			month: 5,
+			OOF: [31, "Last Day for Students", {
+				title: "Last Day for Students",
+				header1: "Last Day of School for Students",
+				par1: "Student's last day of school, STAY SAFE!!!",
+				img1: "https://3.bp.blogspot.com/--lU3vlwI5oU/WSS1oWaiUbI/AAAAAAAAAws/aRigvgZ2MtkjtEO7D4Pel6BDRxNT0ENSwCLcB/s1600/Last-Day-of-School.jpg"
+			}]
 		},
 		July: {
 			month: 7
