@@ -55,11 +55,11 @@ var events = { //every event is now in the array
 				img2: "http://canyouactually.com/wp-content/uploads/1961.jpg"
 			}]
 		},
-		June: {
+		May: {
 			month: 5
 		},
-		May: {
-			month: 6
+		June: {
+			month: 6,
 		},
 		July: {
 			month: 7

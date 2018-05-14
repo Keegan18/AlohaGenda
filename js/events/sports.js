@@ -13,6 +13,6 @@ var sports = {
 				header2: 'Maybe you would like to go out soon, show you around',
 				par2: 'dont mind if I do'
 			}]
-		}
+		},
 	}
 };
