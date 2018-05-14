@@ -151,7 +151,7 @@ function WinterChange() {
 	var i=0;
 	console.log("ran in Winter change");
 	EssentialsBro.body.style.backgroundColor = "#BFFAFF"; //styles for body
-	EssentialsBro.topBar.style.backgroundColor = "#036AB6 "; //styles for top bar
+	EssentialsBro.topBar.style.backgroundColor = "#036AB6"; //styles for top bar
 	EssentialsBro.calendar.style.backgroundColor = "#DDF6FD"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
