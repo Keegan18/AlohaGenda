@@ -45,6 +45,12 @@ var events = { //every event is now in the array
 				header: "Go get some tasty pie!",
 				img1: "https://media1.fdncms.com/stranger/imager/u/original/25870590/17309295_10158349771070402_1610862109579774492_n_1_.jpg",
 				par1: "3.14 is the magic number and date. Go out to a local pie dealer to get amazing deals on pie! "
+			}],
+			Kohio: [26,"Kuhio Day!", {
+				title: "3 day weekend!",
+				header1: "No school!",
+				img1:"https://www.kalakauamiddle.org/ourpages/auto/2014/8/12/45598718/Prince-Kuhio.jpg",
+				par1: "Remind all your friends thats there is no school on this date!"
 			}]
 		},
 		April: {
@@ -55,9 +61,6 @@ var events = { //every event is now in the array
 				img2: "http://canyouactually.com/wp-content/uploads/1961.jpg"
 			}]
 		},
-		June: {
-			month: 6
-		},
 		May: {
 			month: 5,
 			OOF: [31, "Last Day for Students", {
@@ -65,6 +68,28 @@ var events = { //every event is now in the array
 				header1: "Last Day of School for Students",
 				par1: "Student's last day of school, STAY SAFE!!!",
 				img1: "https://3.bp.blogspot.com/--lU3vlwI5oU/WSS1oWaiUbI/AAAAAAAAAws/aRigvgZ2MtkjtEO7D4Pel6BDRxNT0ENSwCLcB/s1600/Last-Day-of-School.jpg"
+			}],
+			
+			SpringFair: [4, "Spring Fair!", {
+				title: "Bring your cash!",
+				img1: "http://www.hawaiipublicschools.org/PublishingImages/3-BEYOND/3-HEALTHNUT/1-Nutrition/Beef1.jpg",
+				img2: "https://pbs.twimg.com/media/C9wnCTyUwAA9wWc.jpg",
+				header: "Delicious foods!",
+				par1: "Make sure to try out some yummy snacks. Last hour of school day reserved for Spring fair."
+			}],
+			Memorial: [28, "Memorial Day", {
+				title: "No School!",
+				img1: "http://cdn.shopify.com/s/files/1/0809/7571/articles/memorial-day_2018_1024x1024.jpg?v=1526062234",
+				header: "Respect and Honor",
+				par1: "Never forget this memorable day."
+			}]
+		},
+		June: {
+			month: 6,
+			LastDay: [1, "Teachers Last Day", {
+				title: "Teachers last day of school",
+				img1: "https://www.inflexion.org/wp-content/uploads/2017/10/waipahu_high_school.jpg",
+				header: "See ya next year!"
 			}]
 		},
 		July: {

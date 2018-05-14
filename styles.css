@@ -6,7 +6,8 @@ html, body {
 }
 
 body {
-	background-color: #D2FF96;
+	background: rgb(21,0,255);
+	background: linear-gradient(0deg, rgba(21,0,255,1) 0%, rgba(255,255,255,1) 52%, rgba(254,255,0,1) 100%);
 	height: 100%;
 	width: 100%;
 	display: ;
@@ -70,7 +71,6 @@ body {
 	display: inline-block;
 	z-index: 1;
 	width: 15%;
-	text-align: center;
 	transition: box-shadow 1s;
 }
 
@@ -94,12 +94,15 @@ body {
 	width: 100%;
 	height: 3.2em;
 	margin-top: 2%;
+	text-align: center;
+	display: inline-block;
 }
 
 #oof {
 	margin-top: 0;
 	padding: 0;
 	height: auto;
+	display: inline-block;
 }
 
 .Cat-button {
@@ -131,8 +134,11 @@ body {
 #main-items {
 	width: 55em;
 	height: 26em;
-	left: -150%;
 	border-radius: 10px;
+ 	left: 50% !important;
+  	right: auto !important;
+  	text-align: center !important;
+  	transform: translate(-50%, 0) !important;
 }
 
 .top-down-items > * { /*buttons for the dropdown */
@@ -140,6 +146,7 @@ body {
     padding: 4% 7% 0 7%;
     text-decoration: none;
     width: 100%;
+    text-align: center;
 }
 
 #h1 {
@@ -244,7 +251,8 @@ body {
 	height: 120%;
 	width: 100%;
 	position: relative;
-	background-color: #9AD2CB;
+	background: rgb(21,0,255);
+	background: linear-gradient(0deg, rgba(21,0,255,1) 0%, rgba(255,255,255,1) 52%, rgba(254,255,0,1) 100%);
 }
 
 .Day-container {
@@ -252,7 +260,7 @@ body {
 	height: auto;
 	width: 100%;
 	text-align: left;
-	left: -1.5%;
+	left: -3%;
 }
 
 .Years {
@@ -273,7 +281,7 @@ body {
 	height: auto;
 	background-color: rgba(0,0,0,0);
 	position: relative;
-	right: 3%;
+	right: 5%;
 }
 
 #RB {
@@ -291,7 +299,7 @@ body {
 
 .Days, .weekendNames {
 	position: relative;
-	width: 8.6%;
+	width: 8.5%;
 	display: inline-flex;
 	text-align: center;
 	margin: 0.4em;
@@ -356,11 +364,9 @@ body {
 /*everything for the overlay starts here*/
 
 .overlay {
-	width: 102%;
-	height: 102%;
+	width: 100%;
+	height: 100%;
 	display: none;
-	margin-top: -0.6%;
-	margin-left: -2%;
 	position: fixed;
 	background-color: RGBA(0,0,0,0.5);
 	z-index: 2;
@@ -370,7 +376,8 @@ body {
 	width: 55em;
 	height: 36em;
 	margin: auto;
-	background-color:rgb(15, 22, 101);;
+	background-color:rgb(15, 22, 101);
+	overflow-y: hidden;
 }
 
 .containerTitle {
@@ -494,7 +501,7 @@ body {
 .infoContainer {
 	width: 55em;
 	height: 46em;
-	overflow: auto;
+	overflow-y: hidden;
 	margin: auto;
 	background: #43C6AC;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
@@ -630,7 +637,7 @@ body {
     display: inline-block;
     width: 63.5%;
     position: relative;
-    top: -35%;
+    top: -23%;
 }
 
 * {

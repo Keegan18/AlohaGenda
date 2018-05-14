@@ -1,4 +1,5 @@
 function ClickNext() { //this makes calender display the next date
+	var temp = sessionStorage.getItem("seasonToggle");
 	if(currentMonth !== 12) {
 		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
 		current.style.display = "none";
@@ -17,11 +18,14 @@ function ClickNext() { //this makes calender display the next date
 		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
 		document.getElementById("Month-"+ month + "-year-" + currentYear).style.display = "none";
 	}
-	if(sessionStorage.getItem("seasonToggle"))
+	if(temp) {
 		ColorChange(currentMonth);
+	}
+	console.log(sessionStorage.getItem("seasonToggle"));
 }
 
 function ClickPrevious() { //vice versa 
+	var temp = sessionStorage.getItem("seasonToggle");
 	if(currentMonth !== 1) {
 		var current = document.getElementById("Month-"+currentMonth+ "-year-" + currentYear);
 		current.style.display = "none";
@@ -40,8 +44,10 @@ function ClickPrevious() { //vice versa
 		document.getElementById("Year-"+currentYear).style.display = "block";
 		document.getElementById("Month-"+currentMonth + "-year-" + currentYear).style.display = "block";
 	}
-	if(sessionStorage.getItem("seasonToggle"))
+	if(temp) {
 		ColorChange(currentMonth);
+	}
+	console.log(sessionStorage.getItem("seasonToggle"));
 }
 
 //Search bar stuff//
@@ -130,12 +136,12 @@ function SetFalse() {
 }
 
 function SetTrue() {
-	sessionStorage.setItem("seasonToggle", true)
+	sessionStorage.setItem("seasonToggle",true)
 }
 
 function Checkset() {
 	if(sessionStorage.getItem("seasonToggle") === null) {
-		sessionStorage.setItem("seasonToggle",true)
+		sessionStorage.setItem("seasonToggle",1)
 		Checkset.temp = 1;
 	} else if(Checkset.temp === 1) {
 		Checkset.temp = 2;
@@ -171,11 +177,11 @@ function WinterChange() {
 function SpringChange() {
 	var i=0;
 	console.log("ran in spring change");
-	EssentialsBro.body.style.background = "#FDE027";
-	EssentialsBro.topBar.style.background = "#FDE027";
+	EssentialsBro.body.style.background = "rgba(178,213,0,1)";
+	EssentialsBro.topBar.style.background = "rgba(178,213,0,1)";
 	
 	EssentialsBro.calendar.style.background = "rgb(178,213,0)";
-	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(178,213,0,1) 0%, rgba(237,242,138,1) 19%, rgba(253,224,39,1) 82%)";
+	EssentialsBro.calendar.style.background = "linear-gradient(180deg, rgba(178,213,0,1) 0%, rgba(237,242,138,1) 19%, rgba(253,224,39,1) 82%)";
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) {
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#e4e910";
@@ -191,7 +197,10 @@ function SpringChange() {
 function SummerChange() {
 	var i=0;
 	console.log("ran in Summer change");
+	
 	EssentialsBro.body.style.background = "#0eadf0"; //styles for body
+	EssentialsBro.body.style.background = "#0eadf0"; //styles for body
+	
 	EssentialsBro.topBar.style.background = "#0eadf0"; //styles for top bar
 	
 	EssentialsBro.calendar.style.background = "rgb(246,173,78)"; //styles for calendar

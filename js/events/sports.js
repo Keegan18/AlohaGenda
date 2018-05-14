@@ -3,15 +3,35 @@ var sports = {
 		year: 2018,
 		April: {
 			month: 4,
-			first: [1, "This Works", {
-				img1: 'https://cdn.cnn.com/cnnnext/dam/assets/171009141715-03-what-a-shot-sports-1010-restricted-large-tease.jpg',
-				img2: 'https://static01.nyt.com/images/2018/04/19/sports/19NBA/19NBA-videoLarge.jpg',
-				img3: 'https://www.onthisday.com/images/sport-header.jpg',
-				img4: 'http://images.performgroup.com/di/library/sportal_com_au/bb/1f/lebron_1lvwv67vww18k17luy7s9tc95t.jpg?w=660&h=371&quality=75',
-				header1: 'Just need to add more events',
-				par1: 'sports activities demo',
-				header2: 'Maybe you would like to go out soon, show you around',
-				par2: 'dont mind if I do'
+			Football: [5, "Football Game", {
+				title: "Waipahu VS Mililani, 5pm",
+				img1: 'http://www.staradvertiser.com/wp-content/uploads/2017/09/SPT-High-School-Football-0036-1.jpg',
+				img2: 'https://scoringlive.net/pix/_17101422_photo50.jpg',
+				header1: 'Get your tickets and bring some cash.',
+				par1: 'Bring your tickets and cash to buy some snacks at the Waipahu football field. Watch Waipahus varsity team go against Mililani.',
+				header2: 'Lets all go and support our team!',
+				par2: 'If you cant make it, spread the word to show as much support as you can.'
+			}],
+			Basketball: [17,"Basketball Game", {
+				title: "Waipahu VS Pearl City",
+				header: "Watch our team go against Pearl City!",
+				img1: "http://www.staradvertiser.com/wp-content/uploads/2017/09/SPT-High-School-Football-0036-1.jpg",
+				par1: "Bring your tickets and money to watch and enjoy the game at Waipahu gym."
+			}]
+		},
+		May: {
+			month: 5,
+			FootBallPreactice: [24,"Football Practice", {
+				title: "Show up for practice 4pm",
+				header: "Basic training",
+				img1: "http://www.staradvertiser.com/wp-content/uploads/2017/09/SPT-High-School-Football-0036-1.jpg",
+				par1: "4 laps around the field, tackleing practice, and practice games if time allows so."
+			}],
+			VolleyBallGame: [4,"Volleyball Game", {
+				title: "Varsity Vollyball Game 3:30pm",
+				header: "Big game at Waipahu Gym",
+				img1: "http://www.mypearlcity.com/public/mypc/imagecache/780x500_preview/images/gallery/barryv/2015-10-05%2008.21.53.jpg",
+				par1: "4 laps around the field, tackleing practice, and practice games if time allows so."
 			}]
 		},
 	}
