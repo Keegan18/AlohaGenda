@@ -35,7 +35,7 @@ var events = { //every event is now in the array
 		March: {
 			month: 3,
 			NationalPigDay: [1,"Safety Fair!", {
-				title: "You all ready for safety fair?",
+				title: "You all ready for safety fair",
 				header1: "Bring your cash and tickets to get some snacks durring safety fair!",
 				img1:"https://scontent-lga3-1.cdninstagram.com/vp/40962b045929c9527d4997fb59b22f91/5B15345A/t51.2885-15/s320x320/e35/26865222_391986307881894_9174722701774815232_n.jpg",
 				par1: "It's the safety fair once again. Hope you all got some tickets or some cash to get some delicious treats at all the venues! Make sure to wear cool clothing, because it's gonna be hot!"

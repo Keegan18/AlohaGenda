@@ -49,4 +49,11 @@ This is a calendar
     background-color: rgba(0,0,0,0);
     position: relative;
     color: white;
-    font-size: 2.5em;
+    font-size: 2.5em;4
+	
+			/* if(hold[i].style.display === "block") {
+			switch(hold.id[6]) {
+				case "5":
+					console.log("oof");
+			} 
+		} */
