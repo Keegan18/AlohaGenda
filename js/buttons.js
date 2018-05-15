@@ -156,13 +156,12 @@ function Checkset() {
 function WinterChange() {
 	var i=0;
 	console.log("ran in Winter change");
-	EssentialsBro.body.style.backgroundColor = "#BFFAFF"; //styles for body
+	EssentialsBro.body.style.backgroundColor = "rgb(3, 106, 182)"; //styles for body
 	
-	EssentialsBro.topBar.style.background = "rgb(221,246,253)"; //styles for top bar
-	EssentialsBro.topBar.style.background = "linear-gradient(0deg, rgba(221,246,253,1) 0%, rgba(191,250,255,1) 100%)"; //styles for top bar
+	EssentialsBro.topBar.style.background = "rgb(3, 106, 182)"; //styles for top bar
 	
 	EssentialsBro.calendar.style.background = "rgb(3,106,182)"; //styles for calendar
-	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(3,106,182,1) 1%, rgba(221,246,253,1) 86%)"; //styles for calendar
+	EssentialsBro.calendar.style.background = "linear-gradient(180deg, rgba(3,106,182,1) 1%, rgba(221,246,253,1) 86%)"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#6ECAED";
