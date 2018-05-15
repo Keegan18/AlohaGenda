@@ -1,4 +1,4 @@
-function Overlay(className,number,month,year) {
+function Overlay(className,number,month,year,day) {
 	
 	/* declaration of everything to be in the overlay intially */
 	
@@ -9,6 +9,8 @@ function Overlay(className,number,month,year) {
 	var infoContainer = document.createElement("DIV"); //where title,line are
 	
 	var descriptTitle = document.createElement("h3"); //title
+
+	var descriptDate = document.createElement("h4");
 	
 	var line = document.createElement("hr"); //segregation
 	
@@ -27,6 +29,8 @@ function Overlay(className,number,month,year) {
 	imgLeft.innerHTML = "<";
 	imgRight.innerHTML = ">";
 	exitButton.innerHTML = "X";
+
+	descriptDate.innerHTML = day + "/" + month + "/" + year;
 	/* end */
 	
 	/* appending everything with its elements respectfully */
@@ -36,6 +40,7 @@ function Overlay(className,number,month,year) {
 	moreDescript.appendChild(infoContainer);  //appends cotainer to overlay
 	
 	infoContainer.appendChild(descriptTitle); // appends title to info container
+	infoContainer.appendChild(descriptDate); // appends date to info container
 	infoContainer.appendChild(line); //appends line to info Container
 	infoContainer.appendChild(flexShow); // appends flex box which contains text to container
 
@@ -54,6 +59,8 @@ function Overlay(className,number,month,year) {
 	infoContainer.className = "infoContainer"; //class name for the container that holds every content
 	
 	descriptTitle.className = "containerTitle"; //class name container for the titles
+
+	descriptDate.className = "containerDate";
 	
 	line.className = "containerLine"; // class name for container line 
 	

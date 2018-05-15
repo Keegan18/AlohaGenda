@@ -156,13 +156,12 @@ function Checkset() {
 function WinterChange() {
 	var i=0;
 	console.log("ran in Winter change");
-	EssentialsBro.body.style.backgroundColor = "#BFFAFF"; //styles for body
+	EssentialsBro.body.style.backgroundColor = "rgb(3, 106, 182)"; //styles for body
 	
-	EssentialsBro.topBar.style.background = "rgb(221,246,253)"; //styles for top bar
-	EssentialsBro.topBar.style.background = "linear-gradient(0deg, rgba(221,246,253,1) 0%, rgba(191,250,255,1) 100%)"; //styles for top bar
+	EssentialsBro.topBar.style.background = "rgb(3, 106, 182)"; //styles for top bar
 	
 	EssentialsBro.calendar.style.background = "rgb(3,106,182)"; //styles for calendar
-	EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(3,106,182,1) 1%, rgba(221,246,253,1) 86%)"; //styles for calendar
+	EssentialsBro.calendar.style.background = "linear-gradient(180deg, rgba(3,106,182,1) 1%, rgba(221,246,253,1) 86%)"; //styles for calendar
 	
 	for(i; i < EssentialsBro.weekendNames.length; i++) { //styles for week names
 		EssentialsBro.weekendNames[i].style.backgroundColor = "#6ECAED";
@@ -175,23 +174,23 @@ function WinterChange() {
 }
 
 function SpringChange() {
-	var i=0;
-	console.log("ran in spring change");
-	EssentialsBro.body.style.background = "rgba(178,213,0,1)";
-	EssentialsBro.topBar.style.background = "rgba(178,213,0,1)";
-	
-	EssentialsBro.calendar.style.background = "rgb(178,213,0)";
-	EssentialsBro.calendar.style.background = "linear-gradient(180deg, rgba(178,213,0,1) 0%, rgba(237,242,138,1) 19%, rgba(253,224,39,1) 82%)";
-	
-	for(i; i < EssentialsBro.weekendNames.length; i++) {
-		EssentialsBro.weekendNames[i].style.backgroundColor = "#e4e910";
-		EssentialsBro.weekendNames[i].style.border = "1px solid #e4e910";
-	}
-	
-	for(i=0; i < EssentialsBro.days.length; i++) {
-		EssentialsBro.days[i].style.backgroundColor = "#f0d10c";
-		EssentialsBro.days[i].style.border = "1px solid #f0d10c";
-	}
+    var i=0;
+    console.log("ran in spring change");
+    EssentialsBro.body.style.background = "rgba(244,159,171,1)";
+    EssentialsBro.topBar.style.background = "rgba(244,159,171,1)";
+    
+    EssentialsBro.calendar.style.background = "rgb(178,213,0)";
+    EssentialsBro.calendar.style.background = "linear-gradient(0deg, rgba(217,247,250,1) 40%, rgba(244,159,171,1) 77%)";
+    
+    for(i; i < EssentialsBro.weekendNames.length; i++) {
+        EssentialsBro.weekendNames[i].style.backgroundColor = "#e4e910";
+        EssentialsBro.weekendNames[i].style.border = "1px solid #e4e910";
+    }
+    
+    for(i=0; i < EssentialsBro.days.length; i++) {
+        EssentialsBro.days[i].style.backgroundColor = "#f0d10c";
+        EssentialsBro.days[i].style.border = "1px solid #f0d10c";
+    }
 }
 
 function SummerChange() {

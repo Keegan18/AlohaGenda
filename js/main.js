@@ -234,7 +234,7 @@ function Calendar(events) { //whole calender logic
 								if(events[p][j][h][2] !== undefined) {
 									var placeholder = events[p][j][h][0];
 									overlayStuff.push(placeholder)
-									Overlay(events[p][j][h][2],events[p][j][h][0],events[p][j].month,events[p].year); //j = keys in the first class, h = keys in the second classes
+									Overlay(events[p][j][h][2],events[p][j][h][0],events[p][j].month,events[p].year,i); //j = keys in the first class, h = keys in the second classes
 
 									//console.log(addInDays.innerHTML.slice(0,1));
 									var placeholder = determineEvent(addInDays);
